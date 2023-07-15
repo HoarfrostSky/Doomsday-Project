@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using States.Controllers;
 using States.ConcreteStates;
+using Souls;
 using UnityEngine;
 
 namespace Cinematic
@@ -17,6 +18,12 @@ namespace Cinematic
         public void FinishCinematicState()
         {
             playerStateController.SetState(new State_Dialogue(playerStateController));
+        }
+
+        public void AlertDarkToDestroy()
+        {
+            GameObject.FindGameObjectWithTag("Soul").GetComponentInChildren<SaveAnimationManager>().gameObject.GetComponent<Animator>().SetTrigger("DestroyAction");
+            GameObject.FindGameObjectWithTag("Dark1").GetComponent<Animator>().SetTrigger("CastSpell");
         }
     }
 }

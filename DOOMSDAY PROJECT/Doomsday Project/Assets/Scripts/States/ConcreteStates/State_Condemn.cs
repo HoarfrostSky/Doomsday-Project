@@ -16,6 +16,7 @@ namespace States.ConcreteStates
         private GameObject sword;
         private SwordScript swordScript;
         private GameObject soul;
+        private GameObject dark1;
         private float previousHPos = 0;
 
         public State_Condemn(IPlayerState playerState) : base(playerState)
@@ -32,6 +33,8 @@ namespace States.ConcreteStates
             this.sword = GameObject.FindGameObjectWithTag("Sword");
             this.swordScript = sword.GetComponent<SwordScript>();
             this.soul = GameObject.FindGameObjectWithTag("Soul");
+            soul.GetComponent<Animator>().SetTrigger("SoulTerrorTransition");
+            this.dark1 = GameObject.FindGameObjectWithTag("Dark1");
             sword.transform.localPosition = new Vector3(-3.3f, 0f, 0f);
             sword.transform.localScale = new Vector3(1f, 1f, 1f);
         }

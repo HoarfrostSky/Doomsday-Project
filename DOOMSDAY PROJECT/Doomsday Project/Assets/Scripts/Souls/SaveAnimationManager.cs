@@ -22,6 +22,16 @@ namespace Souls
             soulParent.SetTrigger("Save");
         }
 
+        public void Dark1CastSpell()
+        {
+            GameObject.FindGameObjectWithTag("Dark1").GetComponent<Animator>().SetTrigger("CastSpell");
+        }
+
+        public void Dark1RevertToIdle()
+        {
+            GameObject.FindGameObjectWithTag("Dark1").GetComponent<Animator>().SetTrigger("RevertToIdle");
+        }
+
         public void ResetToExplore()
         {
             playerState.SetState(new State_Explore(playerState));

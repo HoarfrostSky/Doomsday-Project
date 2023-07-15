@@ -47,7 +47,7 @@ namespace Controls
                     //Gestionar animación de alma siendo atacada no desde aquí sino desde eventos de animaciones
                     //---
 
-                    playerStateController.SetState(new State_Explore(playerStateController));
+                    //playerStateController.SetState(new State_Explore(playerStateController));
                     Debug.Log("SOUL CONDEMNED");
                 }
             }

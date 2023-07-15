@@ -14,6 +14,8 @@ TagManager:
   - Soul
   - Empathise
   - Judge
+  - Dark1
+  - Dark2
   layers:
   - Default
   - TransparentFX

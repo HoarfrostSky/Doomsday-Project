@@ -813,7 +813,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685872510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.85, y: -2.18, z: -1}
+  m_LocalPosition: {x: -20.71, y: -2.18, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2776,6 +2776,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dark1
       objectReference: {fileID: 0}
+    - target: {fileID: 6243338085681062137, guid: 9d50c9c65dbf96c40abf85045e04089d, type: 3}
+      propertyPath: m_TagString
+      value: Dark1
+      objectReference: {fileID: 0}
     - target: {fileID: 7508112511263143694, guid: 9d50c9c65dbf96c40abf85045e04089d, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2839,7 +2843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1618803795249335605, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -1.84
       objectReference: {fileID: 0}
     - target: {fileID: 1618803795249335605, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2879,6 +2883,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+--- !u!1 &1618803796070606047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1618803795249335609, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+  m_PrefabInstance: {fileID: 1618803796070606046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1618803796070606048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618803796070606047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 952946471e7d34d4abbcae31f779a267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3618811009080278073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2888,6 +2909,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3618811010803856554, guid: cc63269a2dc76214a9269626597c29ac, type: 3}
       propertyPath: m_Name
+      value: Dark2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618811010803856554, guid: cc63269a2dc76214a9269626597c29ac, type: 3}
+      propertyPath: m_TagString
       value: Dark2
       objectReference: {fileID: 0}
     - target: {fileID: 3618811010803856559, guid: cc63269a2dc76214a9269626597c29ac, type: 3}
