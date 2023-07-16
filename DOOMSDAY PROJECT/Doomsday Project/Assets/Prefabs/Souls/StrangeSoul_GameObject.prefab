@@ -1,0 +1,357 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5901207762719172497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5901207762719172502}
+  - component: {fileID: 5901207762719172500}
+  - component: {fileID: 5901207762719172503}
+  - component: {fileID: 5901207762719172501}
+  m_Layer: 0
+  m_Name: SaveAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5901207762719172502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901207762719172497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6178125423899843759}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5901207762719172500
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901207762719172497}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.8947369, y: 2.9473684}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!95 &5901207762719172503
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901207762719172497}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d58d63a5d44e77459b72c2680156a1d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5901207762719172501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901207762719172497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 681aa5a2165b1514eb02c60faad5cb45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6178125423899843746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6178125423899843759}
+  - component: {fileID: 6178125423899843744}
+  - component: {fileID: 3604671669610379543}
+  - component: {fileID: 5901207763352305534}
+  - component: {fileID: 5901207763352305522}
+  m_Layer: 0
+  m_Name: StrangeSoul_GameObject
+  m_TagString: Soul
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6178125423899843759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178125423899843746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5901207762719172502}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &6178125423899843744
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178125423899843746}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.5438595, y: 2.9473684}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &3604671669610379543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178125423899843746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335742200e846f34e9de54f53b7df9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  dialogue:
+  - Dark2-!
+  - Nameless-Something wrong?
+  - Dark2-This one feels. . . different?
+  - Nameless-What do you mean?
+  - Dark2Sad-Hm. . .
+  - Dark2-Speak, lonely soul. Speak of your past.
+  - Strange-Kahl.
+  - Nameless-Huh?
+  - Strange-Kahl am farre h.
+  - Nameless-Hey guys, does this happen often?
+  - Dark1Sad-These circumstances by themselves are not that common either.
+  - Strange-Mo?
+  - Nameless-What?
+  - Strange-Ne?
+  - NamelessSad-What the fuck are you saying?
+  - Nameless-Am I not the one who is supposed to be asking questions anyway?
+  - Nameless-Hey, who thought I was a good candidate for this job?
+  - Dark1-No one.
+  - Nameless-But I was chosen!
+  - Nameless-You told me, or maybe it was the other one.
+  - Dark2Sad-Selfishness overflows from your mouth when you speak, Nameless One.
+  - Dark2-Yes, you were chosen.
+  - Dark2-By chance.
+  - Nameless-What?
+  - Strange-Egnu?
+  - Nameless-You shut up.
+  - Dark2-A judgement must be fair, and so the judge was chosen by the fairest methods
+    of all. Randomness.
+  - "Nameless-That\u2019s bullshit. It\u2019s the other way around."
+  - "Dark1-Don\u2019t bother, sibling. I\u2019m afraid the Nameless One does not
+    see the full picture."
+  - Dark1Sad-Pay attention to these words. This is not a judgement of the individual,
+    but of humanity itself. A being that for so long has wraithed beneath the weight
+    of time.
+  - Dark1-For so long in fact, that they began to create a meaning for themselves.
+  - Dark1-A morbid act, yet we let them be.
+  - Dark1Sad-But we must not forget that a lie will always be a lie. More so in these
+    halls.
+  - Nameless-. . .
+  - Dark1-You based your existence on a lie and therefore you must judge them according
+    to that. Our methods of choosing you, however, are not tied to any lie.
+  - Dark2-For we are absolute.
+  - Dark1-We are the truth.
+  - Dark2-And in the absolute, randomness is the fairest law of all.
+  - Nameless-. . .
+  - "Strange-Are thanj peiro. Er L kamenio eje palou m\u2019ou Thaia."
+  - Strange-Mmmmmmmu.
+  - NamelessSad-Whatever.
+  - Nameless-Why do they speak like that?
+  - Dark1-Every soul has its own language. What you are hearing is the language their
+    soul speaks.
+  - Nameless-Like. . . Taiwanese?
+  - Dark1-No.
+  - "Nameless-I don\u2019t think I get it."
+  - Dark1Sad-Great.
+  - Nameless-Do you know any translators?
+  - Dark2-The language of the soul is unique. There are no translators.
+  - "Dark2-The reason why you\u2019ve been able to understand them this far is because
+    your minds and spirits are distorted by similar cultures and ideas. You all follow
+    similar patterns, and thus recognise them in others."
+  - "Dark1-What stands before you is the purest of souls. One that hasn\u2019t been
+    corrupted by your lie."
+  - cinematic
+  - Nameless-What are they doing?
+  - NamelessSad-Are pure souls supposed to do that?
+  - Strange-Laaaaarrrvaaaa!
+  - cinematic
+  - Strange-Laaaaaaaaaaaaaaaaaaaaaaaaaaaarvaaaaa!
+  - Nameless-Shut up!
+  - cinematic
+  - Strange-. . .
+  - Dark1-. . .
+  - Nameless-What? What is this feeling?
+  - Dark2-Tell us, Nameless One.
+  - Nameless-I feel something. Like a current of emotions emanating from them.
+  - Dark1-Hang onto it.
+  - Nameless-Should I?
+  - "Dark1-It\u2019s the only chance you have at tresspassing the border of language."
+  - Nameless-Why?
+  - Dark1-Because this current you sense is created by something much, much stronger.
+  - Dark1Sad-Emotion.
+  - Dark2-Hang onto it, Nameless One.*bullying
+  - Strange-. . .
+  - Strange-. . .
+  - Dark1-Well?
+  - Dark2-What will it be?
+  - NamelessSad-No. Wait, please.
+  - "NamelessSad-Can\u2019t I just rest for a moment?"
+  - "Dark1-Would it be fair, as you humans say? They didn\u2019t have any, it seems."
+  - Dark2-Not even here.
+  - NamelessSad-I. . .
+  - Dark1-Speak your thoughts, Nameless One.
+  - Strange-. . .
+  - "NamelessSad-Let\u2019s get this over with."
+  - judge
+  moveSpeed: 20
+  musicLayerOrders:
+  - 1_0_80_200
+  - 2_0_50_100
+  - 2_50_10_100
+  - 1_80_100_100
+  - 0_0_100_50
+  - 3_0_100_100
+--- !u!95 &5901207763352305534
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178125423899843746}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2101baba70cbfe24da52b0dc9e0623d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5901207763352305522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178125423899843746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d823cd7d69a604439b87a8bc285d2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

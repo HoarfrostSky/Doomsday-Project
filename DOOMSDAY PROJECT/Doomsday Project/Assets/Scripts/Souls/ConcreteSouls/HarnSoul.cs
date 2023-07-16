@@ -8,5 +8,6 @@ namespace Souls.ConcreteSouls
 {
     public class HarnSoul : ASoul
     {
+
     }
 }

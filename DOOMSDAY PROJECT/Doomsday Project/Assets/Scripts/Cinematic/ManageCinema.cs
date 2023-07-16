@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using Souls;
+using Souls.Interfaces;
 
 namespace Cinematic
 {
@@ -12,11 +14,12 @@ namespace Cinematic
         private GameObject soul;
         private AnimatorStateInfo currentAnimation;
 
+        public String[] harnAnimationList;
+        public String[] strangeAnimationList;
+
         private void Awake()
         {
             GameObject.FindGameObjectWithTag("SoulSpawner").GetComponent<SoulSpawner>().sendSoulHandler += RegisterNewSoul;
-
-            //Borrar. Solo por temas de debug
             soul = GameObject.FindGameObjectWithTag("Soul");
         }
 
@@ -25,9 +28,9 @@ namespace Cinematic
             this.soul = newSoul;
         }
 
-        public void ActivateCinematic(int n)
+        public void ActivateCinematic(int modeNumber)
         {
-            this.mode = n;
+            this.mode = modeNumber;
 
             switch(mode)
             {
@@ -51,7 +54,17 @@ namespace Cinematic
         private void SoulMode()
         {
             n++;
-            soul.GetComponent<Animator>().SetInteger("animationNumber", n);
+
+            switch(soul.GetComponent<ASoul>().GetID())
+            {
+                case 1:
+                    soul.GetComponent<Animator>().SetTrigger(harnAnimationList[n]);
+                    break;
+                case 2:
+                    soul.GetComponent<Animator>().SetTrigger(strangeAnimationList[n]);
+                    break;
+            }
+
             currentAnimation = soul.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
         }
     }

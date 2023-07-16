@@ -5,6 +5,7 @@ using System;
 using UnityEngine;
 using States.Interfaces;
 using Interactuables.Interfaces;
+using Cinematic;
 
 namespace States.ConcreteStates
 {
@@ -14,6 +15,7 @@ namespace States.ConcreteStates
         private GameObject showInteractGO;
         private Animator playerAnim;
         private GameObject soul;
+        private GameObject cinemaManager;
 
         public State_Explore(IPlayerState playerState) : base(playerState)
         {
@@ -29,6 +31,9 @@ namespace States.ConcreteStates
 
             soul = GameObject.FindGameObjectWithTag("Soul");
             if(soul != null) MonoBehaviour.Destroy(soul);
+
+            if (cinemaManager == null) cinemaManager = GameObject.FindGameObjectWithTag("CinemaManager");
+            cinemaManager.GetComponent<ManageCinema>().ResetCinematic();
 
             GameObject[] listaInteractuables = GameObject.FindGameObjectsWithTag("Interactuable");
             foreach (GameObject GO in listaInteractuables)

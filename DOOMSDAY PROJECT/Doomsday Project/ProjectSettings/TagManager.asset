@@ -16,6 +16,8 @@ TagManager:
   - Judge
   - Dark1
   - Dark2
+  - MusicManager
+  - DramaticScreen
   layers:
   - Default
   - TransparentFX

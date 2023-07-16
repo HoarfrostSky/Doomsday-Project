@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using Souls.Interfaces;
 using Cinematic;
+using DramaticScreen;
 
 namespace Souls
 {
@@ -12,6 +13,8 @@ namespace Souls
         public int[] soulOrderList;
         public GameObject[] soulPrefabList;
         public GameObject soulContainerParent;
+        public float introTime;
+        public String introText;
 
         private int soulPointer = 0;
         private GameObject currentSoul;
@@ -47,6 +50,8 @@ namespace Souls
         private Dictionary<int, String[]> randomDialogueDictionary = new Dictionary<int, string[]>() { };
 
         public EventHandler<GameObject> sendSoulHandler;
+        public EventHandler<String> dramaticTextHandler;
+        public EventHandler<float> introTimeHandler;
 
         private void Awake()
         {
@@ -83,18 +88,9 @@ namespace Souls
 
         public void SpawnSoul()
         {
-            Debug.Log("Alma numero " + soulPointer + ", de tipo " + soulOrderList[soulPointer]);
-            currentSoul = Instantiate(soulDictionary[soulOrderList[soulPointer]], soulContainerParent.transform);
-            currentSoul.GetComponent<ASoul>().MoveToLocalPosition(new Vector3(15f, 0f, 0f));
+            dramaticTextHandler?.Invoke(this, introText);
 
-            sendSoulHandler?.Invoke(this, currentSoul);
-
-            if(soulOrderList[soulPointer] == 0)
-            {
-                ChooseRandomSoul();
-            }
-
-            soulPointer++;
+            StartCoroutine(GenerateSoulGO(introTime));
         }
 
         private void ChooseRandomSoul()
@@ -106,6 +102,35 @@ namespace Souls
         {
             chosenDialogue = (int)UnityEngine.Random.Range(0, nRandomDialogues);
             return randomDialogueDictionary[chosenDialogue];
+        }
+
+        IEnumerator GenerateSoulGO(float time)
+        {
+            Debug.Log("Alma numero " + soulPointer + ", de tipo " + soulOrderList[soulPointer]);
+            GameObject currentSoulGO = soulDictionary[soulOrderList[soulPointer]];
+            currentSoulGO.SetActive(false);
+            currentSoul = Instantiate(currentSoulGO, soulContainerParent.transform);
+
+            Debug.Log(currentSoul.GetComponent<ASoul>());
+
+            GameObject.FindGameObjectWithTag("DramaticScreen").GetComponent<ManageDramaticScreen>().SetSoul(currentSoul.GetComponent<ASoul>());
+            introTimeHandler?.Invoke(this, introTime);
+
+            yield return new WaitForSeconds(time);
+
+            currentSoulGO.SetActive(true);
+
+            yield return null;
+
+            sendSoulHandler?.Invoke(this, currentSoul);
+
+            if (soulOrderList[soulPointer] == 0)
+            {
+                ChooseRandomSoul();
+            }
+
+            soulPointer++;
+            yield return null;
         }
     }
 }

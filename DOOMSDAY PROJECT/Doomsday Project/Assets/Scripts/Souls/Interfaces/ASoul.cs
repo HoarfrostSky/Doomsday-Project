@@ -5,6 +5,7 @@ using Dialogue;
 using UnityEngine;
 using States.Controllers;
 using States.ConcreteStates;
+using Music;
 
 namespace Souls.Interfaces
 {
@@ -13,8 +14,11 @@ namespace Souls.Interfaces
         public int id;
         public String[] dialogue;
         public float moveSpeed;
+        public String[] musicLayerOrders;
+        private int musicOrder = -1;
         protected bool interactuable = false;
         protected GameObject playerGO;
+        protected ManageMusic musicManager;
 
         public EventHandler<String[]> sendDialogueHandler;
 
@@ -22,6 +26,35 @@ namespace Souls.Interfaces
         {
             playerGO = GameObject.FindGameObjectWithTag("Player");
             playerGO.GetComponent<DialogueManager>().ConnectSoul(this);
+
+            
+        }
+
+        private void Start()
+        {
+            MoveToLocalPosition(new Vector3(15f, 0f, 0f));
+        }
+
+        public void NextMusicOrder()
+        {
+            musicOrder++;
+            String[] processedOrder = musicLayerOrders[musicOrder].Split("_");
+
+            if(musicManager == null)
+            {
+                musicManager = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<ManageMusic>();
+                musicManager.StartMusic(id);
+            }
+
+            musicManager.ManageVolumeLayer(int.Parse(processedOrder[0]), float.Parse(processedOrder[1]), float.Parse(processedOrder[2]), float.Parse(processedOrder[3]));
+        }
+
+        public void NextMusicOrders(int n)
+        {
+            for(int i = 0; i < n; i++)
+            {
+                NextMusicOrder();
+            }
         }
 
         public int GetID()

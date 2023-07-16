@@ -31,6 +31,7 @@ namespace States.ConcreteStates
             playerGO.GetComponent<Animator>().SetTrigger("AttackIdle");
 
             this.sword = GameObject.FindGameObjectWithTag("Sword");
+            sword.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
             this.swordScript = sword.GetComponent<SwordScript>();
             this.soul = GameObject.FindGameObjectWithTag("Soul");
             soul.GetComponent<Animator>().SetTrigger("SoulTerrorTransition");
