@@ -1417,11 +1417,171 @@ MonoBehaviour:
   - Dark1-Sin.
   - Dark2-Do it already, Nameless One.
   - judge
-  randomDialogue11: []
-  randomDialogue12: []
-  randomDialogue13: []
-  randomDialogue14: []
-  randomDialogue15: []
+  randomDialogue11:
+  - Dark1-This soul weeps.
+  - Dark2-Seems to feel an indescribable pain.
+  - Nameless-This cry twists my guts.
+  - Dark1-God chose the weakest for the toughest.
+  - NamelessSad-I once heard that tears only bring out more tears. Humans will never
+    get used to a cry.
+  - Dark2-Breathe and focus.
+  - Nameless-Uh, any record on this one?
+  - Dark1-Does not seem like it, but I could try to look for them anyway.
+  - Dark2-We only know that this one seems to be destroyed.
+  - Soul12-Who are you?
+  - "NamelessSad-Ugh, I\u2019ll never get used to this."
+  - Soul12-Where. . .?
+  - Dark1-Oh, sorrowful soul, face your weakness and speak!
+  - Soul12-I had to do it!
+  - Soul12-Oh my god, I. . .
+  - Nameless-Do what?
+  - Soul12-Fuck.
+  - "Soul12Sad-She couldn\u2019t make it, nor our pretty girl."
+  - Dark1-Explain.
+  - "Soul12Sad-We wanted a sibling for our daughter. That\u2019s all we wanted! Why
+    do all bad things happen to us? Oh god."
+  - "Soul12Sad-We. . . It was a girl. We were naming her Catherine. My mother-in-law\u2019s
+    name."
+  - Soul12Sad-We went on a holiday to celebrate to Bali. The second day, we went
+    to a beach bar and it happened.
+  - Soul12Sad-. . .
+  - Dark2-Continue.
+  - "Soul12Sad-I can\u2019t."
+  - Nameless-Hey! Leave them some time.
+  - Soul12-No. They are right. I must tell what happened.
+  - Soul12-Blood. Everywhere. It was horrible. We went to the hospital as soon as
+    we could. When we got there, she was unconscious, my wife. My dear wife. Her
+    skin was pale as the coldest snow.
+  - Soul12Sad-The doctors made me decide between her and Catherine.
+  - Soul12Sad-. . .
+  - "Soul12-She didn\u2019t feel her tummy when she woke up. We both cried. We didn\u2019t
+    want to leave the hospital either. We wanted to stay near Catherine. I want to
+    stay near Catherine."
+  - "Soul12-I don\u2019t remember what happened after, but I sure know I didn\u2019t
+    leave that place. Be this a dream or doomsday itself, please I beg you, get me
+    to where you keep her from us."
+  - "NamelessSad-But I don\u2019t know where she is."
+  - Soul12-Are you not God himself?
+  - "NamelessSad-I\u2019m sorry."
+  - Soul12-No. You are not.
+  - Nameless-What?
+  - Soul12-How could you be? How could you know how this feels?
+  - Dark2-It gets interesting, at last.
+  - Dark1-Oh shut up, you two. We still have a bunch more to go. Come on. Quick!
+  - "Nameless-I\u2019m sorry."
+  - "Soul12-I don\u2019t wanna hear those words again, you hear me? Shut up already
+    and bring me to her. Oh god. . . I. . . I have to tell her I\u2019m sorry."
+  - Soul12Sad-Catherine. . .
+  - judge
+  randomDialogue12:
+  - "Dark1-Again, another soul wandering what\u2019s beyond."
+  - Nameless-Any records on this one?
+  - Dark2-Wealthy. Had one of the biggest companies in this last century.
+  - Nameless-Does that matter to God?
+  - "Dark1-We don\u2019t know that. You should."
+  - NamelessSad-Sometimes, I wish I was one of those souls.
+  - Soul13-Shall we start, please?
+  - Dark2-Why did you force innocent people to work?
+  - Nameless-What? What are you talking about?
+  - Dark1-About those entire families you promised great salaries but instead gave
+    them suffering. More that twelve hours working without any breaks.
+  - Soul13-Money has a price.
+  - Nameless-Huh. Are you calling slavery a price?
+  - "Soul13-Slavery? You must be kidding. It\u2019s not slavery, but hard work."
+  - Dark1-Nameless One, slavery or hard work?
+  - Nameless-Wait. Did you have any actual reason to do that?
+  - Soul13-Reason? You already know the reason. Everyone knows it.
+  - Nameless-I must be late to the party, then.
+  - Soul13Sad-Power.
+  - Nameless-Great.
+  - judge
+  randomDialogue13:
+  - "Nameless-I don\u2019t know what to think of this one. Do we know something?"
+  - Dark2-I think not.
+  - Soul14-Ah. . . So it is today.
+  - Dark1-Unfortunately yes, spirit in pain.
+  - Soul14-Where is everyone?
+  - "Dark2-That doesn\u2019t matter. Speak your sins or beatitudes."
+  - Soul14-Where should I start?
+  - Nameless-Sum it up.
+  - Soul14-Well, I was born in. . .
+  - NamelessSad-Yeah, skip that part. Anything interesting in the recent years?
+  - Soul14-Nothing but a noble life, although. . .
+  - Nameless-Yeah?
+  - Soul14Sad- The roulette ruined me.
+  - Dark1-Vices are not proper of noble souls.
+  - Dark2-The underworld is for the vicious.
+  - "Nameless-I don\u2019t see anything but guilt in your teary eyes."
+  - Soul14-My family needed food.
+  - Dark1-Did you drink? Confess!
+  - Soul14-And what about it? Was there any other way to forget this disgusting life?
+  - "Dark2-Whoever wants to rise, rises. If you didn\u2019t, it was because you were
+    made for living among the ashes."
+  - Soul14-Ah! My chest! Sorrow is breaking my ribs!
+  - Nameless-What is going on?
+  - Dark1-Every vicious soul always tries to make you feel sorry for them. Be careful.
+  - "Soul14-I know what you are. Can\u2019t you think like a human for just once?"
+  - Dark2-Do it.
+  - judge
+  randomDialogue14:
+  - Dark1-Wow, this one feels really confident.
+  - "Nameless-Finally there\u2019s one to make this easier."
+  - Nameless-Any records on this one?
+  - Dark1-A soldier whose special skill is killing.
+  - Dark2-This one was capable of making an entire building fly into pieces in just
+    two seconds.
+  - "Nameless-Isn\u2019t killing one of the deadly sins or something like that?"
+  - "Soul15-I\u2019m ready."
+  - Dark2-Why so?
+  - "Soul15-I\u2019ve been through everything a human can imagine and I know what
+    you are going to say."
+  - Dark1-But confess, why did you do it?
+  - Soul15-I was just following orders.
+  - Dark1-And why did you follow them?
+  - Soul15Sad-. . .
+  - Nameless-He seems not to like killing.
+  - "Dark2-It\u2019s yet soon to decide."
+  - "Nameless-How do you feel after everything you\u2019ve done?"
+  - Soul15Sad-. . .
+  - Dark1-Well?
+  - Soul15Sad-. . .
+  - Dark2-Nothing?
+  - "Soul15Sad-I\u2019m not allowed to show weakness, even in front of my loved ones."
+  - "Soul15Sad-I can\u2019t remember how it feels to sense the trace of tears running
+    down my face."
+  - "Soul15Sad-It\u2019s been long since the last time I was told \u201CIt's good
+    to see you back\u201D."
+  - "Soul15Sad-I don\u2019t remember how to hug."
+  - "Soul15Sad-I don\u2019t remember how to love."
+  - Dark1-. . .
+  - Soul15Sad-In truth, I wish I had never applied for this job.
+  - Soul15-But the duty of protecting my people has kept me awake.
+  - Dark2-Protecting people equals to killing others?
+  - "Soul15-It\u2019s kill or be killed."
+  - Dark1-Condemn or be condemned?
+  - Dark2-What do you think, Nameless One?
+  - judge
+  randomDialogue15:
+  - Nameless-Ah, another one.
+  - Nameless-Any records on this one?
+  - Dark1-Yes. In fact. . . Oh! What a surprise! This one was known as the Midnight
+    Strangler.
+  - Dark2-He was recently jailed. He has killed almost a hundred teenagers. He also
+    raped twenty-eight of them.
+  - "Dark2Sad-At least that\u2019s what the texts say."
+  - Nameless-. . .
+  - Nameless-Disgusting.
+  - "Nameless-Anyway, I\u2019ll let him talk, maybe he has something to tell us."
+  - Dark1-Well, well.
+  - Nameless-Speak, Midnight Strangler.
+  - Soul16-Ha ha ha! Are you God?
+  - "Soul16-Then God is the most disappointing thing I\u2019ve ever seen!"
+  - Soul16-Your neck shines.
+  - Soul16-If I could only touch it for one second. . .
+  - Dark2-I think this one is clear.
+  - Nameless-Seems like it.
+  - Soul16-Yeah, seems like fucking it. So go at it already and fuck off.
+  - judge
   randomDialogue16: []
   randomDialogue17: []
   randomDialogue18: []
@@ -1430,7 +1590,7 @@ MonoBehaviour:
   randomDialogue21: []
   randomDialogue22: []
   randomDialogue23: []
-  nRandomDialogues: 10
+  nRandomDialogues: 15
 --- !u!4 &840260646
 Transform:
   m_ObjectHideFlags: 0
@@ -2877,6 +3037,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1618803795249335606, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1618803795249335609, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2900,6 +3064,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 952946471e7d34d4abbcae31f779a267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1618803796070606049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 519420028, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+  m_PrefabInstance: {fileID: 1618803796070606046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1618803796070606050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618803796070606049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d6a4fd237a9274187ee0e5bc82a726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionsList:
+  - -2,2,-10_800_5
 --- !u!1001 &3618811009080278073
 PrefabInstance:
   m_ObjectHideFlags: 0

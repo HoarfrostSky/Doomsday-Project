@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using Dialogue;
 using Player;
 using CameraNamespace;
@@ -16,6 +17,8 @@ namespace Controls
     {
         [SerializeField] private float speed;
         [SerializeField] private float swordWeight;
+
+        public EventHandler<int> CameraHandler;
 
         public void CondemnControls(State_Condemn currentState, IPlayerState playerStateController, float angleCondemn, GameObject sword, GameObject player)
         {
@@ -43,13 +46,14 @@ namespace Controls
                     player.GetComponent<Animator>().SetTrigger("Attack1");
                     sword.transform.localScale = new Vector3(0f, 0f, 1f);
 
-                    //---
-                    //Gestionar animación de alma siendo atacada no desde aquí sino desde eventos de animaciones
-                    //---
-
-                    //playerStateController.SetState(new State_Explore(playerStateController));
                     Debug.Log("SOUL CONDEMNED");
                 }
+            }
+
+            if(Input.GetKeyDown(KeyCode.C))
+            {
+                Debug.Log("Se envía la orden");
+                CameraHandler?.Invoke(this,0);
             }
         }
 
