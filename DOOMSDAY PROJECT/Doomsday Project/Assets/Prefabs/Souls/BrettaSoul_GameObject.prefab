@@ -1,0 +1,388 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5901207762719172497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5901207762719172502}
+  - component: {fileID: 5901207762719172500}
+  - component: {fileID: 5901207762719172503}
+  - component: {fileID: 5901207762719172501}
+  m_Layer: 0
+  m_Name: SaveAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5901207762719172502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901207762719172497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6178125423899843759}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5901207762719172500
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901207762719172497}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.8947369, y: 2.9473684}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!95 &5901207762719172503
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901207762719172497}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d58d63a5d44e77459b72c2680156a1d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5901207762719172501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901207762719172497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 681aa5a2165b1514eb02c60faad5cb45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6178125423899843746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6178125423899843759}
+  - component: {fileID: 6178125423899843744}
+  - component: {fileID: 3604671669610379543}
+  - component: {fileID: 5901207763352305534}
+  - component: {fileID: 5901207763352305522}
+  m_Layer: 0
+  m_Name: BrettaSoul_GameObject
+  m_TagString: Soul
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6178125423899843759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178125423899843746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5901207762719172502}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &6178125423899843744
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178125423899843746}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4, y: 2.9473684}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &3604671669610379543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178125423899843746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335742200e846f34e9de54f53b7df9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4
+  maxAtaques: 2
+  dialogue:
+  - Nameless-Welcome to the Last Halls, sorrowful soul.
+  - "Bretta-I\u2019ve been wandering. . . for so long."
+  - "Bretta-I\u2019m dead, huh?"
+  - Nameless-It seems so, yes.
+  - Bretta-What killed me?
+  - Dark1-Fate.
+  - Bretta-I figured as much.
+  - Bretta-Wait. Oh my god.
+  - BrettaSad-Is Colin okay?
+  - Nameless-Who?
+  - cinematic
+  - BrettaSad-My son. I mean. . . Oh god. What happened to me? Is he alright?
+  - Dark2-Your son. . .
+  - Nameless-No.
+  - "Dark2-What\u2019s the matter, Nameless One?"
+  - "Nameless-Let me talk with her. Don\u2019t interfere."
+  - Nameless-May I ask for your name, painful soul?
+  - "Bretta-I\u2019m Bretta."
+  - "Nameless-Right. Bretta. . . let\u2019s try to calm down for a moment."
+  - Nameless-No soul named Colin has passed through these halls.
+  - "Bretta-Does that mean he\u2019s fine?"
+  - "Nameless-Exactly. Can\u2019t you see you are the only dead one here?"
+  - Bretta-What happened to me?
+  - Dark1Sad-That matters not.
+  - Bretta-I want to know.
+  - Dark2-So many want to, but it is not our duty to discuss that. You are here to
+    be judged, Bretta.
+  - Bretta-. . .
+  - cinematic
+  - NamelessSad-Here we go again.
+  - Nameless-Well, Bretta, tell me about you. Experiences, regrets, sins. Only the
+    interesting parts, please.
+  - "Bretta-I don\u2019t know what to tell you, God, or whoever you are. I'm sure
+    you\u2019ve already heard this a hundred times."
+  - "Nameless-I don\u2019t mind hearing it again."
+  - "Bretta-I guess I\u2019ll start by the beginning."
+  - Nameless-Is it really necessary?
+  - Bretta-The beginning is always necessary.
+  - Nameless-. . .
+  - Bretta-Well.
+  - Bretta-When I was a child I lived a strict parenting. The grandiose dreams of
+    a little girl were no more than mere words of innocence. But oh. . . what dreams.
+    . .
+  - Bretta-I always dreamed of exploring the unknown, of dangerous adventures. I
+    dreamed of entering a dark cave and exiting with my hands full of gold and jewels.
+  - "Bretta-I dreamed of traveling the skies, swiming across the clouds at dusk.
+    I\u2019d soak in its beauty and become one with the approaching firmament."
+  - Bretta-And indeed, I ended up being just another distant star. So far from others.
+    So far from everything.
+  - Bretta-I grew to accept that fact, to understand it.
+  - Bretta-Everything seemed so distant.
+  - BrettaSad-And in that distance, I lost myself.
+  - Nameless-What happened?
+  - BrettaSad-. . .
+  - BrettaSad-I hated them all.
+  - BrettaSad-Life was so dull, so uninteresting.
+  - "Bretta-I couldn\u2019t stand the image of someone enjoying themselves. How?
+    What are they seeing in something so mundane, so repetitive, so full of hate
+    and sorrow?"
+  - Bretta-Could they see something I did not or was I the only one who could?
+  - "Dark1-It\u2019s the only true constant in the lie of life, no matter who passes
+    that door."
+  - Bretta-What do you mean?
+  - Dark1-Sorrow. Fear. Longing.
+  - Dark2-Happiness. Determination. Pride.
+  - Dark1Sad-All of them are tied together by pain.
+  - Dark1Sad-For pain is the cement of life.
+  - Nameless-Is that what you think, you two?
+  - "Dark1-We don\u2019t have any opinion on the matter, Nameless One."
+  - Dark2-It just is.
+  - Bretta-I killed a guy once.
+  - cinematic
+  - Nameless-Excuse me?
+  - "Bretta-I opened a special hole in my heart to bury her. Every morning she would
+    try to escape, and every morning I wouldn\u2019t let her, because it would hurt
+    even more than what it already did."
+  - Bretta-. . .
+  - BrettaSad-I made some pretty bad choices. I did. All of it was me.
+  - Bretta-I became arrogant and spiteful and soon I was left wandering the streets.
+    Ah, the cold nights, the indiferent stares. Indeed, I had achieved my dream,
+    in a way.
+  - Bretta-I became the most distant of stars.
+  - Nameless-. . .
+  - Bretta-I was so confused, so angry at everything. Eventually, anger turned to
+    sorrow, the same one I felt many years before and then, I understood.
+  - Bretta-Those two that stand beneath you are right. Pain is the only constant
+    in life.
+  - Bretta-Everything else is temporary. It all vanishes as soon as it appears.
+  - BrettaSad-. . .
+  - BrettaSad-There was this guy, who lived with us in a small community in the outskirts
+    of the city. John.
+  - "BrettaSad-It wasn\u2019t official, but John behaved as the leader of the group
+    and everyone accepted it. Not me. He was always trying to fill us with false
+    hope, to convince us to believe in a better tomorrow."
+  - "Bretta-Couldn\u2019t he just leave us to rot?"
+  - "Bretta-Couldn\u2019t he see that our obligation as human beings was to suffer?"
+  - "Bretta-But there was something that I couldn\u2019t stand even more than any
+    of that. Can you guess?"
+  - NamelessSad-You tell me.
+  - "Bretta-He loved to go out and explore. He\u2019d always find something in some
+    forgotten place. Nothing useful, mind you. It was just a hobby."
+  - Bretta-Everyone just let him do his thing, and yet, it drove me mad.
+  - Nameless-Why is that?
+  - Bretta-Guess.
+  - Nameless-. . .
+  - Bretta-So one day I suggested going out with him to explore. On the way to our
+    destination, I just got him down on the ground and. . . strangled him.
+  - BrettaSad-I never came back to that group. I was alone, once again.
+  - Dark1-Nameless One?
+  - Bretta-But then, he appeared.*dreams_of_adventure
+  - "BrettaSad-And now fear strangles my heart once more. I fear Colin won\u2019t
+    be able to experience all the magic this world has in store for him."
+  - "BrettaSad-If whatever happened to me also affected him, I fear he will leave
+    this world the same way I did. In truth, that is what I fear the most. There
+    can\u2019t be another one like me."
+  - BrettaSad-Do you think he hates me, the same way I hated my family?
+  - Nameless-. . .
+  - Dark1-Enough time has been given.
+  - Dark2-The judgement must continue.
+  - BrettaSad-. . .
+  - BrettaSad-This is it then.
+  - BrettaSad-I guess not all stories have a proper ending anyways. After all, we
+    are more than just stories.
+  - Bretta-Right?
+  - judge
+  moveSpeed: 20
+  musicLayerOrders:
+  - 0_0_50_100
+  - 0_50_75_50
+  - 1_0_50_50
+  - 0_75_100_200
+  - 1_50_80_200
+  - 2_0_100_200
+--- !u!95 &5901207763352305534
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178125423899843746}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f80eee9541dcaa40a99fda21f62d02c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5901207763352305522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178125423899843746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d823cd7d69a604439b87a8bc285d2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

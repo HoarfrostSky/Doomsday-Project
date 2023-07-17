@@ -16,6 +16,8 @@ namespace Souls
         public float introTime;
         public String introText;
 
+        public int maxRandomAnimations;
+
         private int soulPointer = 0;
         private GameObject currentSoul;
         private Dictionary<int, GameObject> soulDictionary = new Dictionary<int, GameObject>() { };
@@ -100,7 +102,24 @@ namespace Souls
 
         private String[] GenerateRandomDialogue()
         {
-            chosenDialogue = (int)UnityEngine.Random.Range(0, nRandomDialogues);
+            int random = (int)UnityEngine.Random.Range(1, nRandomDialogues);
+            chosenDialogue = random;
+
+            while (random > maxRandomAnimations)
+            {
+                random -= maxRandomAnimations;
+            }
+
+            Animator soulAnim = GameObject.FindGameObjectWithTag("Soul").GetComponent<Animator>();
+
+            for (int i = 0; i < maxRandomAnimations; i++)
+            {
+                soulAnim.SetLayerWeight(i, 0);
+            }
+
+            soulAnim.SetLayerWeight(random, 1);
+            soulAnim.SetInteger("SoulNumber", random);
+
             return randomDialogueDictionary[chosenDialogue];
         }
 

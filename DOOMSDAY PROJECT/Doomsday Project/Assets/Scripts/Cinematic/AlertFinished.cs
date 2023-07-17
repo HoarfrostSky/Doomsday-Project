@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using States.Controllers;
 using States.ConcreteStates;
 using Souls;
+using Sword;
 using UnityEngine;
 
 namespace Cinematic
@@ -24,6 +25,21 @@ namespace Cinematic
         {
             GameObject.FindGameObjectWithTag("Soul").GetComponentInChildren<SaveAnimationManager>().gameObject.GetComponent<Animator>().SetTrigger("DestroyAction");
             GameObject.FindGameObjectWithTag("Dark1").GetComponent<Animator>().SetTrigger("CastSpell");
+        }
+
+        public void NextAttack()
+        {
+            GameObject sword = GameObject.FindGameObjectWithTag("Sword");
+            sword.GetComponent<SwordScript>().SetWeight(sword.GetComponent<SwordScript>().GetWeight()*1.5f);
+
+            StartCoroutine(ResetToCondemn());
+        }
+
+        IEnumerator ResetToCondemn()
+        {
+            yield return new WaitForSeconds(1f);
+            playerStateController.SetState(new State_Condemn(playerStateController));
+            yield return null;
         }
     }
 }

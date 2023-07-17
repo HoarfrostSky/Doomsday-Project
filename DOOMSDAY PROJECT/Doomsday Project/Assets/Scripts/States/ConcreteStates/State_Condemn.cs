@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Controls;
 using UnityEngine;
 using Sword;
+using Player;
 using States.Interfaces;
 
 namespace States.ConcreteStates
@@ -33,8 +34,10 @@ namespace States.ConcreteStates
             this.sword = GameObject.FindGameObjectWithTag("Sword");
             sword.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
             this.swordScript = sword.GetComponent<SwordScript>();
+
             this.soul = GameObject.FindGameObjectWithTag("Soul");
-            soul.GetComponent<Animator>().SetTrigger("SoulTerrorTransition");
+            if(playerGO.GetComponent<AttackSoulManager>().GetCurrentAttack() == 0) soul.GetComponent<Animator>().SetTrigger("SoulTerrorTransition");
+
             this.dark1 = GameObject.FindGameObjectWithTag("Dark1");
             sword.transform.localPosition = new Vector3(-3.3f, 0f, 0f);
             sword.transform.localScale = new Vector3(1f, 1f, 1f);

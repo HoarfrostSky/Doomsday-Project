@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  maxAtaques: 1
   dialogue:
   - Harn-At last! I thought I would never see someone again.
   - Nameless-What?

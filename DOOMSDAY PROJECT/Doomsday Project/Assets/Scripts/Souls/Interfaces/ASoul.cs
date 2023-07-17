@@ -12,6 +12,7 @@ namespace Souls.Interfaces
     public abstract class ASoul : MonoBehaviour, ISoul
     {
         public int id;
+        public int maxAtaques;
         public String[] dialogue;
         public float moveSpeed;
         public String[] musicLayerOrders;
@@ -26,8 +27,6 @@ namespace Souls.Interfaces
         {
             playerGO = GameObject.FindGameObjectWithTag("Player");
             playerGO.GetComponent<DialogueManager>().ConnectSoul(this);
-
-            
         }
 
         private void Start()
@@ -46,7 +45,7 @@ namespace Souls.Interfaces
                 musicManager.StartMusic(id);
             }
 
-            musicManager.ManageVolumeLayer(int.Parse(processedOrder[0]), float.Parse(processedOrder[1]), float.Parse(processedOrder[2]), float.Parse(processedOrder[3]));
+            if(processedOrder.Length == 4) musicManager.ManageVolumeLayer(int.Parse(processedOrder[0]), float.Parse(processedOrder[1]), float.Parse(processedOrder[2]), float.Parse(processedOrder[3]));
         }
 
         public void NextMusicOrders(int n)

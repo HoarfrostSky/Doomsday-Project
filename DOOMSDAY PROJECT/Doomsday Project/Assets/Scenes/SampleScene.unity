@@ -557,6 +557,11 @@ MonoBehaviour:
   - StrangeDance
   - StrangePoint
   - StrangeSad
+  nurAnimationList: []
+  brettaAnimationList:
+  - BrettaStandUp
+  - BrettaStandDown
+  - BrettaBreathe
 --- !u!4 &414507821
 Transform:
   m_ObjectHideFlags: 0
@@ -1215,21 +1220,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 952cec66501d3e34aafb5c65125ec46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soulOrderList: 02000000000000000000000002000000030000000000000000000000040000000000000000000000000000000500000000000000060000000000000000000000070000000000000000000000000000000000000008000000000000000000000009000000
+  soulOrderList: 04000000000000000000000002000000030000000000000000000000040000000000000000000000000000000500000000000000060000000000000000000000070000000000000000000000000000000000000008000000000000000000000009000000
   soulPrefabList:
   - {fileID: 6619523800621813888, guid: 155d2ac2feec42d40960fdccce6312ea, type: 3}
   - {fileID: 313089675144221528, guid: acf66263ac0230946acf4665adf110cb, type: 3}
+  - {fileID: 1276560589448824382, guid: a87a54e87cd637640803686d90d7af77, type: 3}
+  - {fileID: 6178125423899843746, guid: 857337b374dfa8945bebf2161d074635, type: 3}
   - {fileID: 6178125423899843746, guid: 857337b374dfa8945bebf2161d074635, type: 3}
   soulContainerParent: {fileID: 685872510}
   introTime: 5
   introText: A NEW SOUL IS GRANTED PASSAGE
+  maxRandomAnimations: 3
   randomDialogue0:
   - Dark2-Oh, another painful soul joins the Jugdement.
-  - Soul6-. . .
+  - Soul1-. . .
   - Nameless-Welcome to the Last Hall, oh sorrowful soul.
-  - Soul6-. . .
+  - Soul1-. . .
   - Nameless-Speak. Speak of yourself.
-  - Soul6Sad-. . .
+  - Soul1Sad-. . .
   - Dark1Sad-Well.
   - judge
   randomDialogue1:
@@ -1339,30 +1347,30 @@ MonoBehaviour:
   randomDialogue7:
   - Dark1-Blessed be the ones who kneel before the judgement of humanity, born onto
     existence by no other than humanity itself.
-  - Soul8-I swear I did nothing.
+  - Soul7-I swear I did nothing.
   - Dark2-The texts within these halls shall prove those words.
   - Nameless-Speak now.
-  - "Soul8-Where is mama? I can\u2019t find mama."
+  - "Soul7-Where is mama? I can\u2019t find mama."
   - NamelessSad-. . .
   - Dark2-Well?
   - Nameless-Are there any records of this one?
   - Dark2-Ask her, sibling.
   - Dark1-Is mama the one who died in the car crash because of you?
-  - "Soul8Sad-No! She can\u2019t. . . be. . ."
+  - "Soul7Sad-No! She can\u2019t. . . be. . ."
   - Dark1-Death took her soul, so did yours.
-  - Soul8-I.
-  - "Soul8Sad-I didn\u2019t mean to! No! It can\u2019t be me. It can\u2019t be me!"
+  - Soul7-I.
+  - "Soul7Sad-I didn\u2019t mean to! No! It can\u2019t be me. It can\u2019t be me!"
   - Dark1-It was you.
   - Nameless-Remorse. . .
   - Dark2-Not remorse, but shame.
-  - "Soul8-I\u2019m sorry!"
+  - "Soul7-I\u2019m sorry!"
   - "Dark1-You\u2019re sorry?"
   - Dark1Sad-Sometimes to be sorry is not enough.
   - "Dark2-That\u2019s why you ended up like your mother."
-  - Soul8-Does that mean I can see her again?
+  - Soul7-Does that mean I can see her again?
   - "NamelessSad-That means you won\u2019t."
-  - Soul8Sad-. . .
-  - "Soul8Sad-I\u2019m scared."
+  - Soul7Sad-. . .
+  - "Soul7Sad-I\u2019m scared."
   - NamelessSad-Me too.
   - Soul8Sad-I wish I could hug her one last time.
   - "Dark1-A party. Drinks, lots of them. You thought you could handle the situation.
@@ -1392,6 +1400,25 @@ MonoBehaviour:
     head.
   - judge
   randomDialogue9:
+  - Soul9-You are not supposed to be here.
+  - "Dark2-They seem to know what\u2019s happening."
+  - Soul9-Where is the only, one and true?
+  - "Nameless-That doesn\u2019t matter. I\u2019m the only one here. You will speak
+    to me only."
+  - "Soul9-Then you must know I\u2019m free from sin."
+  - Dark1-Is that true?
+  - Nameless-Any records on this one?
+  - Dark2-Strangely, not.
+  - Dark1-It is not common for some records to be discarded. When Doomsday came,
+    a lot of them got lost.
+  - Nameless-Why is that?
+  - Dark1-. . .
+  - Dark1Sad-Unorganized paperwork.
+  - "Nameless-I can\u2019t judge someone without the proper information!"
+  - Dark1-Sorry about this one. Hope this mistake does not linger too much in your
+    head.
+  - judge
+  randomDialogue10:
   - Dark1-!
   - Dark1-This one is impure.
   - Dark2-I feel it too.
@@ -1403,7 +1430,7 @@ MonoBehaviour:
   - Dark2-. . .
   - Dark1-Do not wait for too long, Nameless One.
   - judge
-  randomDialogue10:
+  randomDialogue11:
   - Dark1-Another soul awaits its final judgement.
   - Soul11-God?
   - NamelessSad-Not really.
@@ -1429,7 +1456,7 @@ MonoBehaviour:
   - Dark1-Sin.
   - Dark2-Do it already, Nameless One.
   - judge
-  randomDialogue11:
+  randomDialogue12:
   - Dark1-This soul weeps.
   - Dark2-Seems to feel an indescribable pain.
   - Nameless-This cry twists my guts.
@@ -1485,7 +1512,7 @@ MonoBehaviour:
     and bring me to her. Oh god. . . I. . . I have to tell her I\u2019m sorry."
   - Soul12Sad-Catherine. . .
   - judge
-  randomDialogue12:
+  randomDialogue13:
   - "Dark1-Again, another soul wandering what\u2019s beyond."
   - Nameless-Any records on this one?
   - Dark2-Wealthy. Had one of the biggest companies in this last century.
@@ -1507,7 +1534,7 @@ MonoBehaviour:
   - Soul13Sad-Power.
   - Nameless-Great.
   - judge
-  randomDialogue13:
+  randomDialogue14:
   - "Nameless-I don\u2019t know what to think of this one. Do we know something?"
   - Dark2-I think not.
   - Soul14-Ah. . . So it is today.
@@ -1535,7 +1562,7 @@ MonoBehaviour:
   - "Soul14-I know what you are. Can\u2019t you think like a human for just once?"
   - Dark2-Do it.
   - judge
-  randomDialogue14:
+  randomDialogue15:
   - Dark1-Wow, this one feels really confident.
   - "Nameless-Finally there\u2019s one to make this easier."
   - Nameless-Any records on this one?
@@ -1573,7 +1600,7 @@ MonoBehaviour:
   - Dark1-Condemn or be condemned?
   - Dark2-What do you think, Nameless One?
   - judge
-  randomDialogue15:
+  randomDialogue16:
   - Nameless-Ah, another one.
   - Nameless-Any records on this one?
   - Dark1-Yes. In fact. . . Oh! What a surprise! This one was known as the Midnight
@@ -1594,7 +1621,6 @@ MonoBehaviour:
   - Nameless-Seems like it.
   - Soul16-Yeah, seems like fucking it. So go at it already and fuck off.
   - judge
-  randomDialogue16: []
   randomDialogue17: []
   randomDialogue18: []
   randomDialogue19: []
@@ -1602,7 +1628,7 @@ MonoBehaviour:
   randomDialogue21: []
   randomDialogue22: []
   randomDialogue23: []
-  nRandomDialogues: 15
+  nRandomDialogues: 16
 --- !u!4 &840260646
 Transform:
   m_ObjectHideFlags: 0
@@ -1690,7 +1716,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d1f260e274cf1e64fab9a45d35756f96, type: 3}
   - {fileID: 8300000, guid: c47d2cff98b4f084fb992b217888b489, type: 3}
   StrangeLayers:
-  - {fileID: 8300000, guid: 3e8e89595dd15594dbcb5ceb2797fc98, type: 3}
+  - {fileID: 8300000, guid: 9478be90a9deea0409e11c1571321eac, type: 3}
   - {fileID: 8300000, guid: ea7e5caae768b924c9d83e14e30995ff, type: 3}
   - {fileID: 8300000, guid: b11f58137c3546a4fb5bb8745025fb83, type: 3}
   - {fileID: 8300000, guid: 569384b715f35574fba525492f255f84, type: 3}
@@ -2004,71 +2030,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47009a08075c76940bc59abdfaca9b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1126549943
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6178125423899843744, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_Size.x
-      value: 3.4385965
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843744, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843746, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_Name
-      value: StrangeSoul_GameObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843759, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843759, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843759, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843759, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843759, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843759, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843759, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843759, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843759, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843759, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178125423899843759, guid: 857337b374dfa8945bebf2161d074635, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 857337b374dfa8945bebf2161d074635, type: 3}
 --- !u!1 &1352517408
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,6 +2713,8 @@ MonoBehaviour:
   - HarnSad
   - Strange
   - StrangeSad
+  - Bretta
+  - BrettaSad
   - Soul1
   - Soul1Sad
   - Soul2
@@ -2795,36 +2758,38 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bec87b4c18338b8469698b81cac44fe0, type: 3}
   - {fileID: 21300000, guid: fbe9cd7facce0b348a08ed5418f9aa6e, type: 3}
   - {fileID: 21300000, guid: b9a5fb897817be54d946fafc4950b957, type: 3}
-  - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
-  - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
   - {fileID: 21300000, guid: 578bb8b4e593b3f4890dafd1b8897f68, type: 3}
   - {fileID: 21300000, guid: a34e12befc2558b4ab78f9a44f89a5e0, type: 3}
   - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
   - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
   - {fileID: 21300000, guid: 578bb8b4e593b3f4890dafd1b8897f68, type: 3}
   - {fileID: 21300000, guid: a34e12befc2558b4ab78f9a44f89a5e0, type: 3}
+  - {fileID: 21300000, guid: bcd8049eca4398a42879acc2bae8d14d, type: 3}
+  - {fileID: 21300000, guid: 80f8c7c16561a044e96379ac6650a0e6, type: 3}
   - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
   - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
   - {fileID: 21300000, guid: 578bb8b4e593b3f4890dafd1b8897f68, type: 3}
   - {fileID: 21300000, guid: a34e12befc2558b4ab78f9a44f89a5e0, type: 3}
+  - {fileID: 21300000, guid: bcd8049eca4398a42879acc2bae8d14d, type: 3}
+  - {fileID: 21300000, guid: 80f8c7c16561a044e96379ac6650a0e6, type: 3}
   - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
   - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
   - {fileID: 21300000, guid: 578bb8b4e593b3f4890dafd1b8897f68, type: 3}
   - {fileID: 21300000, guid: a34e12befc2558b4ab78f9a44f89a5e0, type: 3}
+  - {fileID: 21300000, guid: bcd8049eca4398a42879acc2bae8d14d, type: 3}
+  - {fileID: 21300000, guid: 80f8c7c16561a044e96379ac6650a0e6, type: 3}
   - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
   - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
   - {fileID: 21300000, guid: 578bb8b4e593b3f4890dafd1b8897f68, type: 3}
   - {fileID: 21300000, guid: a34e12befc2558b4ab78f9a44f89a5e0, type: 3}
+  - {fileID: 21300000, guid: bcd8049eca4398a42879acc2bae8d14d, type: 3}
+  - {fileID: 21300000, guid: 80f8c7c16561a044e96379ac6650a0e6, type: 3}
   - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
   - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
-  - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
-  - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
-  - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
-  - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
-  - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
-  - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
-  - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
-  - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
+  - {fileID: 21300000, guid: 578bb8b4e593b3f4890dafd1b8897f68, type: 3}
+  - {fileID: 21300000, guid: a34e12befc2558b4ab78f9a44f89a5e0, type: 3}
+  - {fileID: 21300000, guid: bcd8049eca4398a42879acc2bae8d14d, type: 3}
+  - {fileID: 21300000, guid: 80f8c7c16561a044e96379ac6650a0e6, type: 3}
   - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
   - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
 --- !u!114 &2048916664
@@ -3152,11 +3117,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: memoryNames.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: memoryNames.Array.data[1]
       value: bullying
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: memoryNames.Array.data[2]
+      value: dreams_of_adventure
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemorySprites.Array.size
@@ -3173,6 +3142,10 @@ PrefabInstance:
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemoryDialogue.Array.data[1]
       value: pruebaprueba2
+      objectReference: {fileID: 0}
+    - target: {fileID: 778246000, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: weight
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1618803795249335605, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: m_RootOrder

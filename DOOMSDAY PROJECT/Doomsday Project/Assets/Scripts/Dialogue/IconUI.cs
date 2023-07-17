@@ -42,5 +42,10 @@ namespace Dialogue
             this.dialogueManager = d;
             dialogueManager.iconHandler += RecieveIcon;
         }
+
+        public Sprite GetCurrentIcon()
+        {
+            return currentIcon;
+        }
     }
 }

@@ -24,6 +24,8 @@ namespace Player
         public String[] carAccidentMemoryDialogue;
         public Sprite[] bullyingMemorySprites;
         public String[] bullyingMemoryDialogue;
+        public Sprite[] dreamsOfAdventureMemorySprites;
+        public String[] dreamsOfAdventureMemoryDialogue;
 
         private void Awake()
         {
@@ -35,6 +37,8 @@ namespace Player
             memoryDialogueDictionary.Add(memoryNames[0], carAccidentMemoryDialogue);
             memorySpritesDictionary.Add(memoryNames[1], bullyingMemorySprites);
             memoryDialogueDictionary.Add(memoryNames[1], bullyingMemoryDialogue);
+            memorySpritesDictionary.Add(memoryNames[2], dreamsOfAdventureMemorySprites);
+            memoryDialogueDictionary.Add(memoryNames[2], dreamsOfAdventureMemoryDialogue);
         }
 
         public void Empathise()
@@ -60,6 +64,7 @@ namespace Player
                 case 3: //Nur
                     break;
                 case 4: //Bretta
+                    soul.NextMusicOrders(3);
                     break;
             }
         }

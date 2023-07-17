@@ -200,7 +200,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.7719297, y: 1.4736842}
+  m_Size: {x: 5.5438595, y: 2.9473684}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -219,9 +219,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  maxAtaques: 1
   dialogue:
   - Dark2-soy un alma aleatoria woo
   moveSpeed: 20
+  musicLayerOrders:
+  - 
 --- !u!95 &1462160376134453663
 Animator:
   serializedVersion: 4
