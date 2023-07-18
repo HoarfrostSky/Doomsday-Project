@@ -9,7 +9,10 @@ namespace Music
     {
         public AudioClip[] HarnLayers;
         public AudioClip[] StrangeLayers;
+        public AudioClip[] NurLayers;
         public AudioClip[] BrettaLayers;
+        public AudioClip[] HayureLayers;
+        public AudioClip[] ColinLayers;
 
         public const int MAX_LAYERS = 5;
 
@@ -36,11 +39,22 @@ namespace Music
                     break;
                 case 3: //Nur
                     Debug.Log("Se ha elegido musica para Nur");
+                    RegisterLayers(NurLayers);
 
                     break;
                 case 4: //Bretta
                     Debug.Log("Se ha elegido musica para Bretta");
                     RegisterLayers(BrettaLayers);
+
+                    break;
+                case 5: //Hayure
+                    Debug.Log("Se ha elegido musica para Hayure");
+                    RegisterLayers(HayureLayers);
+
+                    break;
+                case 6: //Colin
+                    Debug.Log("Se ha elegido musica para Colin");
+                    RegisterLayers(ColinLayers);
 
                     break;
 
@@ -61,9 +75,6 @@ namespace Music
 
         public void ManageVolumeLayer(int nLayer, float iniVol, float endVol, float speedChange)
         {
-            Debug.Log("Capa a la que se le cambiará el volumen: " + nLayer);
-            Debug.Log("Volumen inicial: " + iniVol/100);
-            Debug.Log("Volumen final: " + endVol/100);
             StartCoroutine(VolumeLerp(currentLayers[nLayer], iniVol/100, endVol/100, speedChange));
         }
 
@@ -74,8 +85,6 @@ namespace Music
             {
                 musicLayer.volume = Mathf.Lerp(initialVolume, endVolume, elapsed);
                 elapsed += (0.001f * speed * Time.deltaTime);
-
-                Debug.Log("Volumen actual de la capa es " + musicLayer.volume);
                 yield return null;
             }
         }

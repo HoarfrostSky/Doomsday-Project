@@ -18,6 +18,8 @@ namespace Cinematic
         public String[] strangeAnimationList;
         public String[] nurAnimationList;
         public String[] brettaAnimationList;
+        public String[] hayureAnimationList;
+        public String[] colinAnimationList;
 
         private void Awake()
         {
@@ -70,6 +72,12 @@ namespace Cinematic
                     break;
                 case 4:
                     soul.GetComponent<Animator>().SetTrigger(brettaAnimationList[n]);
+                    break;
+                case 5:
+                    soul.GetComponent<Animator>().SetTrigger(hayureAnimationList[n]);
+                    break;
+                case 6:
+                    soul.GetComponent<Animator>().SetTrigger(colinAnimationList[n]);
                     break;
             }
 

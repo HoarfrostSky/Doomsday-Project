@@ -562,6 +562,13 @@ MonoBehaviour:
   - BrettaStandUp
   - BrettaStandDown
   - BrettaBreathe
+  hayureAnimationList:
+  - HayureTryAttack
+  - HayureConstantAttack
+  - HayureOpenArms
+  colinAnimationList:
+  - ColinJump
+  - ColinJump
 --- !u!4 &414507821
 Transform:
   m_ObjectHideFlags: 0
@@ -1220,13 +1227,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 952cec66501d3e34aafb5c65125ec46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soulOrderList: 04000000000000000000000002000000030000000000000000000000040000000000000000000000000000000500000000000000060000000000000000000000070000000000000000000000000000000000000008000000000000000000000009000000
+  soulOrderList: 06000000000000000000000002000000030000000000000000000000040000000000000000000000000000000500000000000000060000000000000000000000070000000000000000000000000000000000000008000000000000000000000009000000
   soulPrefabList:
   - {fileID: 6619523800621813888, guid: 155d2ac2feec42d40960fdccce6312ea, type: 3}
   - {fileID: 313089675144221528, guid: acf66263ac0230946acf4665adf110cb, type: 3}
   - {fileID: 1276560589448824382, guid: a87a54e87cd637640803686d90d7af77, type: 3}
   - {fileID: 6178125423899843746, guid: 857337b374dfa8945bebf2161d074635, type: 3}
   - {fileID: 6178125423899843746, guid: 857337b374dfa8945bebf2161d074635, type: 3}
+  - {fileID: 5670453153986252660, guid: 7f46116087ffd70408687666c43707b1, type: 3}
+  - {fileID: 3229326244571882376, guid: 271350a0b4361ac48a93bd4ab7ada4e5, type: 3}
   soulContainerParent: {fileID: 685872510}
   introTime: 5
   introText: A NEW SOUL IS GRANTED PASSAGE
@@ -1720,10 +1729,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ea7e5caae768b924c9d83e14e30995ff, type: 3}
   - {fileID: 8300000, guid: b11f58137c3546a4fb5bb8745025fb83, type: 3}
   - {fileID: 8300000, guid: 569384b715f35574fba525492f255f84, type: 3}
+  NurLayers: []
   BrettaLayers:
   - {fileID: 8300000, guid: 519fb2ba722775a4e83ea9d9fe942bd3, type: 3}
   - {fileID: 8300000, guid: 770d76621ecbf1f49a402c4979b13276, type: 3}
   - {fileID: 8300000, guid: 3e7958d57a4c3fc43a0dfc3c4e3c4a63, type: 3}
+  HayureLayers:
+  - {fileID: 8300000, guid: 4196314850ceaa0489a2fdbdf3907c5c, type: 3}
+  - {fileID: 8300000, guid: 15e1e61656518314294a5de71216375e, type: 3}
+  - {fileID: 8300000, guid: a9e69d67429660f4995b255db50a5613, type: 3}
+  - {fileID: 8300000, guid: f0e21a96450413f42861084cad32fbf4, type: 3}
+  - {fileID: 8300000, guid: 5e12f8c077baa034f836d0ca9e50ae58, type: 3}
+  ColinLayers:
+  - {fileID: 8300000, guid: e39505cfa8f71574194be7d22ac3d531, type: 3}
+  - {fileID: 8300000, guid: 5acb820c373ce894e90064de7d59a8d6, type: 3}
+  - {fileID: 8300000, guid: fbfbe6c8b432416469a26ee051ab8691, type: 3}
 --- !u!4 &909509298
 Transform:
   m_ObjectHideFlags: 0
@@ -2104,8 +2124,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  m_sharedMaterial: {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2129,8 +2149,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2194,7 +2214,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2715,6 +2735,9 @@ MonoBehaviour:
   - StrangeSad
   - Bretta
   - BrettaSad
+  - Hayure
+  - HayureSad
+  - Colin
   - Soul1
   - Soul1Sad
   - Soul2
@@ -2760,6 +2783,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b9a5fb897817be54d946fafc4950b957, type: 3}
   - {fileID: 21300000, guid: 578bb8b4e593b3f4890dafd1b8897f68, type: 3}
   - {fileID: 21300000, guid: a34e12befc2558b4ab78f9a44f89a5e0, type: 3}
+  - {fileID: 21300000, guid: bcd8049eca4398a42879acc2bae8d14d, type: 3}
+  - {fileID: 21300000, guid: 80f8c7c16561a044e96379ac6650a0e6, type: 3}
+  - {fileID: 21300000, guid: 04d6cca2d05fcba47828153e12e6d5c1, type: 3}
   - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
   - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
   - {fileID: 21300000, guid: 578bb8b4e593b3f4890dafd1b8897f68, type: 3}
@@ -3117,7 +3143,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: memoryNames.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: memoryNames.Array.data[1]
@@ -3128,20 +3154,406 @@ PrefabInstance:
       value: dreams_of_adventure
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: memoryNames.Array.data[3]
+      value: killings
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: memoryNames.Array.data[4]
+      value: colin_past
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemorySprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemorySprites.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemoryDialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemorySprites.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemoryDialogue.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemorySprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: d24e7e0b75e1a244bb9687d6fd4315ef, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemorySprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: d24e7e0b75e1a244bb9687d6fd4315ef, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemorySprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: d24e7e0b75e1a244bb9687d6fd4315ef, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemorySprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: d24e7e0b75e1a244bb9687d6fd4315ef, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemorySprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: d24e7e0b75e1a244bb9687d6fd4315ef, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemorySprites.Array.size
-      value: 2
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemorySprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: f618c5fe13b18994aa5aee8b97d8dca1, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemorySprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: f618c5fe13b18994aa5aee8b97d8dca1, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemorySprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: f618c5fe13b18994aa5aee8b97d8dca1, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemorySprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: f618c5fe13b18994aa5aee8b97d8dca1, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemorySprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: f618c5fe13b18994aa5aee8b97d8dca1, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemorySprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: f618c5fe13b18994aa5aee8b97d8dca1, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemorySprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: f618c5fe13b18994aa5aee8b97d8dca1, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemorySprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: f618c5fe13b18994aa5aee8b97d8dca1, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemoryDialogue.Array.data[0]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemoryDialogue.Array.data[1]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemoryDialogue.Array.data[2]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemoryDialogue.Array.data[3]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemoryDialogue.Array.data[4]
+      value: sintexto
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemoryDialogue.Array.size
-      value: 2
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemorySprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: a33833072bf90f34c856623b67d0e897, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemorySprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: a33833072bf90f34c856623b67d0e897, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemorySprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: a33833072bf90f34c856623b67d0e897, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemorySprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: a33833072bf90f34c856623b67d0e897, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemorySprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: a33833072bf90f34c856623b67d0e897, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemorySprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: a33833072bf90f34c856623b67d0e897, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemorySprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: a33833072bf90f34c856623b67d0e897, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemorySprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: a33833072bf90f34c856623b67d0e897, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemorySprites.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: a33833072bf90f34c856623b67d0e897, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemoryDialogue.Array.data[0]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemoryDialogue.Array.data[1]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemoryDialogue.Array.data[2]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemoryDialogue.Array.data[3]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemoryDialogue.Array.data[4]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemoryDialogue.Array.data[5]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemoryDialogue.Array.data[6]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemoryDialogue.Array.data[7]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.data[0]
+      value: Like every good story, it starts with me borrowing a chocolate pancake
+        from the store. Two of them, actually. I wanted to give one to a new friend
+        I had made a few days before.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.data[1]
+      value: "We used to talk through the fence of his school\u2019s playground.
+        He was a few years older than me. He was also a bit odd, but I didn\u2019t
+        mind. Everyone is a little odd in their own way."
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.data[2]
+      value: "That day, however, he wasn\u2019t there."
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.data[3]
+      value: I never saw him again. I wonder where he is right now.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.data[4]
+      value: "Anyway, I started to get bored in that area of the city, so I went
+        elsewhere. Somewhere warmer. Winter was setting in. I didn\u2019t have many
+        of those big clothes the others had, so improvisation was the key!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.data[5]
+      value: And then the day came when I met her. My mother! Some guy told me once
+        that I would never be able to find her. . . there she was! Ha!
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.data[6]
+      value: "Well, I don\u2019t think she was my actual mother, but it felt nice.
+        She was kind, the kindest person I\u2019ve ever met. That\u2019s what mothers
+        are, right?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.data[7]
+      value: She used to tell me amazing stories. When I asked her if we could do
+        such things, she always got mad at me. . .
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.data[8]
+      value: But I loved her anyways.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemorySprites.Array.data[1]
       value: 
       objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemorySprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemorySprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemorySprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemorySprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemorySprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemorySprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemorySprites.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemorySprites.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemoryDialogue.Array.data[0]
+      value: I was the only reason. I was responsible for everything.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemoryDialogue.Array.data[1]
-      value: pruebaprueba2
+      value: Her only existence left, inside of me, drowned in sorrow.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemoryDialogue.Array.data[2]
+      value: "For so long, I saw her every single night, when I closed my eyes. She
+        shared her pain with me, but I couldn\u2019t do the same with her. I couldn\u2019t
+        do it."
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemoryDialogue.Array.data[3]
+      value: Her apparitions became less frequent and yet, my regret only got worse.
+        Why? Me? To simply move on? I must not. For the longest time I thought that
+        way.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemoryDialogue.Array.data[4]
+      value: Then I realised.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemoryDialogue.Array.data[5]
+      value: She would come back no more. No matter if it was to haunt or comfort
+        me. She was never coming back.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemoryDialogue.Array.data[6]
+      value: "And yet, she still laid trapped inside my cage of regrets. How could
+        that be? Did she really forgive me or did I just learn to move on? No. That
+        wasn\u2019t it. Not yet."
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemoryDialogue.Array.data[7]
+      value: That is why I tried not to forget or drown in punishment, as I had done
+        all that time, but to forgive. To forgive myself so she could finally be
+        at peace. To get her out of that horrible cage. The only place where she
+        still existed, in a way.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemoryDialogue.Array.data[8]
+      value: That way, she would be able to feel the sun and breeze through my skin.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemoryDialogue.Array.data[9]
+      value: That way, she would be able to feel the sun and breeze through my skin.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemorySprites.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemorySprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: bb51334c6930f864abac38001f7bdf6e, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemorySprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: bb51334c6930f864abac38001f7bdf6e, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemorySprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: bb51334c6930f864abac38001f7bdf6e, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemorySprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: bb51334c6930f864abac38001f7bdf6e, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemorySprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: bb51334c6930f864abac38001f7bdf6e, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemorySprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: bb51334c6930f864abac38001f7bdf6e, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemorySprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: bb51334c6930f864abac38001f7bdf6e, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemorySprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: bb51334c6930f864abac38001f7bdf6e, type: 3}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[0]
+      value: I was wandering through the streets when a child stopped me. He looked
+        so malnourished and dirty.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[1]
+      value: "At first, I ignored him. Some part of me, however, couldn\u2019t. I
+        get it now. I had forgotten to check the cage I had put my distant self in.
+        She had escaped, somehow, and this was the result. My legs carried so much
+        weight. . ."
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[2]
+      value: Every single day. Every night. And the worst of all was waking up every
+        morning to the same burning sun in the horizon. This time, however, Colin
+        was by my side.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[3]
+      value: "I had no hate left in me. No sorrow. Just indiference. But that child
+        used to make me feel a profound longing, that of which can\u2019t be described
+        with mere words."
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[4]
+      value: I saw myself in him. God, I really did. It hurt so much. He could see
+        it, the same way I did so long ago.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[5]
+      value: I knew some places where John used to go, and so I thought I could bring
+        him there. My fear, however, made me foolish once again and ended up just
+        telling him tales of a distant past.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[6]
+      value: "Ah, the magic overflowing from his eyes, yet I didn\u2019t let him
+        follow that dream. It was too soon. He was too young. With time, a strange
+        distance between us appeared. Too many words I regret not being able to say.
+        I did not know how."
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[7]
+      value: I did not know.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[8]
+      value: I did not know.
       objectReference: {fileID: 0}
     - target: {fileID: 778246000, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: weight
