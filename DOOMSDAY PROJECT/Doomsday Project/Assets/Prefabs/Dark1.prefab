@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 514371840}
   m_Layer: 0
   m_Name: Dark1
-  m_TagString: Untagged
+  m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,3 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: []
+  dialogue0: []
+  dialogue1: []
+  dialogue2: []
+  dialogue3: []
+  dialogue4: []

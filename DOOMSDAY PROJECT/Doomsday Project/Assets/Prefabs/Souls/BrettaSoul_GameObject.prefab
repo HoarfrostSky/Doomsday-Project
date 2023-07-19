@@ -354,6 +354,7 @@ MonoBehaviour:
   - 0_75_100_200
   - 1_50_80_200
   - 2_0_100_200
+  blameTrinket: {fileID: 7261672652382087456, guid: 19d2639e4eb455f4d86b86a786b080c8, type: 3}
 --- !u!95 &5901207763352305534
 Animator:
   serializedVersion: 4

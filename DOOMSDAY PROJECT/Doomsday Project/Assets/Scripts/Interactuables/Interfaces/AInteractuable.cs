@@ -18,6 +18,7 @@ namespace Interactuables.Interfaces
         //If player enters range
         private void OnTriggerEnter2D(Collider2D col)
         {
+
             if (col.gameObject.CompareTag("Player"))
             {
                 colGO = col.gameObject;

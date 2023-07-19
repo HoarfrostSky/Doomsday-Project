@@ -6,6 +6,7 @@ using UnityEngine;
 using States.Controllers;
 using States.ConcreteStates;
 using Music;
+using Blame;
 
 namespace Souls.Interfaces
 {
@@ -16,6 +17,8 @@ namespace Souls.Interfaces
         public String[] dialogue;
         public float moveSpeed;
         public String[] musicLayerOrders;
+        public GameObject blameTrinket;
+
         private int musicOrder = -1;
         protected bool interactuable = false;
         protected GameObject playerGO;
@@ -27,6 +30,7 @@ namespace Souls.Interfaces
         {
             playerGO = GameObject.FindGameObjectWithTag("Player");
             playerGO.GetComponent<DialogueManager>().ConnectSoul(this);
+
         }
 
         private void Start()
@@ -92,6 +96,13 @@ namespace Souls.Interfaces
 
             GetComponent<Animator>().SetTrigger("SoulTransition");
             yield return null;
+        }
+
+        private void OnDestroy()
+        {
+            GameObject trinketContainer = GameObject.FindGameObjectWithTag("TrinketContainer");
+            //trinketContainer.GetComponent<ManageTrinketContainer>().Relocate(this.transform.position);
+            Instantiate(blameTrinket, trinketContainer.transform);
         }
     }
 }

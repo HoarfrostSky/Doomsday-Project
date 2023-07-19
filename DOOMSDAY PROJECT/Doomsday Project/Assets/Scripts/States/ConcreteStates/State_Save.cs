@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using States.Interfaces;
 using Souls;
+using Music;
 using ControlManager = Controls.ControlManager;
 
 namespace States.ConcreteStates
@@ -10,8 +11,9 @@ namespace States.ConcreteStates
     public class State_Save : AConcreteState
     {
         private int limit;
-        private int savePoints;
+        private float savePoints;
         private GameObject soul;
+        private ManageMusic musicManager;
 
         public State_Save(IPlayerState playerState) : base(playerState)
         {
@@ -26,6 +28,9 @@ namespace States.ConcreteStates
             this.savePoints = 0;
 
             this.soul = GameObject.FindGameObjectWithTag("Soul");
+
+            musicManager = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<ManageMusic>();
+            musicManager.JudgeMusicVolume(musicManager.GetCurrentVolume(), 0f);
         }
 
         public override void Exit()
@@ -47,7 +52,7 @@ namespace States.ConcreteStates
 
         public void AddSavePoint()
         {
-            savePoints++;
+            savePoints += 200 * Time.deltaTime;
         }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using States.Interfaces;
+using Music;
 using ControlManager = Controls.ControlManager;
 
 namespace States.ConcreteStates
@@ -9,6 +10,7 @@ namespace States.ConcreteStates
     public class State_Judge : AConcreteState
     {
         private GameObject judgeUIGO;
+        private ManageMusic musicManager;
         public State_Judge(IPlayerState playerState) : base(playerState)
         {
             this.name = "State_Judge";
@@ -20,6 +22,9 @@ namespace States.ConcreteStates
 
             judgeUIGO = GameObject.FindGameObjectWithTag("Judge");
             judgeUIGO.transform.localScale = new Vector3(1f, 1f, 1f);
+
+            musicManager = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<ManageMusic>();
+            musicManager.StartJudgeMusic(0f, 30f);
         }
 
         public override void Exit()

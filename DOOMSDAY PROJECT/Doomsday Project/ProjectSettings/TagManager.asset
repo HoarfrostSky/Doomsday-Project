@@ -14,10 +14,14 @@ TagManager:
   - Soul
   - Empathise
   - Judge
-  - Dark1
-  - Dark2
   - MusicManager
   - DramaticScreen
+  - TrinketContainer
+  - Trinket
+  - PlayButton
+  - ExitButton
+  - PauseMenu
+  - SceneManager
   layers:
   - Default
   - TransparentFX

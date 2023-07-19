@@ -225,6 +225,7 @@ MonoBehaviour:
   moveSpeed: 20
   musicLayerOrders:
   - 
+  blameTrinket: {fileID: 2487525950138099283, guid: b6998e8d68164be48a812405b5a8a2bb, type: 3}
 --- !u!95 &1462160376134453663
 Animator:
   serializedVersion: 4

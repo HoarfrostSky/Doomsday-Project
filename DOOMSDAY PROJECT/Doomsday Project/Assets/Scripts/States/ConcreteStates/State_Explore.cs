@@ -6,6 +6,7 @@ using UnityEngine;
 using States.Interfaces;
 using Interactuables.Interfaces;
 using Cinematic;
+using Music;
 
 namespace States.ConcreteStates
 {
@@ -16,6 +17,7 @@ namespace States.ConcreteStates
         private Animator playerAnim;
         private GameObject soul;
         private GameObject cinemaManager;
+        private ManageMusic musicManager;
 
         public State_Explore(IPlayerState playerState) : base(playerState)
         {
@@ -44,6 +46,9 @@ namespace States.ConcreteStates
             showInteractGO = GameObject.FindGameObjectWithTag("ShowInteract");
 
             showInteractGO.transform.localScale = new Vector3(0f, 0f, 1f);
+
+            musicManager = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<ManageMusic>();
+            musicManager.JudgeMusicVolume(musicManager.GetCurrentVolume(), 0f);
         }
 
         public override void Exit()
@@ -60,6 +65,7 @@ namespace States.ConcreteStates
 
         public void RecieveInteractor(object sender, IInteractuable interactorObject)
         {
+            Debug.Log("Se registra interactor: " + interactorObject.ToString());
             this.interactor = interactorObject;
         }
     }

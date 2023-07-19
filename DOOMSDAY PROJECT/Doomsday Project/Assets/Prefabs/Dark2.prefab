@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3618811010803856556}
   - component: {fileID: 3618811010803856557}
   - component: {fileID: 4539343016670374069}
-  - component: {fileID: 1773979800}
+  - component: {fileID: 347120336605987651}
   m_Layer: 0
   m_Name: Dark2
-  m_TagString: Untagged
+  m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6140351, y: 3.2982457}
   m_EdgeRadius: 0
---- !u!114 &1773979800
+--- !u!114 &347120336605987651
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,3 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: []
+  dialogue0: []
+  dialogue1: []
+  dialogue2: []
+  dialogue3: []
+  dialogue4: []

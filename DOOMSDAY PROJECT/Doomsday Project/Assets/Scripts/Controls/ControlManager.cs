@@ -81,12 +81,12 @@ namespace Controls
             if (Input.GetKey(KeyCode.A))
             {
                 rb.isKinematic = false;
-                rb.AddForce(Vector2.left * speed, ForceMode2D.Force);
+                rb.AddForce(Vector2.left * speed * Time.deltaTime * 100, ForceMode2D.Force);
             }
             else if (Input.GetKey(KeyCode.D))
             {
                 rb.isKinematic = false;
-                rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
+                rb.AddForce(Vector2.right * speed * Time.deltaTime * 100, ForceMode2D.Force);
             }
 
             if (Input.GetKeyDown(KeyCode.A))

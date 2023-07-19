@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.14f1 (eee1884e7226) revision 15655304'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'es' Physical Memory: 16327 MB
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'es' Physical Memory: 16234 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-E:\Unity\2021.3.14f1\Editor\Unity.exe
+C:\Users\quasa\Documents\Unity Games\2021.3.14f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker1
 -projectPath
-E:/DOOMSDAY PROJECT_GITHUB/Doomsday-Project/DOOMSDAY PROJECT/Doomsday Project
+C:/Users/quasa/Desktop/DOOMSDAY/Doomsday-Project/DOOMSDAY PROJECT/Doomsday Project
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-55769
-Successfully changed project path to: E:/DOOMSDAY PROJECT_GITHUB/Doomsday-Project/DOOMSDAY PROJECT/Doomsday Project
-E:/DOOMSDAY PROJECT_GITHUB/Doomsday-Project/DOOMSDAY PROJECT/Doomsday Project
+64326
+Successfully changed project path to: C:/Users/quasa/Desktop/DOOMSDAY/Doomsday-Project/DOOMSDAY PROJECT/Doomsday Project
+C:/Users/quasa/Desktop/DOOMSDAY/Doomsday-Project/DOOMSDAY PROJECT/Doomsday Project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,111 +47,115 @@ E:/DOOMSDAY PROJECT_GITHUB/Doomsday-Project/DOOMSDAY PROJECT/Doomsday Project
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 88.40 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 213.40 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.14f1 (eee1884e7226)
-[Subsystems] Discovering subsystems at path E:/Unity/2021.3.14f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path E:/DOOMSDAY PROJECT_GITHUB/Doomsday-Project/DOOMSDAY PROJECT/Doomsday Project/Assets
+[Subsystems] Discovering subsystems at path C:/Users/quasa/Documents/Unity Games/2021.3.14f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/quasa/Desktop/DOOMSDAY/Doomsday-Project/DOOMSDAY PROJECT/Doomsday Project/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3080 Ti (ID=0x2208)
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f91)
     Vendor:   NVIDIA
-    VRAM:     12100 MB
-    Driver:   31.0.15.3623
+    VRAM:     3962 MB
+    Driver:   30.0.15.1278
 Initialize mono
-Mono path[0] = 'E:/Unity/2021.3.14f1/Editor/Data/Managed'
-Mono path[1] = 'E:/Unity/2021.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'E:/Unity/2021.3.14f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56608
+Mono path[0] = 'C:/Users/quasa/Documents/Unity Games/2021.3.14f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Users/quasa/Documents/Unity Games/2021.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Users/quasa/Documents/Unity Games/2021.3.14f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56076
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: E:/Unity/2021.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002273 seconds.
+Register platform support module: C:/Users/quasa/Documents/Unity Games/2021.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Users/quasa/Documents/Unity Games/2021.3.14f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.014846 seconds.
+Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 83.67 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 209.89 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.525 seconds
+- Completed reload, in  1.223 seconds
 Domain Reload Profiling:
-	ReloadAssembly (526ms)
-		BeginReloadAssembly (80ms)
+	ReloadAssembly (1224ms)
+		BeginReloadAssembly (125ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (361ms)
-			LoadAssemblies (79ms)
+		EndReloadAssembly (896ms)
+			LoadAssemblies (122ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (75ms)
+			SetupTypeCache (188ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (19ms)
-			SetupLoadedEditorAssemblies (230ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (562ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (16ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (84ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (107ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
+				RefreshPlugins (210ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (251ms)
+				ProcessInitializeOnLoadMethodAttributes (81ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007020 seconds.
+Registered in 0.014930 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image E:\DOOMSDAY PROJECT_GITHUB\Doomsday-Project\DOOMSDAY PROJECT\Doomsday Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image E:\DOOMSDAY PROJECT_GITHUB\Doomsday-Project\DOOMSDAY PROJECT\Doomsday Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\quasa\Desktop\DOOMSDAY\Doomsday-Project\DOOMSDAY PROJECT\Doomsday Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\quasa\Desktop\DOOMSDAY\Doomsday-Project\DOOMSDAY PROJECT\Doomsday Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 94.88 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 209.28 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.092 seconds
+- Completed reload, in  2.368 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1093ms)
-		BeginReloadAssembly (110ms)
+	ReloadAssembly (2370ms)
+		BeginReloadAssembly (193ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (18ms)
-		EndReloadAssembly (897ms)
-			LoadAssemblies (110ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (1966ms)
+			LoadAssemblies (158ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (206ms)
+			SetupTypeCache (510ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (57ms)
-			SetupLoadedEditorAssemblies (510ms)
+			RebuildScriptCaches (117ms)
+			SetupLoadedEditorAssemblies (1093ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (95ms)
-				BeforeProcessingInitializeOnLoad (107ms)
-				ProcessInitializeOnLoadAttributes (224ms)
-				ProcessInitializeOnLoadMethodAttributes (79ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				RefreshPlugins (209ms)
+				BeforeProcessingInitializeOnLoad (232ms)
+				ProcessInitializeOnLoadAttributes (466ms)
+				ProcessInitializeOnLoadMethodAttributes (160ms)
+				AfterProcessingInitializeOnLoad (15ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.95 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.30 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5560 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 43 unused Assets / (0.7 MB). Loaded Objects now: 6010.
 Memory consumption went from 219.7 MB to 219.0 MB.
-Total: 4.259200 ms (FindLiveObjects: 0.459100 ms CreateObjectMapping: 0.335000 ms MarkObjects: 3.171300 ms  DeleteObjects: 0.293400 ms)
+Total: 6.301000 ms (FindLiveObjects: 0.561500 ms CreateObjectMapping: 0.555100 ms MarkObjects: 4.766100 ms  DeleteObjects: 0.417100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -159,72 +163,34 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 47538.385524 seconds.
+  Time since last request: 319672.746378 seconds.
+  path: Assets/Prefabs/Dark2.prefab
+  artifactKey: Guid(cc63269a2dc76214a9269626597c29ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dark2.prefab using Guid(cc63269a2dc76214a9269626597c29ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bac093cc51ec09db6606905358dd475') in 0.401109 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Prefabs/Sword.prefab
+  artifactKey: Guid(6ee164c72997b3749a6f62aef85575f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Sword.prefab using Guid(6ee164c72997b3749a6f62aef85575f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d1c9c38b93c99baba2bfdafb0469e58') in 0.029037 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.135014 seconds.
   path: Assets/Prefabs/Souls/ColinSoul_GameObject.prefab
   artifactKey: Guid(271350a0b4361ac48a93bd4ab7ada4e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Souls/ColinSoul_GameObject.prefab using Guid(271350a0b4361ac48a93bd4ab7ada4e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '159fedb515903678f648be3a088d4a88') in 0.049103 seconds 
+Start importing Assets/Prefabs/Souls/ColinSoul_GameObject.prefab using Guid(271350a0b4361ac48a93bd4ab7ada4e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd10b572da617dc203cc097660d1c9773') in 0.026276 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Prefabs/Souls/BrettaSoul_GameObject.prefab
-  artifactKey: Guid(857337b374dfa8945bebf2161d074635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Souls/BrettaSoul_GameObject.prefab using Guid(857337b374dfa8945bebf2161d074635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff74bd73c99fa34e5e27f67b8db2ab82') in 0.011263 seconds 
+  Time since last request: 0.001448 seconds.
+  path: Assets/Prefabs/Souls/StrangeSoul_GameObject.prefab
+  artifactKey: Guid(a87a54e87cd637640803686d90d7af77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Souls/StrangeSoul_GameObject.prefab using Guid(a87a54e87cd637640803686d90d7af77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '364efbaa1ffb3f7d91b792f13cb8d919') in 0.024403 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008467 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image E:\DOOMSDAY PROJECT_GITHUB\Doomsday-Project\DOOMSDAY PROJECT\Doomsday Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image E:\DOOMSDAY PROJECT_GITHUB\Doomsday-Project\DOOMSDAY PROJECT\Doomsday Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.14 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.013 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1013ms)
-		BeginReloadAssembly (169ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (42ms)
-		EndReloadAssembly (764ms)
-			LoadAssemblies (145ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (222ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (43ms)
-			SetupLoadedEditorAssemblies (360ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (74ms)
-				ProcessInitializeOnLoadAttributes (200ms)
-				ProcessInitializeOnLoadMethodAttributes (72ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.86 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5415 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 30 unused Assets / (0.7 MB). Loaded Objects now: 6014.
-Memory consumption went from 209.0 MB to 208.3 MB.
-Total: 4.563600 ms (FindLiveObjects: 0.509000 ms CreateObjectMapping: 0.409700 ms MarkObjects: 3.310500 ms  DeleteObjects: 0.333000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Prefabs/Souls/LennaSoul_GameObject.prefab
+  artifactKey: Guid(a510d8cab019e904b896ff3ba32fc298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Souls/LennaSoul_GameObject.prefab using Guid(a510d8cab019e904b896ff3ba32fc298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc8e709e511ec503108502764bdd72f2') in 0.023270 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

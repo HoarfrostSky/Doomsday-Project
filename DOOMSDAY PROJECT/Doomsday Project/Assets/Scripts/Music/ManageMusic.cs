@@ -7,6 +7,8 @@ namespace Music
 {
     public class ManageMusic : MonoBehaviour
     {
+        public AudioSource judgeMusicSource;
+
         public AudioClip[] HarnLayers;
         public AudioClip[] StrangeLayers;
         public AudioClip[] NurLayers;
@@ -16,6 +18,7 @@ namespace Music
         public AudioClip[] LennaLayers;
 
         public const int MAX_LAYERS = 5;
+        private float currentVolume = 0;
 
         private AudioSource[] currentLayers =  new AudioSource[MAX_LAYERS];
 
@@ -89,10 +92,32 @@ namespace Music
             float elapsed = 0;
             while (musicLayer.volume != endVolume)
             {
-                musicLayer.volume = Mathf.Lerp(initialVolume, endVolume, elapsed);
+                currentVolume = Mathf.Lerp(initialVolume, endVolume, elapsed);
+                musicLayer.volume = currentVolume;
                 elapsed += (0.001f * speed * Time.deltaTime);
                 yield return null;
             }
+        }
+
+        public void StartJudgeMusic(float startV, float endV)
+        {
+            for(int i = 0; i < currentLayers.Length; i++)
+            {
+                StartCoroutine(VolumeLerp(currentLayers[i], 100f, 0f, 300f));
+            }
+
+            judgeMusicSource.Play();
+            JudgeMusicVolume(startV, endV);
+        }
+
+        public void JudgeMusicVolume(float iniV, float endV)
+        {
+            StartCoroutine(VolumeLerp(judgeMusicSource, iniV, endV, 300f));
+        }
+
+        public float GetCurrentVolume()
+        {
+            return this.currentVolume;
         }
     }
 }
