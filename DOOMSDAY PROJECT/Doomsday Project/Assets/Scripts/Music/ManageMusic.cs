@@ -13,6 +13,7 @@ namespace Music
         public AudioClip[] BrettaLayers;
         public AudioClip[] HayureLayers;
         public AudioClip[] ColinLayers;
+        public AudioClip[] LennaLayers;
 
         public const int MAX_LAYERS = 5;
 
@@ -55,6 +56,11 @@ namespace Music
                 case 6: //Colin
                     Debug.Log("Se ha elegido musica para Colin");
                     RegisterLayers(ColinLayers);
+
+                    break;
+                case 8: //Lenna
+                    Debug.Log("Se ha elegido musica para Lenna");
+                    RegisterLayers(LennaLayers);
 
                     break;
 

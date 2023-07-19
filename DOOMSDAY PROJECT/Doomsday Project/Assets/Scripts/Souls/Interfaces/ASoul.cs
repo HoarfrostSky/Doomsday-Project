@@ -36,6 +36,8 @@ namespace Souls.Interfaces
 
         public void NextMusicOrder()
         {
+            Debug.Log("Se ha llamado a next music order");
+
             musicOrder++;
             String[] processedOrder = musicLayerOrders[musicOrder].Split("_");
 

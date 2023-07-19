@@ -569,6 +569,10 @@ MonoBehaviour:
   colinAnimationList:
   - ColinJump
   - ColinJump
+  lennaAnimationList:
+  - LennaHead
+  - LennaKneel
+  - LennaStand
 --- !u!4 &414507821
 Transform:
   m_ObjectHideFlags: 0
@@ -1227,7 +1231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 952cec66501d3e34aafb5c65125ec46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soulOrderList: 06000000000000000000000002000000030000000000000000000000040000000000000000000000000000000500000000000000060000000000000000000000070000000000000000000000000000000000000008000000000000000000000009000000
+  soulOrderList: 08000000000000000000000002000000030000000000000000000000040000000000000000000000000000000500000000000000060000000000000000000000070000000000000000000000000000000000000008000000000000000000000009000000
   soulPrefabList:
   - {fileID: 6619523800621813888, guid: 155d2ac2feec42d40960fdccce6312ea, type: 3}
   - {fileID: 313089675144221528, guid: acf66263ac0230946acf4665adf110cb, type: 3}
@@ -1236,6 +1240,8 @@ MonoBehaviour:
   - {fileID: 6178125423899843746, guid: 857337b374dfa8945bebf2161d074635, type: 3}
   - {fileID: 5670453153986252660, guid: 7f46116087ffd70408687666c43707b1, type: 3}
   - {fileID: 3229326244571882376, guid: 271350a0b4361ac48a93bd4ab7ada4e5, type: 3}
+  - {fileID: 3229326244571882376, guid: 271350a0b4361ac48a93bd4ab7ada4e5, type: 3}
+  - {fileID: 4336783188407282110, guid: a510d8cab019e904b896ff3ba32fc298, type: 3}
   soulContainerParent: {fileID: 685872510}
   introTime: 5
   introText: A NEW SOUL IS GRANTED PASSAGE
@@ -1744,6 +1750,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e39505cfa8f71574194be7d22ac3d531, type: 3}
   - {fileID: 8300000, guid: 5acb820c373ce894e90064de7d59a8d6, type: 3}
   - {fileID: 8300000, guid: fbfbe6c8b432416469a26ee051ab8691, type: 3}
+  LennaLayers:
+  - {fileID: 8300000, guid: d9fa1b2103e510f43b301316e2731d75, type: 3}
+  - {fileID: 8300000, guid: f2e4deaa7a18e594993560e4a93f9067, type: 3}
+  - {fileID: 8300000, guid: 62c37679c1955de41befc837f8026ce8, type: 3}
+  - {fileID: 8300000, guid: 14c55e8e3cf0a6242bd6726cf30447e8, type: 3}
 --- !u!4 &909509298
 Transform:
   m_ObjectHideFlags: 0
@@ -2149,15 +2160,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2738,6 +2749,8 @@ MonoBehaviour:
   - Hayure
   - HayureSad
   - Colin
+  - Lenna
+  - LennaSad
   - Soul1
   - Soul1Sad
   - Soul2
@@ -2786,6 +2799,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bcd8049eca4398a42879acc2bae8d14d, type: 3}
   - {fileID: 21300000, guid: 80f8c7c16561a044e96379ac6650a0e6, type: 3}
   - {fileID: 21300000, guid: 04d6cca2d05fcba47828153e12e6d5c1, type: 3}
+  - {fileID: 21300000, guid: 578bb8b4e593b3f4890dafd1b8897f68, type: 3}
+  - {fileID: 21300000, guid: a34e12befc2558b4ab78f9a44f89a5e0, type: 3}
   - {fileID: 21300000, guid: cfcfdada38bab1a4dbaee5bc2a9e38f1, type: 3}
   - {fileID: 21300000, guid: c2decb88320592643bdf6a5829a1ad4d, type: 3}
   - {fileID: 21300000, guid: 578bb8b4e593b3f4890dafd1b8897f68, type: 3}
@@ -3143,7 +3158,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: memoryNames.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: memoryNames.Array.data[1]
@@ -3160,6 +3175,10 @@ PrefabInstance:
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: memoryNames.Array.data[4]
       value: colin_past
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: memoryNames.Array.data[5]
+      value: truth
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: bullyingMemorySprites.Array.size

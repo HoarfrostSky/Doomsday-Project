@@ -30,6 +30,8 @@ namespace Player
         public String[] killingsMemoryDialogue;
         public Sprite[] colinPastMemorySprites;
         public String[] colinPastMemoryDialogue;
+        public Sprite[] truthMemorySprites;
+        public String[] truthMemoryDialogue;
 
         private void Awake()
         {
@@ -47,6 +49,8 @@ namespace Player
             memoryDialogueDictionary.Add(memoryNames[3], killingsMemoryDialogue);
             memorySpritesDictionary.Add(memoryNames[4], colinPastMemorySprites);
             memoryDialogueDictionary.Add(memoryNames[4], colinPastMemoryDialogue);
+            memorySpritesDictionary.Add(memoryNames[5], truthMemorySprites);
+            memoryDialogueDictionary.Add(memoryNames[5], truthMemoryDialogue);
         }
 
         public void Empathise()
@@ -79,6 +83,9 @@ namespace Player
                     break;
                 case 6: //Colin
                     soul.NextMusicOrders(3);
+                    break;
+                case 8: //Lenna
+                    soul.NextMusicOrders(4);
                     break;
             }
         }

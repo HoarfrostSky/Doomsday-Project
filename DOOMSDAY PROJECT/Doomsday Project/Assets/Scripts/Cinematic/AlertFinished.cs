@@ -29,6 +29,7 @@ namespace Cinematic
 
         public void NextAttack()
         {
+            Debug.Log("Se llama a NextAttack");
             GameObject sword = GameObject.FindGameObjectWithTag("Sword");
             sword.GetComponent<SwordScript>().SetWeight(sword.GetComponent<SwordScript>().GetWeight()*1.5f);
 
@@ -37,6 +38,7 @@ namespace Cinematic
 
         IEnumerator ResetToCondemn()
         {
+            Debug.Log("Se llama a ResetToCondemn");
             yield return new WaitForSeconds(1f);
             playerStateController.SetState(new State_Condemn(playerStateController));
             yield return null;
