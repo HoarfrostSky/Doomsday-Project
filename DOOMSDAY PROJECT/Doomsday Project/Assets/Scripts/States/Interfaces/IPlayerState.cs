@@ -13,5 +13,6 @@ namespace States.Interfaces
         public void SetState(IState state);
         public IState GetState();
         public IState GetPreviousState();
+        public IState GetNextState();
     }
 }

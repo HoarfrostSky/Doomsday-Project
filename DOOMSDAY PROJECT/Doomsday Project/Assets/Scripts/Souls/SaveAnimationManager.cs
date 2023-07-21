@@ -24,12 +24,12 @@ namespace Souls
 
         public void Dark1CastSpell()
         {
-            GameObject.FindGameObjectWithTag("Dark1").GetComponent<Animator>().SetTrigger("CastSpell");
+            GameObject.Find("Dark1").GetComponent<Animator>().SetTrigger("CastSpell");
         }
 
         public void Dark1RevertToIdle()
         {
-            GameObject.FindGameObjectWithTag("Dark1").GetComponent<Animator>().SetTrigger("RevertToIdle");
+            GameObject.Find("Dark1").GetComponent<Animator>().SetTrigger("RevertToIdle");
         }
 
         public void ResetToExplore()

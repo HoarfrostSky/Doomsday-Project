@@ -14,6 +14,7 @@ namespace States.Controllers
     {
         private IState currentState;
         private IState previousState;
+        private IState nextState;
 
         private void Awake()
         {
@@ -41,6 +42,8 @@ namespace States.Controllers
 
         public void SetState(IState state)
         {
+            nextState = state;
+
             if(currentState != null)
             {
                 currentState.Exit();
@@ -54,6 +57,11 @@ namespace States.Controllers
         private void Update()
         {
             currentState.Update();
+        }
+
+        public IState GetNextState()
+        {
+            return nextState;
         }
     }
 }

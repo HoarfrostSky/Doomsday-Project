@@ -32,5 +32,7 @@ namespace States.Interfaces
         {
             return name;
         }
+
+        public abstract void RegisterInteractor(GameObject newInteractor);
     }
 }

@@ -14,23 +14,16 @@ namespace Player
         private PlayerStateController playerStateController;
         private DialogueManager dialogueManager;
         private String currentMemory;
-        private Dictionary<String, Sprite[]> memorySpritesDictionary = new Dictionary<String, Sprite[]>() { };
         private Dictionary<String, String[]> memoryDialogueDictionary = new Dictionary<String, String[]>() { };
         private bool memoryAvailable = false;
         private ASoul soul;
 
         public String[] memoryNames;
-        public Sprite[] carAccidentMemorySprites;
         public String[] carAccidentMemoryDialogue;
-        public Sprite[] bullyingMemorySprites;
         public String[] bullyingMemoryDialogue;
-        public Sprite[] dreamsOfAdventureMemorySprites;
         public String[] dreamsOfAdventureMemoryDialogue;
-        public Sprite[] killingsMemorySprites;
         public String[] killingsMemoryDialogue;
-        public Sprite[] colinPastMemorySprites;
         public String[] colinPastMemoryDialogue;
-        public Sprite[] truthMemorySprites;
         public String[] truthMemoryDialogue;
 
         private void Awake()
@@ -39,17 +32,11 @@ namespace Player
             dialogueManager = GetComponentInParent<DialogueManager>();
             dialogueManager.memoryHandler += RecieveMemory;
 
-            memorySpritesDictionary.Add(memoryNames[0], carAccidentMemorySprites);
             memoryDialogueDictionary.Add(memoryNames[0], carAccidentMemoryDialogue);
-            memorySpritesDictionary.Add(memoryNames[1], bullyingMemorySprites);
             memoryDialogueDictionary.Add(memoryNames[1], bullyingMemoryDialogue);
-            memorySpritesDictionary.Add(memoryNames[2], dreamsOfAdventureMemorySprites);
             memoryDialogueDictionary.Add(memoryNames[2], dreamsOfAdventureMemoryDialogue);
-            memorySpritesDictionary.Add(memoryNames[3], killingsMemorySprites);
             memoryDialogueDictionary.Add(memoryNames[3], killingsMemoryDialogue);
-            memorySpritesDictionary.Add(memoryNames[4], colinPastMemorySprites);
             memoryDialogueDictionary.Add(memoryNames[4], colinPastMemoryDialogue);
-            memorySpritesDictionary.Add(memoryNames[5], truthMemorySprites);
             memoryDialogueDictionary.Add(memoryNames[5], truthMemoryDialogue);
         }
 
@@ -102,10 +89,6 @@ namespace Player
             return memoryAvailable;
         }
 
-        public Sprite[] GetCurrentMemorySprites()
-        {
-            return memorySpritesDictionary[currentMemory];
-        }
         public String[] GetCurrentMemoryDialogue()
         {
             return memoryDialogueDictionary[currentMemory];

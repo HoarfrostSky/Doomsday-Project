@@ -23,6 +23,7 @@ namespace Blame.Interfaces
             GameObject.Find("TrinketPile").GetComponent<Interactuable_TrinketPile>().ConnectNextTrinket(this.gameObject);
 
             colGO.GetComponent<PlayerStateController>().SetState(new State_Dialogue(colGO.GetComponent<PlayerStateController>()));
+            Debug.Log("Dialogo a enviar:" + dialogue[0]);
             SendMessageHandler?.Invoke(this, dialogue);
 
             carryingTrinket = true;

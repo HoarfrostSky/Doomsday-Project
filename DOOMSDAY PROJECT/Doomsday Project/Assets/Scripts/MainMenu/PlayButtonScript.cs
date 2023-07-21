@@ -12,10 +12,12 @@ namespace MainMenu
     {
         private ISceneState sceneStateController;
         public EventHandler<AConcreteScene> sceneHandler;
+        public GameObject introScreenManager;
 
         public void StartGame()
         {
-            sceneStateController.SetSceneState(new Scene_MainScene(sceneStateController));
+            introScreenManager.GetComponent<ManageIntro>().StartIntro();
+            //sceneStateController.SetSceneState(new Scene_MainScene(sceneStateController));
         }
 
         public void ConnectSceneController(ISceneState newSceneStateController)

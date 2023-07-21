@@ -10,10 +10,18 @@ namespace Interactuables.Interfaces
 {
     public abstract class AInteractuable : MonoBehaviour, IInteractuable
     {
+        private PlayerStateController stateController;
+
         public EventHandler<String[]> SendMessageHandler;
         public EventHandler<IInteractuable> InteractorHandler;
         [SerializeField] protected String[] dialogue;
         protected GameObject colGO;
+
+        private void Awake()
+        {
+            stateController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateController>();
+            if(stateController.GetState() != null) stateController.GetState().RegisterInteractor(this.gameObject);
+        }
 
         //If player enters range
         private void OnTriggerEnter2D(Collider2D col)

@@ -45,5 +45,9 @@ namespace States.ConcreteStates
             dialogueUIGO.localScale = new Vector3(0f, 0f, 1f);
             controlManager.CinematicControls(this, playerState);
         }
+
+        public override void RegisterInteractor(GameObject newInteractor)
+        {
+        }
     }
 }

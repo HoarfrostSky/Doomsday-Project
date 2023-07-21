@@ -23,14 +23,11 @@ namespace States.ConcreteStates
         {
             Debug.Log("Entering State_Dialogue");
 
-            if(dialogueManager == null)
-            {
                 dialogueManager = playerGO.GetComponent<DialogueManager>();
                 dialogueUIGO = GameObject.FindGameObjectWithTag("DialogueUI");
                 dialogueUIGO.GetComponentInChildren<DialogueUI>().ConnectDialogue(dialogueManager);
                 dialogueUIGO.GetComponentInChildren<IconUI>().ConnectDialogue(dialogueManager);
                 manageEmpathise = playerGO.GetComponentInChildren<ManageEmpathise>();
-            }
 
             if(playerState.GetPreviousState().GetName() == "State_Memory" || playerState.GetPreviousState().GetName() == "State_Cinematic")
             {
@@ -44,6 +41,12 @@ namespace States.ConcreteStates
         {
             Debug.Log("Exiting State_Dialogue");
 
+            if (playerState.GetNextState().GetName() != "State_Cinematic" && playerState.GetNextState().GetName() != "State_Memory")
+            {
+                Debug.Log("Se vacían los textos.");
+                dialogueManager.EmptyTexts();
+            }
+
             manageEmpathise.gameObject.transform.localScale = new Vector3(0f, 0f, 1f);
             dialogueUIGO.GetComponent<RectTransform>().localScale = new Vector3(0f, 0f, 1f);
         }
@@ -51,6 +54,10 @@ namespace States.ConcreteStates
         public override void Update()
         {
             controlManager.DialogueControls(this, playerState, dialogueManager, dialogueUIGO.GetComponentInChildren<DialogueUI>(), manageEmpathise);
+        }
+
+        public override void RegisterInteractor(GameObject newInteractor)
+        {
         }
     }
 }

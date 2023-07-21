@@ -67,7 +67,7 @@ namespace Controls
                 }
                 else
                 {
-                    dialogueManager.NextMessage();
+                    if (!manageEmpathise.CheckAvailability()) dialogueManager.NextMessage();
                 }
             }
             if (Input.GetKeyDown(KeyCode.Q))

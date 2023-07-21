@@ -24,7 +24,7 @@ namespace Cinematic
         public void AlertDarkToDestroy()
         {
             GameObject.FindGameObjectWithTag("Soul").GetComponentInChildren<SaveAnimationManager>().gameObject.GetComponent<Animator>().SetTrigger("DestroyAction");
-            GameObject.FindGameObjectWithTag("Dark1").GetComponent<Animator>().SetTrigger("CastSpell");
+            GameObject.Find("Dark1").GetComponent<Animator>().SetTrigger("CastSpell");
         }
 
         public void NextAttack()

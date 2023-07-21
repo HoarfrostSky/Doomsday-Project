@@ -18,6 +18,8 @@ namespace States.ConcreteStates
         private GameObject soul;
         private GameObject cinemaManager;
         private ManageMusic musicManager;
+        private DialogueManager dialogueManager;
+        private List<GameObject> interactuableList =  new List<GameObject>();
 
         public State_Explore(IPlayerState playerState) : base(playerState)
         {
@@ -28,6 +30,8 @@ namespace States.ConcreteStates
         {
             Debug.Log("Entering State_Explore");
 
+            dialogueManager = playerGO.GetComponent<DialogueManager>();
+
             playerAnim = playerGO.GetComponent<Animator>();
             playerAnim.SetTrigger("RevertToIdle");
 
@@ -37,18 +41,19 @@ namespace States.ConcreteStates
             if (cinemaManager == null) cinemaManager = GameObject.FindGameObjectWithTag("CinemaManager");
             cinemaManager.GetComponent<ManageCinema>().ResetCinematic();
 
-            GameObject[] listaInteractuables = GameObject.FindGameObjectsWithTag("Interactuable");
-            foreach (GameObject GO in listaInteractuables)
-            {
-                GO.GetComponent<AInteractuable>().InteractorHandler += RecieveInteractor;
-            }
-
             showInteractGO = GameObject.FindGameObjectWithTag("ShowInteract");
+
+            GameObject[] interGOs = GameObject.FindGameObjectsWithTag("Interactuable");
+
+            foreach(GameObject GO in interGOs)
+            {
+                RegisterInteractor(GO);
+            }
 
             showInteractGO.transform.localScale = new Vector3(0f, 0f, 1f);
 
             musicManager = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<ManageMusic>();
-            musicManager.JudgeMusicVolume(musicManager.GetCurrentVolume(), 0f);
+            musicManager.JudgeMusicVolume(20f, 0f);
         }
 
         public override void Exit()
@@ -63,9 +68,15 @@ namespace States.ConcreteStates
             controlManager.ExploreControls(this, playerState, interactor, rb, playerAnim);
         }
 
-        public void RecieveInteractor(object sender, IInteractuable interactorObject)
+        public override void RegisterInteractor(GameObject newInteractor)
         {
-            Debug.Log("Se registra interactor: " + interactorObject.ToString());
+            dialogueManager.RegisterMessageHandler(newInteractor);
+            newInteractor.GetComponent<AInteractuable>().InteractorHandler += RecieveActiveInteractor;
+            interactuableList.Add(newInteractor);
+        }
+
+        public void RecieveActiveInteractor(object sender, IInteractuable interactorObject)
+        {
             this.interactor = interactorObject;
         }
     }

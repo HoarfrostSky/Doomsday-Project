@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 41011630}
   - component: {fileID: 41011631}
   - component: {fileID: 41011632}
+  - component: {fileID: 41011633}
   m_Layer: 0
   m_Name: MemoryManager
   m_TagString: Memory
@@ -149,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41011629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3}
+  m_LocalPosition: {x: 5.75, y: 3.41, z: -3}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -199,11 +200,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 32, y: 18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -221,6 +222,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e32e25155fd8d4696213593fdd7685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraSize: 8.9
+  endCameraSize: 7
+--- !u!95 &41011633
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41011629}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f4337422f4f7fe4987816ec2a4c838d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &129293646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,7 +1576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 952cec66501d3e34aafb5c65125ec46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soulOrderList: 01000000000000000000000002000000030000000000000000000000040000000000000000000000000000000500000000000000060000000000000000000000070000000000000000000000000000000000000008000000000000000000000009000000
+  soulOrderList: 08000000000000000000000002000000030000000000000000000000040000000000000000000000000000000500000000000000060000000000000000000000070000000000000000000000000000000000000008000000000000000000000009000000
   soulPrefabList:
   - {fileID: 6619523800621813888, guid: 155d2ac2feec42d40960fdccce6312ea, type: 3}
   - {fileID: 313089675144221528, guid: acf66263ac0230946acf4665adf110cb, type: 3}
@@ -2079,6 +2102,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f2e4deaa7a18e594993560e4a93f9067, type: 3}
   - {fileID: 8300000, guid: 62c37679c1955de41befc837f8026ce8, type: 3}
   - {fileID: 8300000, guid: 14c55e8e3cf0a6242bd6726cf30447e8, type: 3}
+  currentLayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &909509298
 Transform:
   m_ObjectHideFlags: 0
@@ -2106,7 +2135,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 653b7ef2ac789b44d93532a237d999e3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2222,7 +2251,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.9169018, y: 1.1704538}
+  m_Offset: {x: -2.1895726, y: 1.4772086}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2233,7 +2262,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8538747, y: 10.777605}
+  m_Size: {x: 0.46800375, y: 10.164096}
   m_EdgeRadius: 0
 --- !u!212 &973007096
 SpriteRenderer:
@@ -2464,8 +2493,9 @@ GameObject:
   m_Component:
   - component: {fileID: 995724574}
   - component: {fileID: 995724573}
-  - component: {fileID: 995724572}
   - component: {fileID: 995724575}
+  - component: {fileID: 995724576}
+  - component: {fileID: 995724577}
   m_Layer: 0
   m_Name: TrinketPile
   m_TagString: Interactuable
@@ -2473,22 +2503,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!58 &995724572
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995724571}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.42
 --- !u!212 &995724573
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2530,7 +2544,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 68e5a78013e33f247822a837e55b0ab4, type: 3}
+  m_Sprite: {fileID: -818708310, guid: e4dc478d7da735347bcc21320893f53e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2549,8 +2563,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995724571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.11, y: 0, z: 0}
-  m_LocalScale: {x: 4.54, y: 4.54, z: 4.54}
+  m_LocalPosition: {x: 14, y: 4.9, z: -2}
+  m_LocalScale: {x: 2.47, y: 2.47, z: 2.47}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -2568,7 +2582,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65da204997757a54dafe17271ec41b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - Nameless-What the hell is this?
+--- !u!95 &995724576
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995724571}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75a9a338af38db146ae135144633a417, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &995724577
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995724571}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.8058212, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.2105265, y: 6.9473686}
+    newSize: {x: 0.48, y: 0.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.598884, y: 6.9473686}
+  m_EdgeRadius: 0
 --- !u!1 &999907577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,7 +2966,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352517408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2914,7 +2975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 4.5}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1352517410
@@ -2929,7 +2990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f7f8665529c54498ff7c3836aa8eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowness: 5
+  slowness: 2.5
 --- !u!114 &1352517411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2950,10 +3011,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample text
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
-  m_sharedMaterial: {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
+  m_sharedMaterial: {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2977,8 +3038,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 7
+  m_fontSizeBase: 7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3042,7 +3103,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  - {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4140,7 +4201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139415432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.21, y: -3.35, z: 0}
+  m_LocalPosition: {x: -12.08, y: -3.02, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4206,7 +4267,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Texto de dialogo
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
   m_sharedMaterial: {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
@@ -4233,7 +4294,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
+  m_fontSize: 23
   m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4307,6 +4368,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dark1
       objectReference: {fileID: 0}
+    - target: {fileID: 6691070095520443283, guid: 9d50c9c65dbf96c40abf85045e04089d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5590153
+      objectReference: {fileID: 0}
+    - target: {fileID: 6691070095520443283, guid: 9d50c9c65dbf96c40abf85045e04089d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.8623886
+      objectReference: {fileID: 0}
     - target: {fileID: 7508112511263143694, guid: 9d50c9c65dbf96c40abf85045e04089d, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -4360,6 +4429,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 519420031, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: orthographic size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 519420032, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.57
+      objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: memoryNames.Array.size
       value: 6
@@ -4385,6 +4462,10 @@ PrefabInstance:
       value: truth
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: bullyingMemorySprites.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -4394,7 +4475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: bullyingMemoryDialogue.Array.size
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: colinPastMemorySprites.Array.size
@@ -4402,11 +4483,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: killingsMemoryDialogue.Array.size
-      value: 8
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[0]
+      value: Lenna
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[1]
+      value: We were best friends. All of us, three.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[2]
+      value: When the winds of sorrow arrived, the only we had was each other, and
+        thus we formed a group to survive. A few joined us during that time.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[3]
+      value: We all shared our pain, but also our happinness. In a world where happinness
+        is nowhere to be found, the only way to experience it is to create it yourself.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[4]
+      value: "\u201CThe sun shines bright.\u201C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[5]
+      value: "Those were his words. John\u2019s words."
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[6]
+      value: And that woman took him from us.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[7]
+      value: "Oh god. Pain soaked my chest. I couldn\u2019t stand watch his pale
+        face, looking at us, begging for a life we couldn\u2019t give him back."
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[8]
+      value: There is no doubt the days that came after were a bit darker. The sun
+        shone less. Birds sang no more.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[9]
+      value: "Hayure didn\u2019t speak about it. I tried, but he just would not listen.
+        It seemed sorrow had taken two of my dearest friends and now was chasing
+        me down."
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: colinPastMemoryDialogue.Array.size
-      value: 9
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[10]
+      value: One day, I came back to a different Hayure. I knew he was still there,
+        somewhere, but it was his pain who spoke those words.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[11]
+      value: "\u201CI let it happen. I killed him.\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[12]
+      value: "\u201CI am a murderer.\u201C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: truthMemoryDialogue.Array.data[13]
+      value: I cried.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: bullyingMemorySprites.Array.data[0]
@@ -4430,7 +4574,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d24e7e0b75e1a244bb9687d6fd4315ef, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemorySprites.Array.size
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: killingsMemorySprites.Array.data[0]
@@ -4466,11 +4610,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: f618c5fe13b18994aa5aee8b97d8dca1, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: bullyingMemoryDialogue.Array.data[0]
-      value: sintexto
+      value: Strange
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: bullyingMemoryDialogue.Array.data[1]
-      value: sintexto
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: bullyingMemoryDialogue.Array.data[2]
@@ -4482,6 +4626,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: bullyingMemoryDialogue.Array.data[4]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: bullyingMemoryDialogue.Array.data[5]
       value: sintexto
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
@@ -4526,11 +4674,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: a33833072bf90f34c856623b67d0e897, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: killingsMemoryDialogue.Array.data[0]
-      value: sintexto
+      value: Hayure
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: killingsMemoryDialogue.Array.data[1]
-      value: sintexto
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: killingsMemoryDialogue.Array.data[2]
@@ -4557,75 +4705,87 @@ PrefabInstance:
       value: sintexto
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: killingsMemoryDialogue.Array.data[8]
+      value: sintexto
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: colinPastMemoryDialogue.Array.data[0]
+      value: Colin
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.data[1]
       value: Like every good story, it starts with me borrowing a chocolate pancake
         from the store. Two of them, actually. I wanted to give one to a new friend
         I had made a few days before.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: colinPastMemoryDialogue.Array.data[1]
+      propertyPath: colinPastMemoryDialogue.Array.data[2]
       value: "We used to talk through the fence of his school\u2019s playground.
         He was a few years older than me. He was also a bit odd, but I didn\u2019t
         mind. Everyone is a little odd in their own way."
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: colinPastMemoryDialogue.Array.data[2]
+      propertyPath: colinPastMemoryDialogue.Array.data[3]
       value: "That day, however, he wasn\u2019t there."
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: colinPastMemoryDialogue.Array.data[3]
+      propertyPath: colinPastMemoryDialogue.Array.data[4]
       value: I never saw him again. I wonder where he is right now.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: colinPastMemoryDialogue.Array.data[4]
-      value: "Anyway, I started to get bored in that area of the city, so I went
-        elsewhere. Somewhere warmer. Winter was setting in. I didn\u2019t have many
-        of those big clothes the others had, so improvisation was the key!"
+      propertyPath: colinPastMemoryDialogue.Array.data[5]
+      value: Anyway, I started to get bored in that area of the city, so I went elsewhere.
+        Somewhere warmer.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: colinPastMemoryDialogue.Array.data[5]
+      propertyPath: colinPastMemoryDialogue.Array.data[6]
+      value: "Winter was setting in. I didn\u2019t have many of those big clothes
+        the others had, so improvisation was the key!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.data[7]
       value: And then the day came when I met her. My mother! Some guy told me once
         that I would never be able to find her. . . there she was! Ha!
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: colinPastMemoryDialogue.Array.data[6]
+      propertyPath: colinPastMemoryDialogue.Array.data[8]
       value: "Well, I don\u2019t think she was my actual mother, but it felt nice.
         She was kind, the kindest person I\u2019ve ever met. That\u2019s what mothers
-        are, right?"
+        are, right? At least that\u2019s what I heard."
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: colinPastMemoryDialogue.Array.data[7]
-      value: She used to tell me amazing stories. When I asked her if we could do
-        such things, she always got mad at me. . .
+      propertyPath: colinPastMemoryDialogue.Array.data[9]
+      value: "She used to tell me amazing stories but she never lets me go out there
+        and create my own. It\u2019s unfair! She always gets mad at me."
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: colinPastMemoryDialogue.Array.data[8]
-      value: But I loved her anyways.
-      objectReference: {fileID: 0}
+      propertyPath: carAccidentMemorySprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -705290782, guid: 8372963f959e019499a2a1dbf0001484, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemorySprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+      objectReference: {fileID: 21300000, guid: 2f663bfe1f3547d4696fb5460b7a610d, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemorySprites.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+      objectReference: {fileID: 554429858, guid: 9279d594ef8821f46b0582e23b8b01f1, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemorySprites.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+      objectReference: {fileID: -803474259, guid: cecf6b02ce7873d4abed49c693cba583, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemorySprites.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+      objectReference: {fileID: 2134416775, guid: 5bc5ce336a83aa247af7d37506907780, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemorySprites.Array.data[5]
       value: 
-      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+      objectReference: {fileID: 21300000, guid: db81063d37b2c184a88f64acc24d07d1, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemorySprites.Array.data[6]
       value: 
-      objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+      objectReference: {fileID: 21300000, guid: 4d15e4744b6fddd48b17b4ee6d770c93, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemorySprites.Array.data[7]
       value: 
@@ -4639,50 +4799,54 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: colinPastMemoryDialogue.Array.data[10]
+      value: But in the end. . .  I loved her anyways.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemoryDialogue.Array.data[0]
-      value: I was the only reason. I was responsible for everything.
+      value: Harn
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemoryDialogue.Array.data[1]
-      value: Her only existence left, inside of me, drowned in sorrow.
+      value: I was the only reason. I was responsible for everything.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemoryDialogue.Array.data[2]
+      value: Her only existence left, inside of me, drowned in sorrow.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: carAccidentMemoryDialogue.Array.data[3]
       value: "For so long, I saw her every single night, when I closed my eyes. She
         shared her pain with me, but I couldn\u2019t do the same with her. I couldn\u2019t
         do it."
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: carAccidentMemoryDialogue.Array.data[3]
+      propertyPath: carAccidentMemoryDialogue.Array.data[4]
       value: Her apparitions became less frequent and yet, my regret only got worse.
         Why? Me? To simply move on? I must not. For the longest time I thought that
         way.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: carAccidentMemoryDialogue.Array.data[4]
+      propertyPath: carAccidentMemoryDialogue.Array.data[5]
       value: Then I realised.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: carAccidentMemoryDialogue.Array.data[5]
+      propertyPath: carAccidentMemoryDialogue.Array.data[6]
       value: She would come back no more. No matter if it was to haunt or comfort
         me. She was never coming back.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: carAccidentMemoryDialogue.Array.data[6]
+      propertyPath: carAccidentMemoryDialogue.Array.data[7]
       value: "And yet, she still laid trapped inside my cage of regrets. How could
         that be? Did she really forgive me or did I just learn to move on? No. That
         wasn\u2019t it. Not yet."
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: carAccidentMemoryDialogue.Array.data[7]
+      propertyPath: carAccidentMemoryDialogue.Array.data[8]
       value: That is why I tried not to forget or drown in punishment, as I had done
         all that time, but to forgive. To forgive myself so she could finally be
         at peace. To get her out of that horrible cage. The only place where she
         still existed, in a way.
-      objectReference: {fileID: 0}
-    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: carAccidentMemoryDialogue.Array.data[8]
-      value: That way, she would be able to feel the sun and breeze through my skin.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: carAccidentMemoryDialogue.Array.data[9]
@@ -4694,7 +4858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: dreamsOfAdventureMemoryDialogue.Array.size
-      value: 8
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: dreamsOfAdventureMemorySprites.Array.data[0]
@@ -4730,52 +4894,68 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: bb51334c6930f864abac38001f7bdf6e, type: 3}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[0]
+      value: Bretta
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[1]
       value: I was wandering through the streets when a child stopped me. He looked
         so malnourished and dirty.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[1]
-      value: "At first, I ignored him. Some part of me, however, couldn\u2019t. I
-        get it now. I had forgotten to check the cage I had put my distant self in.
-        She had escaped, somehow, and this was the result. My legs carried so much
-        weight. . ."
-      objectReference: {fileID: 0}
-    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[2]
-      value: Every single day. Every night. And the worst of all was waking up every
-        morning to the same burning sun in the horizon. This time, however, Colin
-        was by my side.
+      value: "At first, I ignored him. Some part of me, however, couldn\u2019t."
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[3]
+      value: I get it now.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[4]
+      value: I had forgotten to check the cage I had put my distant self in. She
+        had escaped, somehow, and this was the result. My legs carried so much weight.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[5]
+      value: . . .
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[6]
+      value: Every single day. Every night.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[7]
+      value: Waking up every morning to the same burning sun in the horizon. This
+        time, however, Colin was by my side.
+      objectReference: {fileID: 0}
+    - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[8]
       value: "I had no hate left in me. No sorrow. Just indiference. But that child
         used to make me feel a profound longing, that of which can\u2019t be described
         with mere words."
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[4]
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[9]
       value: I saw myself in him. God, I really did. It hurt so much. He could see
         it, the same way I did so long ago.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[5]
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[10]
       value: I knew some places where John used to go, and so I thought I could bring
         him there. My fear, however, made me foolish once again and ended up just
         telling him tales of a distant past.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[6]
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[11]
       value: "Ah, the magic overflowing from his eyes, yet I didn\u2019t let him
-        follow that dream. It was too soon. He was too young. With time, a strange
-        distance between us appeared. Too many words I regret not being able to say.
-        I did not know how."
+        follow that dream. It was too soon. He was too young."
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[7]
-      value: I did not know.
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[12]
+      value: With time, a strange distance between us appeared. Too many words I
+        regret not being able to say. I did not know how.
       objectReference: {fileID: 0}
     - target: {fileID: 563889244, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
-      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[8]
+      propertyPath: dreamsOfAdventureMemoryDialogue.Array.data[13]
       value: I did not know.
       objectReference: {fileID: 0}
     - target: {fileID: 778246000, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
@@ -4792,11 +4972,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1618803795249335605, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.23
+      value: 5.92
       objectReference: {fileID: 0}
     - target: {fileID: 1618803795249335605, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.84
+      value: -2.02
       objectReference: {fileID: 0}
     - target: {fileID: 1618803795249335605, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4833,6 +5013,10 @@ PrefabInstance:
     - target: {fileID: 1618803795249335609, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964815507890840359, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
+      propertyPath: m_Radius
+      value: 1.83
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950452620841bb84db128d9a5ecaa8d6, type: 3}
@@ -4890,6 +5074,14 @@ PrefabInstance:
     - target: {fileID: 3618811010803856559, guid: cc63269a2dc76214a9269626597c29ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539343016670374069, guid: cc63269a2dc76214a9269626597c29ac, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5131464
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539343016670374069, guid: cc63269a2dc76214a9269626597c29ac, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.77064824
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc63269a2dc76214a9269626597c29ac, type: 3}

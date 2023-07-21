@@ -40,7 +40,7 @@ namespace States.ConcreteStates
             cameraGO = GameObject.FindGameObjectWithTag("MainCamera");
             memoryGO.transform.position = new Vector3(cameraGO.transform.position.x, cameraGO.transform.position.y, memoryGO.transform.position.z);
 
-            memoryManager.RecieveMemoryData(playerState, manageEmpathise.GetCurrentMemorySprites(), manageEmpathise.GetCurrentMemoryDialogue(), memoryGO.GetComponentInChildren<TextMeshPro>(), memoryGO.GetComponentInChildren<SpriteRenderer>());
+            memoryManager.RecieveMemoryData(playerState, manageEmpathise.GetCurrentMemoryDialogue(), memoryGO.GetComponentInChildren<TextMeshPro>(), memoryGO.GetComponentInChildren<SpriteRenderer>());
         }
 
         public override void Exit()
@@ -53,6 +53,10 @@ namespace States.ConcreteStates
         public override void Update()
         {
             controlManager.MemoryControls(this, playerState);
+        }
+
+        public override void RegisterInteractor(GameObject newInteractor)
+        {
         }
     }
 }

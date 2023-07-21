@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6619523800621813901
 Transform:
   m_ObjectHideFlags: 0
@@ -226,6 +226,15 @@ MonoBehaviour:
   musicLayerOrders:
   - 
   blameTrinket: {fileID: 2487525950138099283, guid: b6998e8d68164be48a812405b5a8a2bb, type: 3}
+  randomTrinketSprites:
+  - {fileID: -1120629032, guid: 1f1fb6a4af2e3394f9707d41ef2da79c, type: 3}
+  - {fileID: 1962052511, guid: 1f1fb6a4af2e3394f9707d41ef2da79c, type: 3}
+  - {fileID: 890201458, guid: 1f1fb6a4af2e3394f9707d41ef2da79c, type: 3}
+  - {fileID: 1036917742, guid: 1f1fb6a4af2e3394f9707d41ef2da79c, type: 3}
+  - {fileID: 1091062302, guid: 1f1fb6a4af2e3394f9707d41ef2da79c, type: 3}
+  - {fileID: -1638042102, guid: 1f1fb6a4af2e3394f9707d41ef2da79c, type: 3}
+  - {fileID: -1735015541, guid: 1f1fb6a4af2e3394f9707d41ef2da79c, type: 3}
+  - {fileID: -544673328, guid: 1f1fb6a4af2e3394f9707d41ef2da79c, type: 3}
 --- !u!95 &1462160376134453663
 Animator:
   serializedVersion: 4

@@ -18,23 +18,28 @@ namespace Interactuables.ConcreteInteractuables
         }
         public override void Interact()
         {
-            if (blameTrinket.GetComponent<ABlameTrinket>().IsPlayerCarryingTrinket())
+            if (blameTrinket != null && blameTrinket.GetComponent<ABlameTrinket>().IsPlayerCarryingTrinket())
             {
-                switch(blameTrinket.GetComponent<ABlameTrinket>().GetID())
+                switch (blameTrinket.GetComponent<ABlameTrinket>().GetID())
                 {
                     case 0: //Random
                         break;
                     case 1: //Harn
+                        GetComponent<Animator>().SetTrigger("TrinketPile2");
                         break;
                     case 2: //Strange
+                        GetComponent<Animator>().SetTrigger("TrinketPile3");
                         break;
                     case 3: //Nur
                         break;
                     case 4: //Bretta
+                        GetComponent<Animator>().SetTrigger("TrinketPile4");
                         break;
                     case 5: //Hayure
+                        GetComponent<Animator>().SetTrigger("TrinketPile5");
                         break;
                     case 6: //Colin
+                        GetComponent<Animator>().SetTrigger("TrinketPile6");
                         break;
                     case 7: //Nur father
                         break;

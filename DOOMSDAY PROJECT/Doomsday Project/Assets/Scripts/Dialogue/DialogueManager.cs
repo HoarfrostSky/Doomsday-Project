@@ -17,24 +17,26 @@ namespace Dialogue
         public EventHandler<String> iconHandler;
         public EventHandler<String> memoryHandler;
 
-        private void Awake()
+        public void RegisterMessageHandler(GameObject interactGO)
         {
-            GameObject[] listaInteractuables = GameObject.FindGameObjectsWithTag("Interactuable");
-            foreach (GameObject GO in listaInteractuables)
-            {
-                GO.GetComponent<AInteractuable>().SendMessageHandler += RecieveMessage;
-            }
+            interactGO.GetComponent<AInteractuable>().SendMessageHandler += RecieveMessage;
         }
 
         public void RecieveMessage(object sender, String[] dialogue)
         {
             dialogueTexts = dialogue;
+            Debug.Log("Dialogo recibido: " + dialogueTexts[0]);
             NextMessage();
         }
 
         public void ConnectSoul(ASoul soul)
         {
             soul.sendDialogueHandler += RecieveMessage;
+        }
+
+        public void EmptyTexts()
+        {
+            dialogueTexts = null;
         }
 
         public void ProcessMessage(int i)
@@ -49,7 +51,7 @@ namespace Dialogue
             else if(processedText[0] == "judge")
             {
                 nDialogue = -1;
-                dialogueTexts = null;
+                EmptyTexts();
                 GetComponent<PlayerStateController>().SetState(new State_Judge(GetComponent<PlayerStateController>()));
             }
             else
@@ -69,11 +71,12 @@ namespace Dialogue
         public void NextMessage()
         {
             nDialogue++;
+            Debug.Log("N dialogo: " + nDialogue);
+            Debug.Log("Siguiente mensaje: " + dialogueTexts.ToString());
 
             if (nDialogue == dialogueTexts.Length)
             {
                 nDialogue = -1;
-                dialogueTexts = null;
                 GetComponent<PlayerStateController>().SetState(new State_Explore(GetComponent<PlayerStateController>()));
             }
             else

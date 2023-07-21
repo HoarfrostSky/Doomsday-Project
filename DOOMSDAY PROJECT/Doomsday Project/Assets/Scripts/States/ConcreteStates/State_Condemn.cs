@@ -38,7 +38,7 @@ namespace States.ConcreteStates
             this.soul = GameObject.FindGameObjectWithTag("Soul");
             if(playerGO.GetComponent<AttackSoulManager>().GetCurrentAttack() == 0) soul.GetComponent<Animator>().SetTrigger("SoulTerrorTransition");
 
-            this.dark1 = GameObject.FindGameObjectWithTag("Dark1");
+            this.dark1 = GameObject.Find("Dark1");
             sword.transform.localPosition = new Vector3(-3.3f, 0f, 0f);
             sword.transform.localScale = new Vector3(1f, 1f, 1f);
         }
@@ -57,6 +57,10 @@ namespace States.ConcreteStates
             if(sword.transform.localEulerAngles.z < 100f || sword.transform.localEulerAngles.z >= 290f) sword.transform.RotateAround(playerGO.transform.position, Vector3.forward, 0.01f * swordScript.weight);
 
             controlManager.CondemnControls(this, playerState, mouseDeltaHPosition, sword, playerGO);
+        }
+
+        public override void RegisterInteractor(GameObject newInteractor)
+        {
         }
     }
 }

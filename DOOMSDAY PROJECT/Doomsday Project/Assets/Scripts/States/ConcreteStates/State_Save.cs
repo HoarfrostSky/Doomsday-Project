@@ -30,7 +30,7 @@ namespace States.ConcreteStates
             this.soul = GameObject.FindGameObjectWithTag("Soul");
 
             musicManager = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<ManageMusic>();
-            musicManager.JudgeMusicVolume(musicManager.GetCurrentVolume(), 0f);
+            musicManager.JudgeMusicVolume(20f, 0f);
         }
 
         public override void Exit()
@@ -53,6 +53,10 @@ namespace States.ConcreteStates
         public void AddSavePoint()
         {
             savePoints += 200 * Time.deltaTime;
+        }
+
+        public override void RegisterInteractor(GameObject newInteractor)
+        {
         }
     }
 }
