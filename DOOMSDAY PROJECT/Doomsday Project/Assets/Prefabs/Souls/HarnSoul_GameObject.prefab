@@ -224,7 +224,6 @@ MonoBehaviour:
   - Harn-At last! I thought I would never see someone again.
   - Nameless-What?
   - Harn-Hi! Nice to meet ya!
-  - judge
   - Nameless-Hey!
   - Dark1-Kneel.
   - cinematic
@@ -312,6 +311,7 @@ MonoBehaviour:
   - Harn-I understand. No need for apologies. It was a pleasure speaking with you.
     Nothing to hide. Honest words.
   - Harn-Do what you must.
+  - judge
   moveSpeed: 20
   musicLayerOrders:
   - 0_0_60_100

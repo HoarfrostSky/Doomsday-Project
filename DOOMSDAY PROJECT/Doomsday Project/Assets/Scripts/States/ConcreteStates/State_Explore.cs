@@ -7,6 +7,7 @@ using States.Interfaces;
 using Interactuables.Interfaces;
 using Cinematic;
 using Music;
+using Player;
 
 namespace States.ConcreteStates
 {
@@ -31,6 +32,8 @@ namespace States.ConcreteStates
             Debug.Log("Entering State_Explore");
 
             dialogueManager = playerGO.GetComponent<DialogueManager>();
+
+            playerGO.GetComponent<AttackSoulManager>().ResetCurrentAttack();
 
             playerAnim = playerGO.GetComponent<Animator>();
             playerAnim.SetTrigger("RevertToIdle");

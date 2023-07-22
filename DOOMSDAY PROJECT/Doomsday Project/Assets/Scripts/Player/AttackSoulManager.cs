@@ -40,5 +40,10 @@ namespace Player
         {
             return currentAttack;
         }
+
+        public void ResetCurrentAttack()
+        {
+            this.currentAttack = 0;
+        }
     }
 }

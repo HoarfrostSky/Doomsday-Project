@@ -7,6 +7,7 @@ namespace Scenes.Interfaces
     public abstract class AConcreteScene : IScene
     {
         protected ISceneState sceneState;
+        protected bool finished = false;
 
         public AConcreteScene(ISceneState sceneState)
         {
@@ -18,5 +19,10 @@ namespace Scenes.Interfaces
         public abstract void Exit();
 
         public abstract void Update();
+
+        public bool IsSceneFinished()
+        {
+            return finished;
+        }
     }
 }

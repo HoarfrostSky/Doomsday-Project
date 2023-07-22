@@ -38,23 +38,30 @@ namespace Controls
                 sword.transform.RotateAround(this.gameObject.transform.position, Vector3.forward, angleAttack);
             }
 
-            if(Input.GetKeyDown(KeyCode.Space))
+            if (sword.transform.rotation.eulerAngles.z < 360 && sword.transform.rotation.eulerAngles.z > 180)
             {
-                //If the attack is charged enough
-                if (sword.transform.rotation.eulerAngles.z < 360 && sword.transform.rotation.eulerAngles.z > 180)
+                sword.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    //If the attack is charged enough
+
                     player.GetComponent<Animator>().SetTrigger("Attack1");
                     sword.transform.localScale = new Vector3(0f, 0f, 1f);
 
                     Debug.Log("SOUL CONDEMNED");
                 }
             }
+            else
+            {
+                sword.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 1f);
+            }
 
-            if(Input.GetKeyDown(KeyCode.C))
+            /*if(Input.GetKeyDown(KeyCode.C))
             {
                 Debug.Log("Se envía la orden");
                 CameraHandler?.Invoke(this,0);
-            }
+            }*/
         }
 
         public void DialogueControls(State_Dialogue currentState, IPlayerState playerStateController, DialogueManager dialogueManager, DialogueUI dialogueUI, ManageEmpathise manageEmpathise)

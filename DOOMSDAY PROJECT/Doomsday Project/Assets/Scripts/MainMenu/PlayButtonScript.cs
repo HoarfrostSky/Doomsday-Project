@@ -14,9 +14,15 @@ namespace MainMenu
         public EventHandler<AConcreteScene> sceneHandler;
         public GameObject introScreenManager;
 
+        private bool inIntro = false;
+
         public void StartGame()
         {
-            introScreenManager.GetComponent<ManageIntro>().StartIntro();
+            if (!inIntro)
+            {
+                inIntro = true;
+                introScreenManager.GetComponent<ManageIntro>().StartIntro();
+            }
             //sceneStateController.SetSceneState(new Scene_MainScene(sceneStateController));
         }
 
