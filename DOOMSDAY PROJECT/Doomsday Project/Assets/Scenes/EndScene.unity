@@ -1061,6 +1061,7 @@ GameObject:
   - component: {fileID: 1812241286}
   - component: {fileID: 1812241288}
   - component: {fileID: 1812241289}
+  - component: {fileID: 1812241290}
   m_Layer: 0
   m_Name: EndAnimationGO
   m_TagString: Untagged
@@ -1203,6 +1204,28 @@ MonoBehaviour:
   - Only by staying here you can save them, accordingly to what they deserve
   - Is that not the right thing to do?
   - . . .
+--- !u!114 &1812241290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812241285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ee8f11d26c66c40a2adc87eca50630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  judgeMusicSource: {fileID: 0}
+  saveMusicSource: {fileID: 0}
+  currentLayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  dialogueMusic: []
+  condemnMusic: []
 --- !u!1 &1927843651
 GameObject:
   m_ObjectHideFlags: 0

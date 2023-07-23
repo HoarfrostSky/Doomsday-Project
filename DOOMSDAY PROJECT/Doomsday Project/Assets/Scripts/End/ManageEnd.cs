@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using TMPro;
+using Music;
 
 namespace End
 {
@@ -25,6 +26,7 @@ namespace End
 
         IEnumerator ManageEndSequence()
         {
+
             yield return new WaitForSeconds(4f);
             ShowDialogueBackground();
             NextText(); //. . .
