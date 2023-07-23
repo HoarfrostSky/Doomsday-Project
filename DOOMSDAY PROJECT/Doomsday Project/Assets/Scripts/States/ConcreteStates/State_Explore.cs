@@ -8,6 +8,7 @@ using Interactuables.Interfaces;
 using Cinematic;
 using Music;
 using Player;
+using CameraNamespace;
 
 namespace States.ConcreteStates
 {
@@ -34,6 +35,9 @@ namespace States.ConcreteStates
             dialogueManager = playerGO.GetComponent<DialogueManager>();
 
             playerGO.GetComponent<AttackSoulManager>().ResetCurrentAttack();
+
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<DramaManager>().ExecuteCameraMovement(this, 0);
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraMovementManager>().SetEnableMovement(true);
 
             playerAnim = playerGO.GetComponent<Animator>();
             playerAnim.SetTrigger("RevertToIdle");

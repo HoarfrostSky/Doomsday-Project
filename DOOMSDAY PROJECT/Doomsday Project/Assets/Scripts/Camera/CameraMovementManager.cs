@@ -19,6 +19,8 @@ namespace CameraNamespace
         private int auxDirection = 0;
         private float n = 0;
 
+        private bool enabledMovement = true;
+
         private void Awake()
         {
             rb = player.GetComponent<Rigidbody2D>();
@@ -26,26 +28,29 @@ namespace CameraNamespace
 
         public void RegisterPlayerMovement()
         {
-            switch (rb.velocity.x)
+            if(enabledMovement)
             {
-                case var _ when rb.velocity.x < -movementRange:
-                    direction = -1;
-                    break;
-                
-                case var _ when rb.velocity.x > movementRange:
-                    direction = 1;
-                    break;
-                default:
-                    direction = 0;
-                    n *= recoverySpeed;
-                    break;
+                switch (rb.velocity.x)
+                {
+                    case var _ when rb.velocity.x < -movementRange:
+                        direction = -1;
+                        break;
+
+                    case var _ when rb.velocity.x > movementRange:
+                        direction = 1;
+                        break;
+                    default:
+                        direction = 0;
+                        n *= recoverySpeed;
+                        break;
+                }
+
+                if (auxDirection != direction) n = 0;
+
+                MoveCamera(transform.localPosition, new Vector3((offset * direction), this.transform.localPosition.y, this.transform.localPosition.z));
+
+                auxDirection = direction;
             }
-
-            if (auxDirection != direction) n = 0;
-
-            MoveCamera(transform.localPosition, new Vector3((offset * direction), this.transform.localPosition.y, this.transform.localPosition.z));
-
-            auxDirection = direction;
         }
 
         private void MoveCamera(Vector3 fPos, Vector3 lPos)
@@ -54,6 +59,11 @@ namespace CameraNamespace
 
             n += 0.001f * movementSpeed * Time.deltaTime;
             n = Mathf.Clamp(n, 0, 1);
+        }
+
+        public void SetEnableMovement(bool b)
+        {
+            this.enabledMovement = b;
         }
     }
 }

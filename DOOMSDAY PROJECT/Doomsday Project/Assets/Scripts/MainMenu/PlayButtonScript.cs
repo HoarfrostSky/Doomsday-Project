@@ -5,6 +5,8 @@ using System;
 using Scenes.Interfaces;
 using Scenes.Controllers;
 using Scenes.ConcreteScenes;
+using UnityEngine.UI;
+using TMPro;
 
 namespace MainMenu
 {
@@ -13,6 +15,8 @@ namespace MainMenu
         private ISceneState sceneStateController;
         public EventHandler<AConcreteScene> sceneHandler;
         public GameObject introScreenManager;
+        public GameObject quitButton;
+        public Sprite buttonPressed;
 
         private bool inIntro = false;
 
@@ -21,6 +25,9 @@ namespace MainMenu
             if (!inIntro)
             {
                 inIntro = true;
+                GetComponent<Image>().sprite = buttonPressed;
+                GetComponentInChildren<TextMeshProUGUI>().fontSize = 0f;
+                quitButton.GetComponent<Image>().gameObject.GetComponent<RectTransform>().localScale = new Vector3(0f, 0f, 1f);
                 introScreenManager.GetComponent<ManageIntro>().StartIntro();
             }
             //sceneStateController.SetSceneState(new Scene_MainScene(sceneStateController));

@@ -5,6 +5,7 @@ using Scenes.Interfaces;
 using Scenes.Controllers;
 using UnityEngine.SceneManagement;
 using PauseMenu;
+using Sounds;
 
 namespace Scenes.ConcreteScenes
 {
@@ -36,11 +37,15 @@ namespace Scenes.ConcreteScenes
                 pauseMenuGO.GetComponentInChildren<ResumeButtonScript>().ConnectScene(this);
                 if (pause)
                 {
+                    //Cerrar
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSound>().PlayCerrarPausa();
                     pauseMenuGO.transform.localScale = new Vector3(0f, 0f, 1f);
                     pause = false;
                 }
                 else
                 {
+                    //Abrir
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSound>().PlayAbrirPausa();
                     pauseMenuGO.transform.localScale = new Vector3(1f, 1f, 1f);
                     pause = true;
                 }

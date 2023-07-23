@@ -4,6 +4,9 @@ using UnityEngine;
 using System;
 using Souls;
 using Souls.Interfaces;
+using CameraNamespace;
+using States.ConcreteStates;
+using States.Controllers;
 
 namespace Cinematic
 {
@@ -13,6 +16,8 @@ namespace Cinematic
         private int n = -1;
         private GameObject soul;
         private AnimatorStateInfo currentAnimation;
+
+        public GameObject introGO;
 
         public String[] harnAnimationList;
         public String[] strangeAnimationList;
@@ -43,6 +48,7 @@ namespace Cinematic
                     SoulMode();
                     break;
                 case 1:
+                    StartCoroutine(ManageTitleIntro());
                     break;
                 default:
                     break;
@@ -86,6 +92,38 @@ namespace Cinematic
             }
 
             currentAnimation = soul.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
+        }
+
+        IEnumerator ManageTitleIntro()
+        {
+            DramaManager cameraScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<DramaManager>();
+            GameObject.Find("Dark2").transform.localScale = new Vector3(0f, 0f, 1f);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetTrigger("SitRight");
+
+            cameraScript.ExecuteCameraMovement(this, 9);
+
+            yield return new WaitForSeconds(5f);
+
+            cameraScript.ExecuteCameraMovement(this, 10);
+
+            yield return new WaitForSeconds(36f);
+
+            cameraScript.CallFadeOut();
+
+            yield return new WaitForSeconds(3f);
+
+            cameraScript.ExecuteCameraMovement(this, 0);
+
+            yield return new WaitForSeconds(2f);
+
+            PlayerStateController playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateController>();
+            playerController.SetState(new State_Explore(playerController));
+
+            yield return new WaitForSeconds(0.5f);
+
+            introGO.SetActive(false);
+            GameObject.Find("Dark2").transform.localScale = new Vector3(1f, 1f, 1f);
+            cameraScript.CallFadeIn();
         }
     }
 }

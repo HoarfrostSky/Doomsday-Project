@@ -25,6 +25,7 @@ namespace Souls
         public void Dark1CastSpell()
         {
             GameObject.Find("Dark1").GetComponent<Animator>().SetTrigger("CastSpell");
+            GetComponent<AudioSource>().Play();
         }
 
         public void Dark1RevertToIdle()

@@ -21,6 +21,7 @@ namespace States.Interfaces
         public AConcreteState(IPlayerState playerState)
         {
             this.playerState = playerState;
+            Debug.Log(playerState.ToString());
             this.playerGO = playerState.GetGameObject();
             this.rb = playerState.GetRigidbody();
             this.controlManager = playerGO.GetComponent<ControlManager>();

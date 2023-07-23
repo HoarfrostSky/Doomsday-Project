@@ -17,6 +17,8 @@ namespace Blame.Interfaces
         {
             Debug.Log("Se interactúa con trinket");
 
+            GetComponent<AudioSource>().Play();
+
             this.transform.localScale = new Vector3(0f, 0f, 1f);
             GetComponent<Collider2D>().enabled = false;
 

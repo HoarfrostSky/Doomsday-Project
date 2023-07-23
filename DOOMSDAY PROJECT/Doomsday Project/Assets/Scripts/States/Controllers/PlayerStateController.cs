@@ -12,18 +12,20 @@ namespace States.Controllers
 {
     public class PlayerStateController : MonoBehaviour, IPlayerState
     {
+        public GameObject GO;
+
         private IState currentState;
         private IState previousState;
         private IState nextState;
 
         private void Awake()
         {
-            SetState(new State_Explore(this));
+            SetState(new State_Title(this));
         }
 
         public GameObject GetGameObject()
         {
-            return this.gameObject;
+            return GO;
         }
         public Rigidbody2D GetRigidbody()
         {

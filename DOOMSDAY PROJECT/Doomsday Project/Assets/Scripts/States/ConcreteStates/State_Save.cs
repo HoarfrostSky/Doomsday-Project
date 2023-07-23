@@ -29,22 +29,35 @@ namespace States.ConcreteStates
 
             this.soul = GameObject.FindGameObjectWithTag("Soul");
 
+            playerGO.GetComponent<Animator>().SetTrigger("RevertToIdle");
+            playerGO.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+            playerGO.GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, -1f, 0f) * 10);
+
             musicManager = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<ManageMusic>();
             musicManager.JudgeMusicVolume(20f, 0f);
+            musicManager.saveMusicSource.volume = 0f;
+            musicManager.saveMusicSource.Play();
+
+            controlManager.ResetSpacebar();
         }
 
         public override void Exit()
         {
             Debug.Log("Exiting State_Save");
+
         }
 
         public override void Update()
         {
             controlManager.SaveControls(this, playerState, playerGO);
             Debug.Log("Save points: " + savePoints);
-            if(savePoints >= limit)
+            musicManager.saveMusicSource.volume = savePoints / limit;
+            if (savePoints >= limit)
             {
+                musicManager.SaveMusicVolume(100f, 0f);
                 soul.GetComponentInChildren<SaveAnimationManager>().gameObject.GetComponent<Animator>().SetTrigger("SaveAction");
+
+                GameObject.Find("SpacebarHelp").transform.localScale = new Vector3(0f, 0f, 1f);
 
                 Debug.Log("ALMA SALVADA");
             }

@@ -209,7 +209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.1}
+  m_AnchoredPosition: {x: 0.02, y: -0.075}
   m_SizeDelta: {x: 3.8339, y: 3.3312}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &352085423
@@ -232,7 +232,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  - {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -276,8 +276,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: E
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
-  m_sharedMaterial: {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
+  m_sharedMaterial: {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -301,8 +301,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 8.6
+  m_fontSizeBase: 8.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -371,7 +371,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477363170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.84, y: 1.99, z: -1}
+  m_LocalPosition: {x: 1.21, y: 1.41, z: -1}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -461,7 +461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.66, z: -10}
+  m_LocalPosition: {x: 0, y: 3.57, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -495,7 +495,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8.6
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -597,7 +597,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionsList:
-  - -2,2,-10_800_5
+  - 0,3.57,-10_100_7.00
+  - -9.00,-0.41,-10_8000_4.17
+  - -0.81,-0.41,-10_20_4.17
+  - 0.77,-1.63,-10_200_2.54
+  - -2.13,0.60,-10_100_4.67
+  - 0.31, 0.46,-10_200_2.43
+  - -2.92,-0.6,-10_650_1.75
+  - -0.18,1.14,-10_200_3.57
+  - 0,8.23,-10_10_11.24
+  playerGO: {fileID: 1618803795249335609}
+  throneGO: {fileID: 0}
+  dramaticScreenGO: {fileID: 0}
 --- !u!1 &563889241
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,7 +636,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563889241}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.72, y: 1.73, z: -1}
+  m_LocalPosition: {x: -2.65, y: -0.91, z: -1}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -675,8 +686,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6509434, g: 0.3495346, b: 0.22516905, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 76bfdfb225c0e2c4381ed9045ec735bc, type: 3}
+  m_Color: {r: 0.7010205, g: 0.8018868, b: 0.7165248, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -703,7 +714,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.84210527, y: 0.96842104}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -726,10 +737,105 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoryNames:
   - car_accident
-  carAccidentMemorySprites:
-  - {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+  - bullying
+  - dreams_of_adventure
+  - killings
+  - colin_past
+  - truth
   carAccidentMemoryDialogue:
-  - pruebaprueba
+  - Harn
+  - I was the only reason. I was responsible for everything.
+  - Her only existence left, inside of me, drowned in sorrow.
+  - "For so long, I saw her every single night, when I closed my eyes. She shared
+    her pain with me, but I couldn\u2019t do the same with her. I couldn\u2019t do
+    it."
+  - Her apparitions became less frequent and yet, my regret only got worse. Why?
+    Me? To simply move on? I must not. For the longest time I thought that way.
+  - Then I realised.
+  - She would come back no more. No matter if it was to haunt or comfort me. She
+    was never coming back.
+  - "And yet, she still laid trapped inside my cage of regrets. How could that be?
+    Did she really forgive me or did I just learn to move on? No. That wasn\u2019t
+    it. Not yet."
+  - That is why I tried not to forget or drown in punishment, as I had done all that
+    time, but to forgive. To forgive myself so she could finally be at peace. To
+    get her out of that horrible cage. The only place where she still existed, in
+    a way.
+  - That way, she would be able to feel the sun and breeze through my skin.
+  bullyingMemoryDialogue:
+  - Strange
+  - 
+  dreamsOfAdventureMemoryDialogue:
+  - Bretta
+  - I was wandering through the streets when a child stopped me. He looked so malnourished
+    and dirty.
+  - "At first, I ignored him. Some part of me, however, couldn\u2019t."
+  - I get it now.
+  - I had forgotten to check the cage I had put my distant self in. She had escaped,
+    somehow, and this was the result. My legs carried so much weight.
+  - . . .
+  - Every single day. Every night.
+  - Waking up every morning to the same burning sun in the horizon. This time, however,
+    Colin was by my side.
+  - "I had no hate left in me. No sorrow. Just indiference. But that child used to
+    make me feel a profound longing, that of which can\u2019t be described with mere
+    words."
+  - I saw myself in him. God, I really did. It hurt so much. He could see it, the
+    same way I did so long ago.
+  - I knew some places where John used to go, and so I thought I could bring him
+    there. My fear, however, made me foolish once again and ended up just telling
+    him tales of a distant past.
+  - "Ah, the magic overflowing from his eyes, yet I didn\u2019t let him follow that
+    dream. It was too soon. He was too young."
+  - With time, a strange distance between us appeared. Too many words I regret not
+    being able to say. I did not know how.
+  - I did not know.
+  killingsMemoryDialogue:
+  - Hayure
+  - 
+  colinPastMemoryDialogue:
+  - Colin
+  - Like every good story, it starts with me borrowing a chocolate pancake from the
+    store. Two of them, actually. I wanted to give one to a new friend I had made
+    a few days before.
+  - "We used to talk through the fence of his school\u2019s playground. He was a
+    few years older than me. He was also a bit odd, but I didn\u2019t mind. Everyone
+    is a little odd in their own way."
+  - "That day, however, he wasn\u2019t there."
+  - I never saw him again. I wonder where he is right now.
+  - Anyway, I started to get bored in that area of the city, so I went elsewhere.
+    Somewhere warmer.
+  - "Winter was setting in. I didn\u2019t have many of those big clothes the others
+    had, so improvisation was the key!"
+  - And then the day came when I met her. My mother! Some guy told me once that I
+    would never be able to find her. . . there she was! Ha!
+  - "Well, I don\u2019t think she was my actual mother, but it felt nice. She was
+    kind, the kindest person I\u2019ve ever met. That\u2019s what mothers are, right?
+    At least that\u2019s what I heard."
+  - "She used to tell me amazing stories but she never lets me go out there and create
+    my own. It\u2019s unfair! She always gets mad at me."
+  - But in the end. . .  I loved her anyways.
+  truthMemoryDialogue:
+  - Lenna
+  - We were best friends. All of us, three.
+  - When the winds of sorrow arrived, the only we had was each other, and thus we
+    formed a group to survive. A few joined us during that time.
+  - We all shared our pain, but also our happinness. In a world where happinness
+    is nowhere to be found, the only way to experience it is to create it yourself.
+  - "\u201CThe sun shines bright.\u201C"
+  - "Those were his words. John\u2019s words."
+  - And that woman took him from us.
+  - "Oh god. Pain soaked my chest. I couldn\u2019t stand watch his pale face, looking
+    at us, begging for a life we couldn\u2019t give him back."
+  - There is no doubt the days that came after were a bit darker. The sun shone less.
+    Birds sang no more.
+  - "Hayure didn\u2019t speak about it. I tried, but he just would not listen. It
+    seemed sorrow had taken two of my dearest friends and now was chasing me down."
+  - One day, I came back to a different Hayure. I knew he was still there, somewhere,
+    but it was his pain who spoke those words.
+  - "\u201CI let it happen. I killed him.\u201D"
+  - "\u201CI am a murderer.\u201C"
+  - I cried.
 --- !u!1 &653213838
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +894,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  - {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -832,8 +938,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Empathise
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
-  m_sharedMaterial: {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
+  m_sharedMaterial: {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -902,6 +1008,90 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 653213841}
   m_maskType: 0
+--- !u!1 &760270088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 760270089}
+  - component: {fileID: 760270090}
+  m_Layer: 0
+  m_Name: SpacebarHelp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &760270089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760270088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.37, y: 1.87, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1618803795249335605}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &760270090
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760270088}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1282551196, guid: 8be86b8a5570e3b46ab91162636fc16c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.5789473, y: 1.2631578}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2003860031
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,7 +1116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003860031}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.87, y: 4.82, z: -1}
+  m_LocalPosition: {x: 2.21, y: -2.12, z: -1}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -993,7 +1183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  - {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1037,8 +1227,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Q
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
-  m_sharedMaterial: {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
+  m_sharedMaterial: {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1249,7 +1439,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  - {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1293,8 +1483,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Condemn
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
-  m_sharedMaterial: {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
+  m_sharedMaterial: {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1421,7 +1611,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  - {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1465,8 +1655,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Q
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
-  m_sharedMaterial: {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
+  m_sharedMaterial: {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1490,8 +1680,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 7.12
+  m_fontSizeBase: 7.12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1553,6 +1743,7 @@ GameObject:
   - component: {fileID: 1362340335}
   - component: {fileID: 906782389}
   - component: {fileID: 1618803796070606048}
+  - component: {fileID: 402411539}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1577,6 +1768,7 @@ Transform:
   - {fileID: 563889242}
   - {fileID: 2003860032}
   - {fileID: 1618803796147803025}
+  - {fileID: 760270089}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1694,7 +1886,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.13
+  m_Radius: 1.83
 --- !u!114 &1618803795249335602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1719,8 +1911,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26c709babb6cf34ca556fcd6fe33d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 13
+  speed: 50
   swordWeight: 40
+  spacebarSprites:
+  - {fileID: 1282551196, guid: 8be86b8a5570e3b46ab91162636fc16c, type: 3}
+  - {fileID: 584899644, guid: 8be86b8a5570e3b46ab91162636fc16c, type: 3}
+  spacebar: {fileID: 760270088}
 --- !u!114 &1362340335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1765,6 +1961,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 952946471e7d34d4abbcae31f779a267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &402411539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618803795249335609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ea95f383bb8f445b3d11a12aebe232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: ff29ec16e105c224f9b4756f98534cef, type: 3}
+  - {fileID: 8300000, guid: b40aba14d0d3d314cbccb47328e19f49, type: 3}
+  - {fileID: 8300000, guid: a3613197677296d40a9971589eabc4fa, type: 3}
+  - {fileID: 8300000, guid: 60010670c5d09b1499f938538eb9167c, type: 3}
 --- !u!1 &2761744049461465280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,7 +2036,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  - {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1867,8 +2080,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: E
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
-  m_sharedMaterial: {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
+  m_sharedMaterial: {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1892,8 +2105,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 7.12
+  m_fontSizeBase: 7.12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2079,7 +2292,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  - {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2123,8 +2336,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Save
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
-  m_sharedMaterial: {fileID: 5567454746289081071, guid: 375d97a630ce37f4ea4591df2e9e7d32, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
+  m_sharedMaterial: {fileID: 5567454746289081071, guid: c6272144a992d5f46aae19da9ce81997, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2255,6 +2468,10 @@ PrefabInstance:
     - target: {fileID: 41295615740245268, guid: 6ee164c72997b3749a6f62aef85575f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649886866862305781, guid: 6ee164c72997b3749a6f62aef85575f1, type: 3}
+      propertyPath: weight
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ee164c72997b3749a6f62aef85575f1, type: 3}

@@ -7,6 +7,7 @@ namespace Music.Interfaces
     public abstract class AMusicManager : MonoBehaviour
     {
         public AudioSource judgeMusicSource;
+        public AudioSource saveMusicSource;
         public const int MAX_LAYERS = 5;
         [SerializeField] protected AudioSource[] currentLayers = new AudioSource[MAX_LAYERS];
 
@@ -61,7 +62,12 @@ namespace Music.Interfaces
 
         public void JudgeMusicVolume(float iniV, float endV)
         {
-            StartCoroutine(VolumeLerp(judgeMusicSource, iniV / 100, endV / 100, 200f));
+            StartCoroutine(VolumeLerp(judgeMusicSource, iniV / 100, endV / 100, 400f));
+        }
+
+        public void SaveMusicVolume(float iniV, float endV)
+        {
+            StartCoroutine(VolumeLerp(saveMusicSource, iniV / 100, endV / 100, 200f));
         }
 
         public abstract void StartMusic(int n);

@@ -26,6 +26,8 @@ namespace Souls.Interfaces
 
         public EventHandler<String[]> sendDialogueHandler;
 
+        public AudioClip[] audioClips;
+
         private void Awake()
         {
             playerGO = GameObject.FindGameObjectWithTag("Player");
@@ -103,6 +105,41 @@ namespace Souls.Interfaces
             GameObject trinketContainer = GameObject.FindGameObjectWithTag("TrinketContainer");
             //trinketContainer.GetComponent<ManageTrinketContainer>().Relocate(this.transform.position);
             Instantiate(blameTrinket, trinketContainer.transform);
+        }
+
+        public void PlayTransitionSound()
+        {
+            GetComponent<AudioSource>().clip = audioClips[0];
+            GetComponent<AudioSource>().volume = 0.6f;
+            GetComponent<AudioSource>().Play();
+        }
+
+        public void PlayFallSound()
+        {
+            GetComponent<AudioSource>().clip = audioClips[1];
+            GetComponent<AudioSource>().volume = 1.0f;
+            GetComponent<AudioSource>().Play();
+        }
+
+        public void PlayMovement1Sound()
+        {
+            GetComponent<AudioSource>().clip = audioClips[2];
+            GetComponent<AudioSource>().volume = 0.05f;
+            GetComponent<AudioSource>().Play();
+        }
+
+        public void PlayMovement2Sound()
+        {
+            GetComponent<AudioSource>().clip = audioClips[3];
+            GetComponent<AudioSource>().volume = 0.05f;
+            GetComponent<AudioSource>().Play();
+        }
+
+        public void PlayMovement3Sound()
+        {
+            GetComponent<AudioSource>().clip = audioClips[4];
+            GetComponent<AudioSource>().volume = 0.05f;
+            GetComponent<AudioSource>().Play();
         }
     }
 }

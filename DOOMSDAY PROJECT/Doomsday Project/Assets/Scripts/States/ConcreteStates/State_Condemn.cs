@@ -30,6 +30,8 @@ namespace States.ConcreteStates
             Debug.Log("Entering State_Condemn");
 
             playerGO.GetComponent<Animator>().SetTrigger("AttackIdle");
+            playerGO.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+            playerGO.GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, -1f, 0f) * 10);
 
             this.sword = GameObject.FindGameObjectWithTag("Sword");
             sword.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
@@ -41,11 +43,15 @@ namespace States.ConcreteStates
             this.dark1 = GameObject.Find("Dark1");
             sword.transform.localPosition = new Vector3(-3.3f, 0f, 0f);
             sword.transform.localScale = new Vector3(1f, 1f, 1f);
+
+            controlManager.ResetSpacebar();
         }
 
         public override void Exit()
         {
             Debug.Log("Exiting State_Condemn");
+
+            GameObject.Find("SpacebarHelp").transform.localScale = new Vector3(0f, 0f, 1f);
         }
 
         public override void Update()

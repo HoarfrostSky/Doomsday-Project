@@ -13,6 +13,8 @@ namespace DramaticScreen
         private SoulSpawner soulSpawner;
         private ASoul soul;
 
+        public EventHandler<int> CameraHandler;
+
         private void Awake()
         {
             soulSpawner = GameObject.FindGameObjectWithTag("SoulSpawner").GetComponent<SoulSpawner>();
@@ -29,9 +31,7 @@ namespace DramaticScreen
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
 
-            //---
-            //Efectos
-            //---
+            GetComponent<AudioSource>().Play();
 
             soul.NextMusicOrder();
 
@@ -48,6 +48,8 @@ namespace DramaticScreen
             yield return new WaitForSeconds(t);
 
             soul.gameObject.SetActive(true);
+
+            CameraHandler?.Invoke(this, 2);
 
             transform.localScale = new Vector3(0f, 0f, 1f);
 

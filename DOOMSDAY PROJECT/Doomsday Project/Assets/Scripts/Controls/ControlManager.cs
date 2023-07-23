@@ -10,6 +10,7 @@ using States.Controllers;
 using States.ConcreteStates;
 using Interactuables.Interfaces;
 using Interact = Interactuables.Interfaces.IInteractuable;
+using Sounds;
 
 namespace Controls
 {
@@ -17,6 +18,9 @@ namespace Controls
     {
         [SerializeField] private float speed;
         [SerializeField] private float swordWeight;
+
+        public Sprite[] spacebarSprites;
+        public GameObject spacebar;
 
         public EventHandler<int> CameraHandler;
 
@@ -40,6 +44,7 @@ namespace Controls
 
             if (sword.transform.rotation.eulerAngles.z < 360 && sword.transform.rotation.eulerAngles.z > 180)
             {
+                spacebar.transform.localScale = new Vector3(0.4f, 0.4f, 1f);
                 sword.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
 
                 if (Input.GetKeyDown(KeyCode.Space))
@@ -51,17 +56,26 @@ namespace Controls
 
                     Debug.Log("SOUL CONDEMNED");
                 }
+
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    spacebar.GetComponent<SpriteRenderer>().sprite = spacebarSprites[1];
+                }
+
+                if (Input.GetKeyUp(KeyCode.Space))
+                {
+                    spacebar.GetComponent<SpriteRenderer>().sprite = null;
+                }
             }
             else
             {
                 sword.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 1f);
             }
+        }
 
-            /*if(Input.GetKeyDown(KeyCode.C))
-            {
-                Debug.Log("Se envía la orden");
-                CameraHandler?.Invoke(this,0);
-            }*/
+        public void ResetSpacebar()
+        {
+            spacebar.GetComponent<SpriteRenderer>().sprite = spacebarSprites[0];
         }
 
         public void DialogueControls(State_Dialogue currentState, IPlayerState playerStateController, DialogueManager dialogueManager, DialogueUI dialogueUI, ManageEmpathise manageEmpathise)
@@ -99,24 +113,34 @@ namespace Controls
             if (Input.GetKeyDown(KeyCode.A))
             {
                 playerAnim.SetTrigger("WalkLeft");
+                GetComponent<PlayerSound>().PlaySoundPasos();
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
                 playerAnim.SetTrigger("WalkRight");
+                GetComponent<PlayerSound>().PlaySoundPasos();
             }
 
             if (Input.GetKeyUp(KeyCode.A))
             {
                 playerAnim.SetTrigger("StopWalking");
+                GetComponent<PlayerSound>().StopSoundPasos();
             }
             else if (Input.GetKeyUp(KeyCode.D))
             {
                 playerAnim.SetTrigger("StopWalking");
+                GetComponent<PlayerSound>().StopSoundPasos();
             }
 
             if (Input.GetKeyDown(KeyCode.E))
             {
                 interactor?.Interact();
+            }
+
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                Debug.Log("Se envía la orden");
+                CameraHandler?.Invoke(this, 0);
             }
 
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraMovementManager>().RegisterPlayerMovement();
@@ -127,10 +151,12 @@ namespace Controls
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 playerStateController.SetState(new State_Save(playerStateController));
+                CameraHandler?.Invoke(this, 4);
             }
             else if (Input.GetKeyDown(KeyCode.E))
             {
                 playerStateController.SetState(new State_Condemn(playerStateController));
+                CameraHandler?.Invoke(this, 4);
             }
         }
 
@@ -141,6 +167,7 @@ namespace Controls
 
         public void SaveControls(State_Save currentState, IPlayerState playerStateController, GameObject player)
         {
+            spacebar.transform.localScale = new Vector3(0.4f, 0.4f, 1f);
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 player.GetComponent<Animator>().SetTrigger("SaveIdle");
@@ -149,17 +176,34 @@ namespace Controls
             if (Input.GetKey(KeyCode.Space))
             {
                 currentState.AddSavePoint();
+                spacebar.GetComponent<SpriteRenderer>().sprite = spacebarSprites[1];
             }
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 player.GetComponent<Animator>().SetTrigger("RevertToIdle");
+                spacebar.GetComponent<SpriteRenderer>().sprite = spacebarSprites[0];
             }
         }
 
         public void CinematicControls(State_Cinematic currentState, IPlayerState playerStateController)
         {
 
+        }
+
+        public void CameraChargeAttack()
+        {
+            CameraHandler?.Invoke(this, 5);
+        }
+
+        public void CameraDeliverAttack()
+        {
+            CameraHandler?.Invoke(this, 6);
+        }
+
+        public void CameraRecoverAttack()
+        {
+            CameraHandler?.Invoke(this, 7);
         }
     }
 }
