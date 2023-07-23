@@ -19,13 +19,20 @@ namespace Dialogue
 
         public void RegisterMessageHandler(GameObject interactGO)
         {
+            Debug.Log("Se registra para dialogo un nuevo interactor: " + interactGO.name);
             interactGO.GetComponent<AInteractuable>().SendMessageHandler += RecieveMessage;
+        }
+
+        public void UnsuscribeMessageHandler(GameObject interactGO)
+        {
+            Debug.Log("Se registra para dialogo un nuevo interactor: " + interactGO.name);
+            interactGO.GetComponent<AInteractuable>().SendMessageHandler -= RecieveMessage;
         }
 
         public void RecieveMessage(object sender, String[] dialogue)
         {
             dialogueTexts = dialogue;
-            Debug.Log("Dialogo recibido: " + dialogueTexts[0]);
+            Debug.Log("Dialogo recibido: " + dialogueTexts[0] + ", enviado por: " + sender.ToString());
             NextMessage();
         }
 
@@ -63,6 +70,7 @@ namespace Dialogue
                     memoryHandler?.Invoke(this, processedText2[1]);
                 }
 
+                Debug.Log("Se muestra mensaje");
                 ShowIcon(processedText[0]);
                 ShowText(processedText2[0]);
             }
@@ -71,9 +79,6 @@ namespace Dialogue
         public void NextMessage()
         {
             nDialogue++;
-            Debug.Log("N dialogo: " + nDialogue);
-            Debug.Log("Siguiente mensaje: " + dialogueTexts.ToString());
-
             if (nDialogue == dialogueTexts.Length)
             {
                 nDialogue = -1;
@@ -81,6 +86,9 @@ namespace Dialogue
             }
             else
             {
+                Debug.Log("N dialogo: " + nDialogue);
+                //Debug.Log("Siguiente mensaje: " + dialogueTexts.ToString());
+                Debug.Log("Mensaje se manda a procesar");
                 ProcessMessage(nDialogue);
             }
         }

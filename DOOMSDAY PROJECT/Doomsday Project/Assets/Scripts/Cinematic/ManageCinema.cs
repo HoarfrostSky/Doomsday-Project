@@ -100,6 +100,7 @@ namespace Cinematic
             GameObject.Find("Dark2").transform.localScale = new Vector3(0f, 0f, 1f);
             GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetTrigger("SitRight");
 
+            cameraScript.gameObject.transform.localPosition = new Vector3(-2.06f, 17.07f, -10f);
             cameraScript.ExecuteCameraMovement(this, 9);
 
             yield return new WaitForSeconds(5f);

@@ -31,6 +31,7 @@ namespace Player
 
         public void RecieveMemoryData(IPlayerState stateControllerReference, String[] memStrings, TextMeshPro textComp, SpriteRenderer spriteComp)
         {
+            this.memoryDialoguePointer = -1;
                 this.playerStateController = stateControllerReference;
 
                 //this.currentMemorySprites = memSprites;
@@ -50,6 +51,8 @@ namespace Player
             {
                 GetComponent<Animator>().SetLayerWeight(i, 0);
             }
+
+            Debug.Log("Pointer: " + memoryDialoguePointer);
 
                 switch (memStrings[memoryDialoguePointer])
             {

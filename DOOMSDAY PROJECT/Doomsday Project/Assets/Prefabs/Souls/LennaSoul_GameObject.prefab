@@ -228,8 +228,8 @@ GameObject:
   - component: {fileID: 6598926613603191819}
   - component: {fileID: 4068729806741490286}
   - component: {fileID: 119166466}
-  - component: {fileID: 7690115820227448181}
   - component: {fileID: 5429768235898740532}
+  - component: {fileID: 4140772825650561930}
   m_Layer: 0
   m_Name: LennaSoul_GameObject
   m_TagString: Soul
@@ -477,18 +477,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7690115820227448181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4336783188407282110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58f27e7816240dd418de4070bc2cf139, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &5429768235898740532
 AudioSource:
   m_ObjectHideFlags: 0
@@ -585,3 +573,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4140772825650561930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4336783188407282110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f27e7816240dd418de4070bc2cf139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

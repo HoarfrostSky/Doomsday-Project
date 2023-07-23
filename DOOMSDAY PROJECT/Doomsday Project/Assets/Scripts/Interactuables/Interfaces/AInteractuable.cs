@@ -10,7 +10,7 @@ namespace Interactuables.Interfaces
 {
     public abstract class AInteractuable : MonoBehaviour, IInteractuable
     {
-        private PlayerStateController stateController;
+        protected PlayerStateController stateController;
 
         public EventHandler<String[]> SendMessageHandler;
         public EventHandler<IInteractuable> InteractorHandler;

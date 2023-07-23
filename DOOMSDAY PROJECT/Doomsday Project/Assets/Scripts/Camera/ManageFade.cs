@@ -25,7 +25,6 @@ namespace CameraNamespace
             {
                 GetComponent<SpriteRenderer>().color = Color.Lerp(iniColor, finalColor, elapsed / totalTime);
                 elapsed += Time.deltaTime;
-                Debug.Log(elapsed);
                 yield return null;
             }
         }

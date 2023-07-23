@@ -18,9 +18,21 @@ namespace States.Controllers
         private IState previousState;
         private IState nextState;
 
+        public List<GameObject> interactuableList = new List<GameObject>();
+
         private void Awake()
         {
             SetState(new State_Title(this));
+        }
+
+        public void SetInteractuables(List<GameObject> listGOs)
+        {
+            this.interactuableList = listGOs;
+        }
+
+        public List<GameObject> GetInteractuables()
+        {
+            return this.interactuableList;
         }
 
         public GameObject GetGameObject()

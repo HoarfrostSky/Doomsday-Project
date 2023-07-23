@@ -5,6 +5,7 @@ using System;
 using Interactuables.Interfaces;
 using States.Controllers;
 using States.ConcreteStates;
+using Dialogue;
 
 namespace Interactuables.ConcreteInteractuables
 {
@@ -20,7 +21,7 @@ namespace Interactuables.ConcreteInteractuables
 
         private Dictionary<int, String[]> dialogueDicitonary = new Dictionary<int, string[]> { };
 
-        private void Awake()
+        private void Start()
         {
             dialogueDicitonary.Add(0, dialogue0);
             dialogueDicitonary.Add(1, dialogue1);
@@ -32,7 +33,7 @@ namespace Interactuables.ConcreteInteractuables
         public override void Interact()
         {
             colGO.GetComponent<PlayerStateController>().SetState(new State_Dialogue(colGO.GetComponent<PlayerStateController>()));
-            SendMessageHandler?.Invoke(this, dialogueDicitonary[currentDialogue]);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<DialogueManager>().RecieveMessage(this, dialogueDicitonary[currentDialogue]);
         }
 
         public void PrepareNextDialogue()

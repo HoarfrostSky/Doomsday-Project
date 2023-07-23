@@ -50,12 +50,7 @@ namespace States.ConcreteStates
 
             showInteractGO = GameObject.FindGameObjectWithTag("ShowInteract");
 
-            GameObject[] interGOs = GameObject.FindGameObjectsWithTag("Interactuable");
-
-            foreach(GameObject GO in interGOs)
-            {
-                RegisterInteractor(GO);
-            }
+            RegisterInteractorAtEnter();
 
             showInteractGO.transform.localScale = new Vector3(0f, 0f, 1f);
 
@@ -67,6 +62,7 @@ namespace States.ConcreteStates
         {
             Debug.Log("Exiting State_Explore");
 
+            //UnsuscribeInteractorAtExit();
             showInteractGO.transform.localScale = new Vector3(0f, 0f, 1f);
         }
 
@@ -80,6 +76,41 @@ namespace States.ConcreteStates
             dialogueManager.RegisterMessageHandler(newInteractor);
             newInteractor.GetComponent<AInteractuable>().InteractorHandler += RecieveActiveInteractor;
             interactuableList.Add(newInteractor);
+        }
+
+        public void UnsuscribeInteractor(GameObject newInteractor)
+        {
+            dialogueManager.UnsuscribeMessageHandler(newInteractor);
+            newInteractor.GetComponent<AInteractuable>().InteractorHandler -= RecieveActiveInteractor;
+            interactuableList.Remove(newInteractor);
+        }
+
+        private void RegisterInteractorAtEnter()
+        {
+                GameObject[] interGOs = GameObject.FindGameObjectsWithTag("Interactuable");
+
+                foreach(GameObject GO in interGOs)
+                {
+                    Debug.Log("Se registra un interactor");
+                    RegisterInteractor(GO);
+                }
+
+                //playerState.SetInteractuables(interactuableList);
+        }
+
+        private void UnsuscribeInteractorAtExit()
+        {
+            for(int i = 0; i < interactuableList.Count; i++)
+            {
+                UnsuscribeInteractor(interactuableList[i]);
+            }
+            /*foreach (GameObject GO in interactuableList)
+            {
+                Debug.Log("Se registra un interactor");
+                UnsuscribeInteractor(GO);
+            }*/
+
+            //playerState.SetInteractuables(interactuableList);
         }
 
         public void RecieveActiveInteractor(object sender, IInteractuable interactorObject)

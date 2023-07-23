@@ -25,7 +25,7 @@ namespace End
 
         IEnumerator ManageEndSequence()
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(4f);
             ShowDialogueBackground();
             NextText(); //. . .
             yield return new WaitForSeconds(3f);

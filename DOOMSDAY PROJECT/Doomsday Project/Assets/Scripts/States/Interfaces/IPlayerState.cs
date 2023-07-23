@@ -14,5 +14,8 @@ namespace States.Interfaces
         public IState GetState();
         public IState GetPreviousState();
         public IState GetNextState();
+
+        public void SetInteractuables(List<GameObject> listGOs);
+        public List<GameObject> GetInteractuables();
     }
 }

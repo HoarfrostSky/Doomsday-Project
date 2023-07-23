@@ -5,6 +5,7 @@ using Blame.Interfaces;
 using Interactuables.Interfaces;
 using States.ConcreteStates;
 using States.Controllers;
+using End;
 
 namespace Interactuables.ConcreteInteractuables
 {
@@ -52,6 +53,7 @@ namespace Interactuables.ConcreteInteractuables
                     case 7: //Nur father
                         break;
                     case 8: //Lenna
+                        GetComponent<ChangeToEnd>().End();
                         break;
 
                 }

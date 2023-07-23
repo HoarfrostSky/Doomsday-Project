@@ -47,6 +47,9 @@ namespace MainMenu
             sceneManager.GetComponent<SceneStateController>().GetSceneState().Exit();
             Debug.Log("Comienza la intro");
 
+            //Quitar esta linea. Solo debug
+            //sceneManager.GetComponent<SceneStateController>().SetSceneState(new Scene_MainScene(sceneManager.GetComponent<SceneStateController>()));
+
             introMusic.StartMusic(1);
             introMusic.ManageVolumeLayer(0, 0, 100, 1000);
 
