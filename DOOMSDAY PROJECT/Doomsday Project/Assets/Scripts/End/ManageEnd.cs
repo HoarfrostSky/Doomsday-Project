@@ -12,6 +12,7 @@ namespace End
         public GameObject dialogueBackground;
         public GameObject lastJudgement;
         public String[] endTexts;
+        private ManageMusicEnd music;
 
         private TextMeshPro textComponent;
         private int textPointer = -1;
@@ -20,12 +21,15 @@ namespace End
 
         private void Awake()
         {
+            music = GetComponent<ManageMusicEnd>();
+            music.StartMusic(1);
             textComponent = dialogueBackground.GetComponentInChildren<TextMeshPro>();
             StartCoroutine(ManageEndSequence());
         }
 
         IEnumerator ManageEndSequence()
         {
+            music.ManageVolumeLayer(0, 0, 100, 200);
 
             yield return new WaitForSeconds(4f);
             ShowDialogueBackground();
@@ -58,6 +62,7 @@ namespace End
             NextText(); //It is time for my sins to be judged
 
             yield return new WaitForSeconds(4f);
+            music.ManageVolumeLayer(1, 0, 100, 200);
             GetComponent<Animator>().SetTrigger("Darks");
             NextText(); //Not so fast, Nameless One
             yield return new WaitForSeconds(4f);
@@ -108,6 +113,8 @@ namespace End
             GetComponent<Animator>().SetTrigger("LastJudge");
             lastJudgement.transform.localScale = new Vector3(1f, 1f, 1f);
             isLastJudgement = true;
+            music.ManageVolumeLayer(0, 100, 0, 50);
+            music.ManageVolumeLayer(0, 100, 0, 50);
         }
 
         private void ShowDialogueBackground()

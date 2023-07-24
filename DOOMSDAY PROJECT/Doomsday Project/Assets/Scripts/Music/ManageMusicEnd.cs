@@ -10,6 +10,8 @@ namespace Music
         public AudioClip[] dialogueMusic;
         public AudioClip[] condemnMusic;
 
+        public AudioSource attackSound;
+
         public override void StartMusic(int n)
         {
             if(n == 1)
@@ -21,5 +23,23 @@ namespace Music
                 RegisterLayers(condemnMusic);
             }
         }
+
+        public void StartCondemnMusic()
+        {
+            StartMusic(2);
+            ManageVolumeLayer(0, 0, 100, 200);
+        }
+
+        public void StartSadMusic()
+        {
+            ManageVolumeLayer(1, 0, 100, 300);
+        }
+
+        public void PlayAttackSound()
+        {
+            attackSound.Play();
+        }
+
     }
 }
+

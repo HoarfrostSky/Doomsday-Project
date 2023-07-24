@@ -6,6 +6,7 @@ using Interactuables.Interfaces;
 using States.ConcreteStates;
 using States.Controllers;
 using End;
+using UnityEngine.SceneManagement;
 
 namespace Interactuables.ConcreteInteractuables
 {
@@ -53,7 +54,9 @@ namespace Interactuables.ConcreteInteractuables
                     case 7: //Nur father
                         break;
                     case 8: //Lenna
+                        SceneManager.LoadScene("EndScene");
                         GetComponent<ChangeToEnd>().End();
+                        
                         break;
 
                 }
