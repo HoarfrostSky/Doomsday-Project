@@ -100,8 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - Nameless-This is a trinket left by Lenna
+  - NamelessSad-. . .
+  - NamelessSad-Ah. . .
   id: 8
+  textAssetData: {fileID: 4900000, guid: 50aea01b205809c478c9231345a782eb, type: 3}
 --- !u!58 &6246536387850888465
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -32,9 +32,5 @@ namespace States.ConcreteStates
         {
 
         }
-
-        public override void RegisterInteractor(GameObject newInteractor)
-        {
-        }
     }
 }

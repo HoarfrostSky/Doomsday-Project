@@ -738,6 +738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3282f9525a6d344dbde6f18599a0d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empathiseSounds: []
   memoryNames:
   - car_accident
   - bullying
@@ -765,9 +766,11 @@ MonoBehaviour:
     get her out of that horrible cage. The only place where she still existed, in
     a way.
   - That way, she would be able to feel the sun and breeze through my skin.
+  es_carAccidentMemoryDialogue: []
   bullyingMemoryDialogue:
   - Strange
   - 
+  es_bullyingMemoryDialogue: []
   dreamsOfAdventureMemoryDialogue:
   - Bretta
   - I was wandering through the streets when a child stopped me. He looked so malnourished
@@ -793,9 +796,11 @@ MonoBehaviour:
   - With time, a strange distance between us appeared. Too many words I regret not
     being able to say. I did not know how.
   - I did not know.
+  es_dreamsOfAdventureMemoryDialogue: []
   killingsMemoryDialogue:
   - Hayure
   - 
+  es_killingsMemoryDialogue: []
   colinPastMemoryDialogue:
   - Colin
   - Like every good story, it starts with me borrowing a chocolate pancake from the
@@ -818,6 +823,7 @@ MonoBehaviour:
   - "She used to tell me amazing stories but she never lets me go out there and create
     my own. It\u2019s unfair! She always gets mad at me."
   - But in the end. . .  I loved her anyways.
+  es_colinPastMemoryDialogue: []
   truthMemoryDialogue:
   - Lenna
   - We were best friends. All of us, three.
@@ -839,6 +845,7 @@ MonoBehaviour:
   - "\u201CI let it happen. I killed him.\u201D"
   - "\u201CI am a murderer.\u201C"
   - I cried.
+  es_truthMemoryDialogue: []
 --- !u!1 &653213838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,6 +1499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2728349663229770726}
   - component: {fileID: 3948548432145233316}
+  - component: {fileID: 7218750806925822950}
   - component: {fileID: 4160518126798372651}
   m_Layer: 0
   m_Name: Condemn_Text
@@ -1562,6 +1570,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7218750806925822950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351349609863427038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591018df91cc2424c974ee4143cadd62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enText: Condemn
+  esText: Condenar
 --- !u!114 &4160518126798372651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2016,10 +2038,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   swordWeight: 40
+  canAttack: 1
   spacebarSprites:
   - {fileID: 1282551196, guid: 8be86b8a5570e3b46ab91162636fc16c, type: 3}
   - {fileID: 584899644, guid: 8be86b8a5570e3b46ab91162636fc16c, type: 3}
   spacebar: {fileID: 760270088}
+  gameManager: {fileID: 0}
 --- !u!114 &1362340335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2347,6 +2371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4780043078876999122}
   - component: {fileID: 8930260329413654430}
+  - component: {fileID: 5668422515737304939}
   - component: {fileID: 913350314223176383}
   m_Layer: 0
   m_Name: Save_Text
@@ -2417,6 +2442,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5668422515737304939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022148232106298762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591018df91cc2424c974ee4143cadd62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enText: Save
+  esText: Salvar
 --- !u!114 &913350314223176383
 MonoBehaviour:
   m_ObjectHideFlags: 0

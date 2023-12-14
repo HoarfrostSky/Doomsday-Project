@@ -11,6 +11,7 @@ using States.ConcreteStates;
 using Interactuables.Interfaces;
 using Interact = Interactuables.Interfaces.IInteractuable;
 using Sounds;
+using Game;
 
 namespace Controls
 {
@@ -19,10 +20,14 @@ namespace Controls
         [SerializeField] private float speed;
         [SerializeField] private float swordWeight;
 
+        public bool canAttack = true;
+
         public Sprite[] spacebarSprites;
         public GameObject spacebar;
 
         public EventHandler<int> CameraHandler;
+
+        public GameManager gameManager;
 
         public void CondemnControls(State_Condemn currentState, IPlayerState playerStateController, float angleCondemn, GameObject sword, GameObject player)
         {
@@ -47,14 +52,14 @@ namespace Controls
                 spacebar.transform.localScale = new Vector3(0.4f, 0.4f, 1f);
                 sword.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
 
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space) && canAttack)
                 {
                     //If the attack is charged enough
 
                     player.GetComponent<Animator>().SetTrigger("Attack1");
                     sword.transform.localScale = new Vector3(0f, 0f, 1f);
 
-                    Debug.Log("SOUL CONDEMNED");
+                    canAttack = false;
                 }
 
                 if (Input.GetKey(KeyCode.Space))
@@ -69,6 +74,7 @@ namespace Controls
             }
             else
             {
+                spacebar.transform.localScale = new Vector3(0f, 0f, 1f);
                 sword.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 1f);
             }
         }
@@ -80,6 +86,8 @@ namespace Controls
 
         public void DialogueControls(State_Dialogue currentState, IPlayerState playerStateController, DialogueManager dialogueManager, DialogueUI dialogueUI, ManageEmpathise manageEmpathise)
         {
+            GetComponent<Animator>().SetFloat("playerMovement", 0);
+
             if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Insert))
             {
                 if (dialogueUI.EstaMostrandoTexto())
@@ -97,51 +105,40 @@ namespace Controls
             }
         }
 
-        public void ExploreControls(State_Explore currentState, IPlayerState playerStateController, IInteractuable interactor, Rigidbody2D rb, Animator playerAnim)
+        public void ExploreControls(State_Explore currentState, IPlayerState playerStateController, Rigidbody2D rb, Animator playerAnim)
         {
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                GetComponent<PlayerSound>().PlaySoundPasos();
+            }
+            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                GetComponent<PlayerSound>().PlaySoundPasos();
+            }
+
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 rb.isKinematic = false;
                 rb.AddForce(Vector2.left * speed * Time.deltaTime * 100, ForceMode2D.Force);
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 rb.isKinematic = false;
                 rb.AddForce(Vector2.right * speed * Time.deltaTime * 100, ForceMode2D.Force);
             }
 
-            if (Input.GetKeyDown(KeyCode.A))
+            else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
             {
-                playerAnim.SetTrigger("WalkLeft");
-                GetComponent<PlayerSound>().PlaySoundPasos();
-            }
-            else if (Input.GetKeyDown(KeyCode.D))
-            {
-                playerAnim.SetTrigger("WalkRight");
-                GetComponent<PlayerSound>().PlaySoundPasos();
-            }
-
-            if (Input.GetKeyUp(KeyCode.A))
-            {
-                playerAnim.SetTrigger("StopWalking");
-                GetComponent<PlayerSound>().StopSoundPasos();
-            }
-            else if (Input.GetKeyUp(KeyCode.D))
-            {
-                playerAnim.SetTrigger("StopWalking");
                 GetComponent<PlayerSound>().StopSoundPasos();
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && gameManager.activeInteractuable != null)
             {
-                interactor?.Interact();
+                Debug.Log("He interactuado con: " + gameManager.activeInteractuable.ToString());
+                gameManager.activeInteractuable?.Interact();
             }
 
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                Debug.Log("Se envía la orden");
-                CameraHandler?.Invoke(this, 0);
-            }
+            GetComponent<Animator>().SetFloat("playerMovement", rb.velocity.x);
 
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraMovementManager>().RegisterPlayerMovement();
         }
@@ -204,6 +201,11 @@ namespace Controls
         public void CameraRecoverAttack()
         {
             CameraHandler?.Invoke(this, 7);
+        }
+
+        public void ActivateCanAttack()
+        {
+            canAttack = true;
         }
     }
 }

@@ -81,7 +81,14 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 10.016666
+  - time: 6
+    functionName: ShowLoadingText
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 8.033334
     functionName: ChangeFinished
     data: 
     objectReferenceParameter: {fileID: 0}

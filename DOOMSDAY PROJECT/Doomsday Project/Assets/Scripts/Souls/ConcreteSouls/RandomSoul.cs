@@ -12,12 +12,23 @@ namespace Souls.ConcreteSouls
         public Sprite[] randomTrinketSprites;
         private GameObject blameTrinketGO;
 
+        private void Awake()
+        {
+            playerGO = GameObject.FindGameObjectWithTag("Player");
+            playerGO.GetComponent<DialogueManager>().ConnectSoul(this);
+
+            for (int i = 0; i < dialogueDict.Count; i++)
+            {
+                dialogue[i] = dialogueDict[i];
+            }
+        }
+
         private void OnDestroy()
         {
             GameObject trinketContainer = GameObject.FindGameObjectWithTag("TrinketContainer");
-            //trinketContainer.GetComponent<ManageTrinketContainer>().Relocate(this.transform.position);
             blameTrinketGO = Instantiate(blameTrinket, trinketContainer.transform);
             blameTrinketGO.GetComponent<SpriteRenderer>().sprite = randomTrinketSprites[(int) UnityEngine.Random.Range(0, randomTrinketSprites.Length - 1)];
         }
+
     }
 }

@@ -45,6 +45,7 @@ namespace States.ConcreteStates
         {
             Debug.Log("Exiting State_Save");
 
+            MonoBehaviour.Destroy(soul);
         }
 
         public override void Update()
@@ -66,10 +67,6 @@ namespace States.ConcreteStates
         public void AddSavePoint()
         {
             savePoints += 200 * Time.deltaTime;
-        }
-
-        public override void RegisterInteractor(GameObject newInteractor)
-        {
         }
     }
 }

@@ -319,8 +319,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 8
   maxAtaques: 3
+  dialogueData: {fileID: 0}
   dialogue:
-  - Lenna-Ah. . . ah. . .
+  - LennaSad-Ah. . . ah. . .
   - "Dark2-It seems they\u2019re in a hurry."
   - "Dark1-So are we. It\u2019ll make our job easier."
   - NamelessSad-. . .
@@ -416,8 +417,7 @@ MonoBehaviour:
   - LennaSad-Together, us three, fading past the veil of night.
   - LennaSad-Ah. . .
   - LennaSad-Seems nice.
-  - LennaSad-. . .
-  - Lenna-Send me with him.
+  - LennaSad-Send me with him.
   - "Dark1-Do not pay attention to her words, Nameless One. Her soul must be judged
     according to her actions only, not others\u2019."
   - NamelessSad-. . .
@@ -425,19 +425,19 @@ MonoBehaviour:
   - LennaSad-Please, send me with him, wherever he may be.
   - "Lenna-I\u2019m ready."
   - judge
-  moveSpeed: 20
+  moveSpeed: 35
   musicLayerOrders:
-  - 0_0_50_500
-  - 3_0_35_400
-  - 0_50_75_100
-  - 2_0_50_100
-  - 0_75_100_150
-  - 1_0_100_150
-  - 2_50_100_150
-  - 3_35_100_300
-  - 0_100_0_200
-  - 1_100_0_200
-  - 2_100_0_200
+  - 0_0_30_500
+  - 3_0_20_400
+  - 0_30_65_100
+  - 2_0_30_100
+  - 0_65_80_150
+  - 1_0_80_150
+  - 2_30_80_150
+  - 3_20_55_300
+  - 0_80_0_200
+  - 1_80_0_200
+  - 2_80_0_200
   blameTrinket: {fileID: 2554695245893896285, guid: e17a58317587db049b58fca8c461c534, type: 3}
   audioClips:
   - {fileID: 8300000, guid: cf7ec86cccda3944d89edefee246f0a0, type: 3}

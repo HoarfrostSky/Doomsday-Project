@@ -324,20 +324,19 @@ MonoBehaviour:
   - Hayure-I recognise these halls. No need to speak.
   - Dark1-A strong presence emanates from this one.
   - Nameless-Who are you?
-  - Hayure-Death.
+  - Hayure-Your doom.
   - cinematic
   - Dark2Sad-Not so fast.
-  - "Hayure-I\u2019ll feast with your guts! I\u2019ll show you the real end."
+  - "Hayure-God! Come down here and face me! I\u2019ll show you the real end."
   - NamelessSad-. . .
   - "Nameless-I\u2019m afraid that is a far too great reward for me to have."
   - Dark1Sad-Your soul obeys us, you fool.
   - Dark2-Nameless One.
   - Nameless-Huh?
   - "Dark2-Did you hear the door\u2019s screeching?"
-  - Nameless-. . .
   - Nameless-I did. Mostly.
   - Dark2-And what did the door say?
-  - NamelessSad-Hayure, soul, look at me.
+  - NamelessSad-Soul, look at me. Your name is Hayure, right?
   - HayureSad-. . .
   - Nameless-How many lives did you put to rest?
   - HayureSad-. . .
@@ -348,10 +347,10 @@ MonoBehaviour:
   - Nameless-I wanted to hear it to from you.
   - cinematic
   - "Nameless-You won\u2019t escape your fate."
-  - "Hayure-I\u2019m not interested in escaping mine."
+  - "Hayure-My fate is sealed. I\u2019m not interested in escaping mine."
   - "HayureSad-I\u2019m interested in you meeting yours."
-  - HayureSad-I always knew it. Under that mask and robes you are like me. And yet,
-    you behave like you are not.
+  - HayureSad-I always knew it. Under that mask and godly robes you are like me.
+    And yet, you behave like you are not.
   - "Hayure-You don\u2019t understand what\u2019s your actual place in this world."
   - Nameless-. . .
   - Hayure-You are no more than flesh and bones, waiting to rot. Oh, trust me. You
@@ -368,21 +367,21 @@ MonoBehaviour:
   - NamelessSad-Stop this!
   - Dark1-Only you can do that.
   - NamelessSad-God. . .
-  - Hayure-We are both murderers of the soul, Nameless One.
+  - Hayure-Stare into my eyes. We are both murderers of the soul.
   - Hayure-See you in hell.
   - judge
   moveSpeed: 35
   musicLayerOrders:
-  - 0_0_50_200
-  - 1_0_50_300
-  - 2_0_40_100
-  - 0_50_75_50
-  - 1_50_75_50
-  - 0_75_100_100
-  - 1_75_100_100
-  - 2_40_10_200
-  - 3_0_100_100
-  - 4_0_100_400
+  - 0_0_30_200
+  - 1_0_30_300
+  - 2_0_20_100
+  - 0_30_65_50
+  - 1_30_65_50
+  - 0_65_80_100
+  - 1_65_80_100
+  - 2_20_8_200
+  - 3_0_80_100
+  - 4_0_80_400
   blameTrinket: {fileID: 8043949845184249337, guid: 04642dbe39220b947a46e0857afa5c99, type: 3}
   audioClips:
   - {fileID: 8300000, guid: cf7ec86cccda3944d89edefee246f0a0, type: 3}

@@ -35,6 +35,8 @@ namespace DramaticScreen
 
             soul.NextMusicOrder();
 
+            if(soul.GetID() == 0) soul.NextMusicOrders(2);
+
             StartCoroutine(ManageTime(t));
         }
 

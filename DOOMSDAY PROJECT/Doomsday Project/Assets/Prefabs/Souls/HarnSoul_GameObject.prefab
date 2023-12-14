@@ -318,6 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   maxAtaques: 1
+  dialogueData: {fileID: 4900000, guid: 23be5ce6582dba24f82b3fea804e6689, type: 3}
   dialogue:
   - Harn-At last! I thought I would never see someone again.
   - Nameless-What?
@@ -344,12 +345,12 @@ MonoBehaviour:
   - "Harn-And what about that mask? Oh, trust me. If my brother were around, he would
     be screaming at the top of his lungs! That\u2019s horrible fashion sense, my
     guy."
-  - "Harn-He\u2019d say something like that."
+  - "Harn-Heh. . . He\u2019d say something like that."
   - Dark1-Stop this nonsense.
   - Harn-Hey!
   - Dark2-Nameless One, it is vital for you to know that records are kept for most
-    souls. Every action of interest, every deed, every sin. They are written in these
-    walls, in every furniture, every window.
+    souls. Every action of interest, every deed, every sin.
+  - Dark2-They are written in these walls, in every furniture, every window.
   - "Dark2Sad-Did you not hear the door cry out their past sorrows and memories?
     Maybe you\u2019ve not yet got used to its harrowing voice."
   - Nameless-Okay. . . and what exactly did the door tell you?
@@ -374,15 +375,16 @@ MonoBehaviour:
     robbed another of their most precious belonging.
   - Nameless-What did you do?
   - Harn-Oh.
-  - HarnSad-I. . .
-  - HarnSad-Yeah.
+  - HarnSad-So that's what you mean.
+  - HarnSad-I. . . yeah.
   - HarnSad-I guess this is it. No more running, huh?
   - cinematic
   - HarnSad-A thief. You could call it that.
   - Nameless-. . .
-  - "HarnSad-I robbed her of her breath, her smile, her voice. I robbed her of happiness
-    or dread. No longer could she see the sun or feel the breeze\u2019s embrace."
-  - HarnSad-A cage. I left her inside a horrible cage of memories and regret.*car_accident
+  - HarnSad-Indeed, I robbed her of many things. Her smile, her voice. I robbed her
+    of happiness or dread.
+  - HarnSad-And left her inside a horrible cage of memories and regret. My memories
+    and regrets.*car_accident
   - Dark1-A sin is a sin.
   - Dark2-And thus, it must be judged as such.
   - Harn-So you are the one who must judge them, the others like me.
@@ -392,15 +394,18 @@ MonoBehaviour:
   - "HarnSad-I\u2019m so sorry for what I caused."
   - Nameless-Are you changing your mind?
   - HarnSad-No.
-  - "Harn-I\u2019m letting go."
+  - HarnSad-I guess I'm finally letting go.
   - "Harn-I wish I could say I hold no regrets, my guy, but that\u2019s just a lie.
-    A bad one. No one who tells you that is making any sense. Remember that."
+    A bad one."
   - "Harn-But I\u2019m not worried. Whatever you choose, just know that I\u2019ll
-    hold no grudges against you. But what about those two back there? So fixed in
-    being mysterious. Death this, Death that."
+    hold no grudges against you."
+  - Harn-But what about those two back there? So fixed in being mysterious. Death
+    this, Death that.
   - "Harn-Yet they don\u2019t even know that Death visited me long ago, when she
-    took her under her wings. In truth, the morning I woke up in that cold white
-    bed, no one by my side, I realised I had also left with her."
+    took her under her wings."
+  - Harn-In truth, the morning I woke up in that cold white bed, no one by my side,
+    I realised I had also left with her. Nothing's been the same since then.
+  - HarnSad-How could it be?
   - Dark2-What is your sentence, Nameless One?
   - Harn-May I ask for a final wish?
   - "Nameless-I don\u2019t think you can, but go for it."
@@ -412,9 +417,9 @@ MonoBehaviour:
   - judge
   moveSpeed: 20
   musicLayerOrders:
-  - 0_0_60_100
-  - 0_60_100_100
-  - 1_0_100_400
+  - 0_0_50_100
+  - 0_50_80_100
+  - 1_0_80_400
   blameTrinket: {fileID: 8835925779021399349, guid: ead1583ea5b79984aa5a6e05fd9f30d4, type: 3}
   audioClips:
   - {fileID: 8300000, guid: cf7ec86cccda3944d89edefee246f0a0, type: 3}

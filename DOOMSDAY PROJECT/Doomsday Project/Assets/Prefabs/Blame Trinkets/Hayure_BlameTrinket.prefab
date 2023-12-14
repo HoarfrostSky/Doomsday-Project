@@ -100,8 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - Nameless-This is a trinket left by Hayure
+  - NamelessSad-Argh.
+  - NamelessSad-I don't know how much longer I can keep doing this.
   id: 5
+  textAssetData: {fileID: 4900000, guid: cab72cc8f010f6c4f9cf6ebe31e6b3ee, type: 3}
 --- !u!58 &1902181187641020597
 CircleCollider2D:
   m_ObjectHideFlags: 0

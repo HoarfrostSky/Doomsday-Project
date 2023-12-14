@@ -12,7 +12,5 @@ namespace States.Interfaces
         public void Exit();
         public void Update();
         public String GetName();
-
-        public void RegisterInteractor(GameObject newInteractor);
     }
 }

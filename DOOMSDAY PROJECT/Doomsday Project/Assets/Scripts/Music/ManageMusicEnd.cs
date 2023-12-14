@@ -39,6 +39,16 @@ namespace Music
         {
             attackSound.Play();
         }
+        public void PlayAttackSound2()
+        {
+            attackSound.volume = 0.6f;
+            attackSound.Play();
+        }
+        public void PlayAttackSound3()
+        {
+            attackSound.volume = 0.15f;
+            attackSound.Play();
+        }
 
     }
 }

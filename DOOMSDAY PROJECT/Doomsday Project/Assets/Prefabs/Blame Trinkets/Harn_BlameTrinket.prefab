@@ -100,8 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - Nameless-This is a trinket left by Harn
+  - NamelessSad-So this is all that's left from that poor soul, huh?
+  - Nameless-I should put it with the others on the pile on my right.
   id: 1
+  textAssetData: {fileID: 4900000, guid: 03060b957cbd09c43a61bc8b554bedc9, type: 3}
 --- !u!58 &1106686885281687673
 CircleCollider2D:
   m_ObjectHideFlags: 0

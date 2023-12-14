@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace Music.Interfaces
 {
@@ -8,6 +9,7 @@ namespace Music.Interfaces
     {
         public AudioSource judgeMusicSource;
         public AudioSource saveMusicSource;
+        public AudioMixerGroup musicMixer;
         public const int MAX_LAYERS = 5;
         [SerializeField] protected AudioSource[] currentLayers = new AudioSource[MAX_LAYERS];
 
@@ -19,6 +21,7 @@ namespace Music.Interfaces
                 currentLayers[i].clip = musicLayerClips[i];
                 currentLayers[i].volume = 0f;
                 currentLayers[i].loop = true;
+                currentLayers[i].outputAudioMixerGroup = musicMixer;
                 currentLayers[i].Play();
             }
         }
@@ -48,11 +51,13 @@ namespace Music.Interfaces
         }
         public void StartJudgeMusic(float startV, float endV)
         {
+            StopAllCoroutines();
             for (int i = 0; i < currentLayers.Length; i++)
             {
                 if (currentLayers[i] != null)
                 {
-                    ManageVolumeLayer(i, 100f, 0f, 250f);
+                    Debug.Log("Se baja volumen de capa " + i);
+                    ManageVolumeLayer(i, currentLayers[i].volume, 0f, 250f);
                 }
             }
 

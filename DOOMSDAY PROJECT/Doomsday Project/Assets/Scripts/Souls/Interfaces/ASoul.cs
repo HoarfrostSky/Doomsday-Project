@@ -6,7 +6,8 @@ using UnityEngine;
 using States.Controllers;
 using States.ConcreteStates;
 using Music;
-using Blame;
+using Localization;
+using Scenes.Controllers;
 
 namespace Souls.Interfaces
 {
@@ -14,7 +15,9 @@ namespace Souls.Interfaces
     {
         public int id;
         public int maxAtaques;
-        public String[] dialogue;
+        public TextAsset dialogueData;
+        public Dictionary<int, String> dialogueDict = new Dictionary<int, string>();
+        [TextArea(3, 10)] public String[] dialogue;
         public float moveSpeed;
         public String[] musicLayerOrders;
         public GameObject blameTrinket;
@@ -23,6 +26,8 @@ namespace Souls.Interfaces
         protected bool interactuable = false;
         protected GameObject playerGO;
         protected ManageMusic musicManager;
+
+        private LocalizationManager localizationManager;
 
         public EventHandler<String[]> sendDialogueHandler;
 
@@ -33,11 +38,48 @@ namespace Souls.Interfaces
             playerGO = GameObject.FindGameObjectWithTag("Player");
             playerGO.GetComponent<DialogueManager>().ConnectSoul(this);
 
+            localizationManager = new LocalizationManager();
+            localizationManager.LoadLocalizationString(FindObjectOfType<SceneStateController>()?.GetLanguage(), dialogueData, dialogueDict);
+
+            for (int i = 0; i < dialogueDict.Count; i++)
+            {
+                dialogue[i] = dialogueDict[i];
+            }
         }
 
         private void Start()
         {
-            MoveToLocalPosition(new Vector3(15f, 0f, 0f));
+
+            switch (GetID())
+            {
+                case 1: //Harn
+                    MoveToLocalPosition(new Vector3(15f, 0f, 0f));
+                    break;
+                case 2: //Child
+                    MoveToLocalPosition(new Vector3(15f, 0f, 0f));
+                    break;
+                case 3: //Nur
+                    MoveToLocalPosition(new Vector3(15f, 0f, 0f));
+                    break;
+                case 4: //Bretta
+                    MoveToLocalPosition(new Vector3(14f, 0f, 0f));
+                    break;
+                case 5: //Hayure
+                    MoveToLocalPosition(new Vector3(14f, 0f, 0f));
+                    break;
+                case 6: //Colin
+                    MoveToLocalPosition(new Vector3(15f, 0f, 0f));
+                    break;
+                case 7: //Nur's father
+                    MoveToLocalPosition(new Vector3(15f, 0f, 0f));
+                    break;
+                case 8: //Bretta
+                    MoveToLocalPosition(new Vector3(14.5f, 0f, 0f));
+                    break;
+                default: //random
+                    MoveToLocalPosition(new Vector3(15f, 0f, 0f));
+                    break;
+            }
         }
 
         public void NextMusicOrder()
@@ -103,7 +145,6 @@ namespace Souls.Interfaces
         private void OnDestroy()
         {
             GameObject trinketContainer = GameObject.FindGameObjectWithTag("TrinketContainer");
-            //trinketContainer.GetComponent<ManageTrinketContainer>().Relocate(this.transform.position);
             Instantiate(blameTrinket, trinketContainer.transform);
         }
 

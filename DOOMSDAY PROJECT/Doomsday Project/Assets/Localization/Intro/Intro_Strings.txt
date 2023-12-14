@@ -1,0 +1,15 @@
+Intro1;Doomsday arrived;El Día del Juicio Final llegó;
+Intro2;God did not;Dios no;
+Intro3;;;
+Intro4;You have been chosen to take His place;Has sido elegido para tomar Su lugar;
+Intro5;;;
+Intro6;Souls will be granted passage across the Most Somber Door;A las almas se les otorgará paso a través de la Más Sombría Puerta;
+Intro7;;;
+Intro8;You will judge them;Tú las juzgarás;
+Intro9;;;
+Intro10;You will save them;Tú las salvarás;
+Intro11;You will condemn them;Tú las condenarás;
+Intro12;;;
+Intro13;Make haste, Nameless One;Apresúrate, Sin Nombre;
+Intro14;;;
+Intro15;Loading;Cargando

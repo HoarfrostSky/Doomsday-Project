@@ -100,8 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - Nameless-This is a trinket left by Bretta
+  - Nameless-This one feels heavy.
   id: 4
+  textAssetData: {fileID: 4900000, guid: 47a2b4d164daa9d4692a05913e9ff7db, type: 3}
 --- !u!58 &1225712163979707500
 CircleCollider2D:
   m_ObjectHideFlags: 0

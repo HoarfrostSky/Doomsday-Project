@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using States.ConcreteStates;
 using States.Controllers;
+using Souls.Interfaces;
 
 namespace Souls
 {
     public class SaveAnimationManager : MonoBehaviour
     {
         private Animator soulParent;
+        private GameObject soulParentGO;
         private PlayerStateController playerState;
 
         private void Awake()
         {
-            soulParent = GameObject.FindGameObjectWithTag("Soul").GetComponent<Animator>();
+            soulParentGO = GameObject.FindGameObjectWithTag("Soul");
+            soulParent = soulParentGO.GetComponent<Animator>();
             playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateController>();
         }
 
@@ -25,7 +28,13 @@ namespace Souls
         public void Dark1CastSpell()
         {
             GameObject.Find("Dark1").GetComponent<Animator>().SetTrigger("CastSpell");
-            GetComponent<AudioSource>().Play();
+            
+        }
+
+        public void PlaySpellSound()
+        {
+            GetComponent<AudioSource>().volume = 0.6f;
+            //GetComponent<AudioSource>().Play();
         }
 
         public void Dark1RevertToIdle()

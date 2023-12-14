@@ -4,10 +4,10 @@ using UnityEngine;
 using System;
 using Music;
 using TMPro;
-using MainMenu;
 using Scenes.Interfaces;
 using Scenes.ConcreteScenes;
 using Scenes.Controllers;
+using Localization;
 
 namespace MainMenu
 {
@@ -28,8 +28,23 @@ namespace MainMenu
 
         public float timeOffset;
 
-        public String[] introTexts;
+        public Dictionary<int, String> introTexts = new Dictionary<int, string>();
         private int textPointer = -1;
+        public TextAsset introTextsData;
+
+        private LocalizationManager localization;
+
+        private void Start()
+        {
+            localization = new LocalizationManager();
+            localization.LoadLocalizationString(FindObjectOfType<SceneStateController>()?.GetLanguage(), introTextsData, introTexts);
+        }
+
+        public void LoadLanguage()
+        {
+            localization.ResetLanguageDictionaries(introTexts);
+            localization.LoadLocalizationString(FindObjectOfType<SceneStateController>()?.GetLanguage(), introTextsData, introTexts);
+        }
 
         public void StartIntro()
         {
@@ -56,7 +71,18 @@ namespace MainMenu
             yield return new WaitForSeconds(timeOffset);
 
             HideMenu();
-            ChangeTextSize(4.58f);
+            switch(Application.systemLanguage)
+            {
+                case SystemLanguage.English:
+                    ChangeTextSize(4.58f);
+                    break;
+                case SystemLanguage.Spanish:
+                    ChangeTextSize(3.2f);
+                    break;
+                default:
+                    ChangeTextSize(4.58f);
+                    break;
+            }
             NextText(); //Doomsday arrived
             ShowScreen();
 
@@ -64,7 +90,7 @@ namespace MainMenu
 
             ChangeBackgroundColor(new Color(1f, 1f, 1f, 1f));
             ChangeTextColor(new Color(0f, 0f, 0f, 1f));
-            ChangeTextSize(0.6f);
+            ChangeTextSize(0.9f);
             NextText(); //God did not
 
             yield return new WaitForSeconds(5f);
@@ -86,12 +112,13 @@ namespace MainMenu
 
             NextText(); //Souls will be granted passage...
 
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(7f);
 
             NextText(); //
 
             yield return new WaitForSeconds(2f);
 
+            Debug.Log("You will judge them");
             NextText(); //You will judge them
 
 
@@ -103,9 +130,9 @@ namespace MainMenu
             introMusic.ManageVolumeLayer(2, 0, 70, 40);
             NextText(); //
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
 
-            ChangeTextPosition(new Vector3(0f, 0.18f, -0.5f));
+            ChangeTextPosition(new Vector3(0f, 0.14f, -0.5f));
             NextText(); //You will save them
             sceneManager.GetComponent<SceneStateController>().SetSceneState(new Scene_SaveTutorial(sceneManager.GetComponent<SceneStateController>(), saveTutorial, this.gameObject, spaceBarSprites));
 

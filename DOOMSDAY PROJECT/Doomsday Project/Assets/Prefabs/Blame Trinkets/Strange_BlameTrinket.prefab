@@ -100,8 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - Nameless-This is a trinket left by Strange
+  - Nameless-Well. . . with the others I guess.
   id: 2
+  textAssetData: {fileID: 4900000, guid: d7d8c040a52b2ca4daa25e84ed1f841a, type: 3}
 --- !u!58 &5768090766596962647
 CircleCollider2D:
   m_ObjectHideFlags: 0

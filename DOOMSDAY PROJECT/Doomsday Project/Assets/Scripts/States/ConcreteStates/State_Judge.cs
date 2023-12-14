@@ -32,7 +32,7 @@ namespace States.ConcreteStates
             judgeUIGO.transform.localScale = new Vector3(0.4f, 0.4f, 1f);
 
             musicManager = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<ManageMusic>();
-            musicManager.StartJudgeMusic(0f, 10f);
+            musicManager.StartJudgeMusic(0f, 30f);
         }
 
         public override void Exit()
@@ -45,10 +45,6 @@ namespace States.ConcreteStates
         public override void Update()
         {
             controlManager.JudgeControls(this, playerState);
-        }
-
-        public override void RegisterInteractor(GameObject newInteractor)
-        {
         }
     }
 }

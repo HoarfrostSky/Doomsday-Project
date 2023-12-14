@@ -14,35 +14,28 @@ namespace Player
     {
         private IPlayerState playerStateController;
 
-        private Sprite[] currentMemorySprites;
-        private Sprite currentSprite;
         private String[] currentMemoryDialogue;
         private String currentDialogue;
         private TextMeshPro memoryText;
-        private SpriteRenderer memorySprite;
         public float cameraSize;
         public float endCameraSize;
 
-        //private int memorySpritePointer = -1;
         private int memoryDialoguePointer = -1;
         private bool finishedText = false;
 
         public EventHandler<String> dialogueHandler;
 
-        public void RecieveMemoryData(IPlayerState stateControllerReference, String[] memStrings, TextMeshPro textComp, SpriteRenderer spriteComp)
+        public void RecieveMemoryData(IPlayerState stateControllerReference, String[] memStrings, TextMeshPro textComp)
         {
             this.memoryDialoguePointer = -1;
                 this.playerStateController = stateControllerReference;
 
-                //this.currentMemorySprites = memSprites;
                 this.currentMemoryDialogue = memStrings;
                 this.memoryText = textComp;
-                this.memorySprite = spriteComp;
 
                 memoryText.gameObject.GetComponent<Dialogue3D>().isTextFinishedHandler += ChangeFinishedText;
                 memoryText.gameObject.GetComponent<Dialogue3D>().ConnectDialogue(this);
 
-            //StartCoroutine(ExecuteMemory());
             memoryDialoguePointer++;
 
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().orthographicSize = cameraSize;
@@ -110,35 +103,5 @@ namespace Player
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().orthographicSize = endCameraSize;
             playerStateController.SetState(new State_Dialogue(playerStateController));
         }
-
-        /*public void NextMemorySprite()
-        {
-            this.memorySpritePointer++;
-            currentSprite = currentMemorySprites[memorySpritePointer];
-            memorySprite.sprite = currentSprite;
-        }*/
-
-        /*IEnumerator ExecuteMemory()
-        {
-            while (memoryPointer < currentMemorySprites.Length - 1)
-            {
-                memoryPointer++;
-                currentSprite = currentMemorySprites[memoryPointer];
-                currentDialogue = currentMemoryDialogue[memoryPointer];
-
-                memorySprite.sprite = currentSprite;
-                dialogueHandler?.Invoke(this, currentDialogue);
-
-                yield return null;
-
-                //Se espera a que el texto se haya mostrado
-                yield return new WaitUntil(() => finishedText);
-                yield return new WaitForSeconds(3);
-            }
-
-            playerStateController.SetState(new State_Dialogue(playerStateController));
-
-            yield return null;
-        }*/
     }
 }

@@ -104,7 +104,7 @@ MonoBehaviour:
   id: 2
   maxAtaques: 1
   dialogue:
-  - Dark2-!
+  - Dark2-Hm?
   - Nameless-Something wrong?
   - Dark2-This one feels. . . different?
   - Nameless-What do you mean?
@@ -162,8 +162,8 @@ MonoBehaviour:
   - Nameless-Do you know any translators?
   - Dark2-The language of the soul is unique. There are no translators.
   - "Dark2-The reason why you\u2019ve been able to understand them this far is because
-    your minds and spirits are distorted by similar cultures and ideas. You all follow
-    similar patterns, and thus recognise them in others."
+    your minds and spirits are distorted by similar cultures and ideas."
+  - Dark2-You all follow similar patterns, and thus recognise them in others.
   - "Dark1-What stands before you is the purest of souls. One that hasn\u2019t been
     corrupted by your lie."
   - cinematic
@@ -201,12 +201,12 @@ MonoBehaviour:
   - judge
   moveSpeed: 20
   musicLayerOrders:
-  - 1_0_80_200
-  - 2_0_50_100
-  - 2_50_10_100
-  - 1_80_100_100
-  - 0_0_100_50
-  - 3_0_100_100
+  - 1_0_60_200
+  - 2_0_30_100
+  - 2_30_10_100
+  - 1_60_80_100
+  - 0_0_80_50
+  - 3_0_80_100
   blameTrinket: {fileID: 2722533213330019355, guid: eef7b842abfe9684f92e48bf62fab2b1, type: 3}
   audioClips:
   - {fileID: 8300000, guid: cf7ec86cccda3944d89edefee246f0a0, type: 3}

@@ -318,6 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   maxAtaques: 2
+  dialogueData: {fileID: 0}
   dialogue:
   - Nameless-Welcome to the Last Halls, sorrowful soul.
   - "Bretta-I\u2019ve been wandering. . . for so long."
@@ -359,13 +360,14 @@ MonoBehaviour:
   - Bretta-The beginning is always necessary.
   - Nameless-. . .
   - Bretta-Well.
-  - Bretta-When I was a child I lived a strict parenting. The grandiose dreams of
-    a little girl were no more than mere words of innocence. But oh. . . what dreams.
-    . .
+  - Bretta-Ah, my parents were very strict when I was younger. To them, the grandiose
+    dreams of a little girl were no more than mere words of innocence, but oh. .
+    . what dreams. . .
   - Bretta-I always dreamed of exploring the unknown, of dangerous adventures. I
     dreamed of entering a dark cave and exiting with my hands full of gold and jewels.
   - "Bretta-I dreamed of traveling the skies, swiming across the clouds at dusk.
     I\u2019d soak in its beauty and become one with the approaching firmament."
+  - Bretta-Heh.
   - Bretta-And indeed, I ended up being just another distant star. So far from others.
     So far from everything.
   - Bretta-I grew to accept that fact, to understand it.
@@ -392,9 +394,10 @@ MonoBehaviour:
   - Bretta-I killed a guy once.
   - cinematic
   - Nameless-Excuse me?
-  - "Bretta-I opened a special hole in my heart to bury her. Every morning she would
-    try to escape, and every morning I wouldn\u2019t let her, because it would hurt
-    even more than what it already did."
+  - Bretta-You see, the time came when I opened a special hole in my heart to bury
+    myself, the little girl who dreamed of treasures and poetic dusks.
+  - "Bretta-Every morning she would try to escape, and every morning I wouldn\u2019t
+    let her, because it would hurt even more than what it already did."
   - Bretta-. . .
   - BrettaSad-I made some pretty bad choices. I did. All of it was me.
   - Bretta-I became arrogant and spiteful and soon I was left wandering the streets.
@@ -411,29 +414,40 @@ MonoBehaviour:
   - BrettaSad-There was this guy, who lived with us in a small community in the outskirts
     of the city. John.
   - "BrettaSad-It wasn\u2019t official, but John behaved as the leader of the group
-    and everyone accepted it. Not me. He was always trying to fill us with false
-    hope, to convince us to believe in a better tomorrow."
+    and everyone seemed to accept it. Not me."
+  - BrettaSad-He was always trying to fill us with false hope, to convince us to
+    believe in a better tomorrow.
   - "Bretta-Couldn\u2019t he just leave us to rot?"
   - "Bretta-Couldn\u2019t he see that our obligation as human beings was to suffer?"
   - "Bretta-But there was something that I couldn\u2019t stand even more than any
     of that. Can you guess?"
   - NamelessSad-You tell me.
   - "Bretta-He loved to go out and explore. He\u2019d always find something in some
-    forgotten place. Nothing useful, mind you. It was just a hobby."
-  - Bretta-Everyone just let him do his thing, and yet, it drove me mad.
+    forgotten place. It seemed like a mere hobby to everyone."
+  - Bretta-At that time, to me, it was like being stabbed in the chest.
   - Nameless-Why is that?
   - Bretta-Guess.
   - Nameless-. . .
-  - Bretta-So one day I suggested going out with him to explore. On the way to our
-    destination, I just got him down on the ground and. . . strangled him.
-  - BrettaSad-I never came back to that group. I was alone, once again.
+  - Bretta-The day came when rage finally took hold of my body. I offered myself
+    to go with him and he accepted. I can't remember what the exact reason was, what
+    made me actually do it.
+  - BrettaSad-But on the way to our destination, I just got him down on the ground
+    and. . .
+  - BrettaSad-Damn. I put my hands around his neck and just kept chocking him with
+    all my strength. After a while. . . his body was still there, but John was nowhere
+    to be found.
+  - BrettaSad-I knew it wasn't the right thing to do but I did it anyway. I didn't
+    care.
+  - BrettaSad-I never came back to that group after that. When my senses returned,
+    I couldn't face what I had done.
+  - BrettaSad-I was alone, once again.
   - Dark1-Nameless One?
   - Bretta-But then, he appeared.*dreams_of_adventure
   - "BrettaSad-And now fear strangles my heart once more. I fear Colin won\u2019t
     be able to experience all the magic this world has in store for him."
-  - "BrettaSad-If whatever happened to me also affected him, I fear he will leave
-    this world the same way I did. In truth, that is what I fear the most. There
-    can\u2019t be another one like me."
+  - BrettaSad-If whatever happened to me also affected him, I fear he will leave
+    this world the same way I did. In truth, that is what I fear the most.
+  - "BrettaSad-There can\u2019t be another one like me."
   - BrettaSad-Do you think he hates me, the same way I hated my family?
   - Nameless-. . .
   - Dark1-Enough time has been given.
@@ -446,12 +460,12 @@ MonoBehaviour:
   - judge
   moveSpeed: 20
   musicLayerOrders:
-  - 0_0_50_100
-  - 0_50_75_50
-  - 1_0_50_50
-  - 0_75_100_200
-  - 1_50_80_200
-  - 2_0_100_200
+  - 0_0_30_100
+  - 0_30_65_50
+  - 1_0_30_50
+  - 0_65_80_200
+  - 1_30_60_200
+  - 2_0_80_200
   blameTrinket: {fileID: 7261672652382087456, guid: 19d2639e4eb455f4d86b86a786b080c8, type: 3}
   audioClips:
   - {fileID: 8300000, guid: cf7ec86cccda3944d89edefee246f0a0, type: 3}

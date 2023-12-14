@@ -8,13 +8,14 @@ namespace Player
     public class AttackSoulManager : MonoBehaviour
     {
         private int currentAttack = 0;
-        private int maxAttacks = 1;
+        private int maxAttacks;
         GameObject soul;
 
         public void RegisterAttack()
         {
             soul = GameObject.FindGameObjectWithTag("Soul");
             maxAttacks = soul.GetComponent<ASoul>().maxAtaques;
+            Debug.Log("Ataques maximos: " + maxAttacks);
 
             switch(currentAttack)
             {
@@ -39,6 +40,11 @@ namespace Player
         public int GetCurrentAttack()
         {
             return currentAttack;
+        }
+
+        public int GetMaxAttacks()
+        {
+            return maxAttacks;
         }
 
         public void ResetCurrentAttack()

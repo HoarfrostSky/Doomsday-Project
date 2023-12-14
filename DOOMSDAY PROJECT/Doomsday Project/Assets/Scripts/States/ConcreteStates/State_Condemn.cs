@@ -45,13 +45,22 @@ namespace States.ConcreteStates
             sword.transform.localScale = new Vector3(1f, 1f, 1f);
 
             controlManager.ResetSpacebar();
+            controlManager.canAttack = true;
         }
 
         public override void Exit()
         {
             Debug.Log("Exiting State_Condemn");
 
+            
             GameObject.Find("SpacebarHelp").transform.localScale = new Vector3(0f, 0f, 1f);
+            GameObject.FindGameObjectWithTag("Sword").transform.localScale = new Vector3(0f, 0f, 1f);
+
+            if (playerGO.GetComponent<AttackSoulManager>().GetCurrentAttack() == playerGO.GetComponent<AttackSoulManager>().GetMaxAttacks())
+            {
+                playerGO.GetComponent<AttackSoulManager>().ResetCurrentAttack();
+                MonoBehaviour.Destroy(soul);
+            }
         }
 
         public override void Update()
@@ -63,10 +72,6 @@ namespace States.ConcreteStates
             if(sword.transform.localEulerAngles.z < 100f || sword.transform.localEulerAngles.z >= 290f) sword.transform.RotateAround(playerGO.transform.position, Vector3.forward, 0.01f * swordScript.weight);
 
             controlManager.CondemnControls(this, playerState, mouseDeltaHPosition, sword, playerGO);
-        }
-
-        public override void RegisterInteractor(GameObject newInteractor)
-        {
         }
     }
 }

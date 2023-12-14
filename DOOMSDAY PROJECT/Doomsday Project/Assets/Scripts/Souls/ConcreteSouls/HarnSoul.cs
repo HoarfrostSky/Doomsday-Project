@@ -9,6 +9,7 @@ namespace Souls.ConcreteSouls
 {
     public class HarnSoul : ASoul
     {
+
         private void OnDestroy()
         {
             GameObject trinketContainer = GameObject.Find("TrinketContainer");

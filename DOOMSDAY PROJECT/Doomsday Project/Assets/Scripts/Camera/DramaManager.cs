@@ -29,10 +29,13 @@ namespace CameraNamespace
         // 7: camara se recupera despues del golpe
         // 8: zoom abierto cuando el personaje se aleja del trono
         // 9: colocar cámara en titulo
+        // 11: habitación lore
 
         private float speed;
         private Vector3 direction;
         private float finalZoom;
+
+        private int currentDirection = 999;
 
         private void Awake()
         {
@@ -49,25 +52,28 @@ namespace CameraNamespace
 
         private void ProcessDirections(int i)
         {
-            String[] processedDirections = directionsList[i].Split("_");
-            if(processedDirections.Length == 3)
+            if(currentDirection != i)
             {
-                String[] processedVector = processedDirections[0].Split(",");
-                this.direction = new Vector3(float.Parse(processedVector[0])/100, float.Parse(processedVector[1])/100, float.Parse(processedVector[2]));
+                String[] processedDirections = directionsList[i].Split("_");
+                if (processedDirections.Length == 3)
+                {
+                    String[] processedVector = processedDirections[0].Split(",");
+                    this.direction = new Vector3(float.Parse(processedVector[0]) / 100, float.Parse(processedVector[1]) / 100, float.Parse(processedVector[2]));
 
-                this.speed = float.Parse(processedDirections[1]);
-                this.finalZoom = float.Parse(processedDirections[2])/100;
-            }
-            else
-            {
-                Debug.LogError("ERROR AL PROCESAR DIRECCIONES DRAMATICAS. MENSAJE " + i + " NO DIVIDIDO EN 4 SECCIONES.");
+                    this.speed = float.Parse(processedDirections[1]);
+                    this.finalZoom = float.Parse(processedDirections[2]) / 100;
+                }
+                else
+                {
+                    Debug.LogError("ERROR AL PROCESAR DIRECCIONES DRAMATICAS. MENSAJE " + i + " NO DIVIDIDO EN 4 SECCIONES.");
+                }
+
+                currentDirection = i;
             }
         }
 
         public void ExecuteCameraMovement(object sender, int i)
         {
-            Debug.Log("Se recibe la orden");
-
             GetComponent<CameraMovementManager>().SetEnableMovement(false);
 
             ProcessDirections(i);

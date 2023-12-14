@@ -6,9 +6,10 @@ namespace CameraNamespace
 {
     public class ManageZoomOut : MonoBehaviour
     {
+        public int cameraOrder;
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<DramaManager>().ExecuteCameraMovement(this, 8);
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<DramaManager>().ExecuteCameraMovement(this, cameraOrder);
         }
 
         private void OnTriggerExit2D(Collider2D collision)

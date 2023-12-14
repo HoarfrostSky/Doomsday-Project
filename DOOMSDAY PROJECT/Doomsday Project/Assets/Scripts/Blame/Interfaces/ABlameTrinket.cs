@@ -5,6 +5,10 @@ using Interactuables.Interfaces;
 using Interactuables.ConcreteInteractuables;
 using States.ConcreteStates;
 using States.Controllers;
+using System;
+using Interact = Interactuables.Interfaces.IInteractuable;
+using Localization;
+using Scenes.Controllers;
 
 namespace Blame.Interfaces
 {
@@ -12,6 +16,14 @@ namespace Blame.Interfaces
     {
         public int id = 0;
         protected bool carryingTrinket = false;
+
+        public TextAsset textAssetData;
+        private Dictionary<int, String[]> dialogueDicitonary = new Dictionary<int, string[]> { };
+
+        private void Start()
+        {
+            localization.LoadLocalization(FindObjectOfType<SceneStateController>()?.GetLanguage(), textAssetData, dialogueDicitonary);
+        }
 
         public override void Interact()
         {
@@ -25,8 +37,8 @@ namespace Blame.Interfaces
             GameObject.Find("TrinketPile").GetComponent<Interactuable_TrinketPile>().ConnectNextTrinket(this.gameObject);
 
             colGO.GetComponent<PlayerStateController>().SetState(new State_Dialogue(colGO.GetComponent<PlayerStateController>()));
-            Debug.Log("Dialogo a enviar:" + dialogue[0]);
-            SendMessageHandler?.Invoke(this, dialogue);
+            Debug.Log("Dialogo a enviar:" + dialogueDicitonary[0]);
+            SendMessageHandler?.Invoke(this, dialogueDicitonary[0]);
 
             carryingTrinket = true;
         }

@@ -7,6 +7,8 @@ namespace MainMenu
     public class IntroductionAlert : MonoBehaviour
     {
 
+        public GameObject loadingTextGO;
+
         private bool finished = false;
 
         public void ChangeFinished()
@@ -17,6 +19,11 @@ namespace MainMenu
         public bool GetFinished()
         {
             return this.finished;
+        }
+
+        public void ShowLoadingText()
+        {
+            loadingTextGO.transform.localScale = new Vector3(1f, 1f, 1f);
         }
     }
 }

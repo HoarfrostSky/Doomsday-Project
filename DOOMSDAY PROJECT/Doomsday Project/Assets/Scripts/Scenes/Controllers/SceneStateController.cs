@@ -11,6 +11,8 @@ namespace Scenes.Controllers
         private IScene currentSceneState;
         private IScene previousSceneState;
 
+        public string language;
+
         private void Awake()
         {
             Object.DontDestroyOnLoad(this.gameObject);
@@ -37,6 +39,15 @@ namespace Scenes.Controllers
             previousSceneState = currentSceneState;
             currentSceneState = sceneState;
             sceneState.Enter();
+        }
+
+        public string GetLanguage()
+        {
+            return language;
+        }
+        public void SetLanguage(string newLanguage)
+        {
+            this.language = newLanguage;
         }
 
         private void Update()

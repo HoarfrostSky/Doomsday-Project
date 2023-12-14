@@ -12,22 +12,18 @@ namespace Interactuables.ConcreteInteractuables
     {
         public GameObject player;
         public GameObject cameraGO;
-        private bool canSpawnSoul = true;
+        private bool canSpawnSoul = false;
 
         public EventHandler<int> CameraHandler;
 
         public override void Interact()
         { 
-            //colGO.GetComponent<PlayerStateController>().SetState(new State_Dialogue(colGO.GetComponent<PlayerStateController>()));
-            //SendMessageHandler?.Invoke(this, dialogue);
-
             if (canSpawnSoul)
             {
                 CameraHandler?.Invoke(this, 1);
 
                 GameObject.FindGameObjectWithTag("SoulSpawner").GetComponent<SoulSpawner>().SpawnSoul();
                 GetComponent<Collider2D>().enabled = false;
-                canSpawnSoul = false;
 
                 player.GetComponent<Animator>().SetTrigger("SitLeft");
                 player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
@@ -51,7 +47,7 @@ namespace Interactuables.ConcreteInteractuables
             }
             else
             {
-                GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 1f);
+                GetComponent<SpriteRenderer>().color = new Color(0.55f, 0.55f, 0.55f, 1f);
             }
         }
     }

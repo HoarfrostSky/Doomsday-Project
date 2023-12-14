@@ -5,6 +5,7 @@ using Souls.Interfaces;
 using States.ConcreteStates;
 using States.Controllers;
 using UnityEngine;
+using Interactuables.ConcreteInteractuables;
 
 namespace Dialogue
 {
@@ -19,13 +20,11 @@ namespace Dialogue
 
         public void RegisterMessageHandler(GameObject interactGO)
         {
-            Debug.Log("Se registra para dialogo un nuevo interactor: " + interactGO.name);
             interactGO.GetComponent<AInteractuable>().SendMessageHandler += RecieveMessage;
         }
 
         public void UnsuscribeMessageHandler(GameObject interactGO)
         {
-            Debug.Log("Se registra para dialogo un nuevo interactor: " + interactGO.name);
             interactGO.GetComponent<AInteractuable>().SendMessageHandler -= RecieveMessage;
         }
 
@@ -60,6 +59,13 @@ namespace Dialogue
                 nDialogue = -1;
                 EmptyTexts();
                 GetComponent<PlayerStateController>().SetState(new State_Judge(GetComponent<PlayerStateController>()));
+            }
+            else if(processedText[0] == "allowSpawn")
+            {
+                nDialogue = -1;
+                EmptyTexts();
+                GameObject.Find("Throne").GetComponent<Interactuable_Throne>().SetCanSpawnSoul(true);
+                GetComponent<PlayerStateController>().SetState(new State_Explore(GetComponent<PlayerStateController>()));
             }
             else
             {

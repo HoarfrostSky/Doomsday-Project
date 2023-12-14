@@ -4,11 +4,7 @@ using UnityEngine;
 using System;
 using States.Interfaces;
 using Player;
-using Dialogue;
 using TMPro;
-using Souls.Interfaces;
-using Dialogue.Text3D;
-using ControlManager = Controls.ControlManager;
 
 namespace States.ConcreteStates
 {
@@ -40,23 +36,20 @@ namespace States.ConcreteStates
             cameraGO = GameObject.FindGameObjectWithTag("MainCamera");
             memoryGO.transform.position = new Vector3(cameraGO.transform.position.x, cameraGO.transform.position.y, memoryGO.transform.position.z);
 
-            memoryManager.RecieveMemoryData(playerState, manageEmpathise.GetCurrentMemoryDialogue(), memoryGO.GetComponentInChildren<TextMeshPro>(), memoryGO.GetComponentInChildren<SpriteRenderer>());
+            memoryManager.RecieveMemoryData(playerState, manageEmpathise.GetCurrentMemoryDialogue(), memoryGO.GetComponentInChildren<TextMeshPro>());
         }
 
         public override void Exit()
         {
             Debug.Log("Exiting State_Memory");
 
+            manageEmpathise.PlayEndMemorySound();
             memoryGO.transform.localScale = new Vector3(0f, 0f, 1f);
         }
 
         public override void Update()
         {
             controlManager.MemoryControls(this, playerState);
-        }
-
-        public override void RegisterInteractor(GameObject newInteractor)
-        {
         }
     }
 }

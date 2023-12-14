@@ -18,11 +18,12 @@ namespace Scenes.ConcreteScenes
 
         public override void Enter()
         {
-            Debug.Log("Entering Menu Scene");
-            if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(1))
+            //Esto no deberia estad comentado pero son las 2 de la mañana y estoy hasta la polla
+            /*Debug.Log("Entering Menu Scene");
+            if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(0))
             {
                 SceneManager.LoadScene("MenuScene");
-            }
+            }*/
 
             playButton = GameObject.FindGameObjectWithTag("PlayButton").GetComponent<PlayButtonScript>();
             playButton.ConnectSceneController(sceneState);

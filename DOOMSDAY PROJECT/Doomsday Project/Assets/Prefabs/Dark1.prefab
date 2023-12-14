@@ -120,7 +120,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1, y: 0}
+  m_Offset: {x: -1.01, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -131,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6140351, y: 3.2982457}
+  m_Size: {x: 0.5590153, y: 3.2982457}
   m_EdgeRadius: 0
 --- !u!114 &514371840
 MonoBehaviour:
@@ -146,8 +146,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: []
-  dialogue0: []
-  dialogue1: []
-  dialogue2: []
-  dialogue3: []
-  dialogue4: []
+  dialogue0:
+  - Dark1-Welcome, Nameless One.
+  - Dark1-What stands before you is your throne. Here, souls will kneel and you will
+    judge.
+  - Nameless-Right. . .
+  - Nameless-And what's that on the back?
+  - Dark1-When a soul leaves this plane, their emotion solidifies into one trinket.
+  - Dark1-A mere memory of those who are not with us, of their life, their being.
+  - Dark1-You shall collect them and add them to the pile on your right. Don't let
+    them distract you.
+  - Nameless-Why should they?
+  - Dark1-. . .
+  - Dark1-Whenever you are ready, sit on the throne and judge.
+  - Dark1-Oh, to judge!
+  - allowSpawn
+  dialogue1:
+  - Nameless-What was that?
+  - Dark1-What do you mean?
+  - Nameless-For a split second I felt a strong current of wind emanating from Harn.
+  - Nameless-It asked something of me. I couldn't really comprehend it but I just.
+    . .
+  - Nameless-Dark images flashed before my eyes.
+  - Dark1-That wasn't wind, Nameless One, but emotions. Inside these halls, emotions
+    become tactile.
+  - Dark1-What you experienced was the physical manifestation of what you humans
+    call empathising.
+  - Dark1Sad-Here, the process becomes so strong and pure that you can place yourself
+    inside their own life and memories.
+  - Dark1Sad-What you saw were probably memories of his distant self.
+  dialogue2:
+  - Nameless-So. . . when is God coming back exactly?
+  - Dark1-. . .
+  - Nameless-. . .
+  - Nameless-Right.
+  dialogue3:
+  - Dark1Sad-Lift your spirits, Nameless One.
+  - Dark1Sad-You humans are but a convoluted mess. Changing, evolving, but then again,
+    returning to the same point in time.
+  - Dark1-That place, whatever it is, is where you belong.
+  - Dark1Sad-Is that not the truth, even if it is contained inside your little lie?
+  - NamelessSad-Yeah, whatever.
+  - NamelessSad-I'd appreciate if you stopped calling my life a fucking lie.
+  - Dark1-Don't panic, Nameless One. Negation is the first phase.
+  - Dark1-A phase many are unable to overcome.
+  dialogue4:
+  - Dark1-This one's been my favourite.
+  - Nameless-Yeah, I bet.
+  dialogue5:
+  - Dark1Sad-. . .
+  dialogue6:
+  - Dark1Sad-Ah. . .
+  - Dark1Sad-To judge. . .

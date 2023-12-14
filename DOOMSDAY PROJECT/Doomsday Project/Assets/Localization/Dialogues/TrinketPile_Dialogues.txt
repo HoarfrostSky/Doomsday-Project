@@ -1,0 +1,11 @@
+Trinket0;Nameless-A pile of strange golden trinkets.;Nameless-Un montón de extraños abalorios dorados.;
+
+TrinketHarn;Nameless. . .//Nameless-What?//Nameless-I can hear a slow rumbling coming from inside;Nameless-. . .//Nameless-¿Qué?//Nameless-Me parece escuchar un lento temblor proveniente del interior.;
+
+TrinketStrange;NamelessSad-The less I think about it, the better.//Nameless-I can do this.;NamelessSad-Cuanto menos piense en ello, mejor.//Nameless-Puedo hacerlo.;
+
+TrinketBretta;Nameless-The rumbling continues. . .;Nameless-El temblor continúa. . .;
+
+TrinketHayure;NamelessSad-I'm feeling a bit deezy.;NamelessSad-Me noto un poco mareado.;
+
+TrinketColin;NamelessSad-God. . .;NamelessSad-God. . .

@@ -16,6 +16,8 @@ namespace MainMenu
         public EventHandler<AConcreteScene> sceneHandler;
         public GameObject introScreenManager;
         public GameObject quitButton;
+        public GameObject en;
+        public GameObject es;
         public Sprite buttonPressed;
 
         private bool inIntro = false;
@@ -24,10 +26,13 @@ namespace MainMenu
         {
             if (!inIntro)
             {
+                GetComponent<AudioSource>().Play();
                 inIntro = true;
                 GetComponent<Image>().sprite = buttonPressed;
                 GetComponentInChildren<TextMeshProUGUI>().fontSize = 0f;
                 quitButton.GetComponent<Image>().gameObject.GetComponent<RectTransform>().localScale = new Vector3(0f, 0f, 1f);
+                en.GetComponent<Image>().gameObject.GetComponent<RectTransform>().localScale = new Vector3(0f, 0f, 1f);
+                es.GetComponent<Image>().gameObject.GetComponent<RectTransform>().localScale = new Vector3(0f, 0f, 1f);
                 introScreenManager.GetComponent<ManageIntro>().StartIntro();
             }
             //sceneStateController.SetSceneState(new Scene_MainScene(sceneStateController));

@@ -318,11 +318,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   maxAtaques: 1
+  dialogueData: {fileID: 0}
   dialogue:
   - Dark2-soy un alma aleatoria woo
   moveSpeed: 20
   musicLayerOrders:
-  - 
+  - 0_0_30_50
+  - 2_0_20_10
+  - 1_0_40_10
   blameTrinket: {fileID: 2487525950138099283, guid: b6998e8d68164be48a812405b5a8a2bb, type: 3}
   audioClips:
   - {fileID: 8300000, guid: cf7ec86cccda3944d89edefee246f0a0, type: 3}

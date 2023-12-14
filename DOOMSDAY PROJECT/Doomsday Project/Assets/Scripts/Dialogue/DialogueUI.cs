@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using Dialogue;
 using TMPro;
 
 namespace Dialogue
@@ -16,13 +15,23 @@ namespace Dialogue
 
 		public float slowness;
 
+		public AudioClip[] voiceSFX;
+		public AudioClip[] altVoiceSFX;
+		private AudioSource voice;
+		private int voiceN = 0;
+		public int maxVoice;
+
+		int a = 1;
+
         private void Awake()
         {
             textComponent = GetComponent<TextMeshProUGUI>();
+			voice = GetComponent<AudioSource>();
         }
 
-        public void RecieveDialogueText(object sender, String newText)
-        {
+		public void RecieveDialogueText(object sender, String newText)
+		{
+			Debug.Log("se llama a recieve dialogue");
 			originalText = newText;
 			StartCoroutine(RevealText());
 		}
@@ -34,12 +43,21 @@ namespace Dialogue
 
 		public void ConnectDialogue(DialogueManager d)
         {
-            this.dialogueManager = d;
+			Debug.Log($"se llama a connect dialogue por {a} vez");
+			a++;
+			this.dialogueManager = d;
             dialogueManager.dialogueHandler += RecieveDialogueText;
         }
 
+		public void DisconnectDialogue()
+        {
+			dialogueManager.dialogueHandler -= RecieveDialogueText;
+		}
+
 		IEnumerator RevealText()
 		{
+			Debug.Log("se llama a reveal text");
+
 			showingText = true;
 			textComponent.text = "";
 
@@ -53,6 +71,18 @@ namespace Dialogue
 
 				++numCharsRevealed;
 
+				voiceN++;
+				Debug.Log($"n: {voiceN}; maxN: {maxVoice}");
+				if(voiceN >= maxVoice)
+                {
+					Debug.Log($"SONIDO: {originalText.Substring(0, numCharsRevealed)}");
+					if(FindObjectOfType<IconUI>().currentName == "***" || FindObjectOfType<IconUI>().currentName == "******")
+						voice.PlayOneShot(voiceSFX[(int)UnityEngine.Random.Range(0, voiceSFX.Length)]);
+					else
+						voice.PlayOneShot(altVoiceSFX[(int)UnityEngine.Random.Range(0, altVoiceSFX.Length)]);
+					voiceN = 0;
+				}
+
 				textComponent.text = originalText.Substring(0, numCharsRevealed);
 
 				yield return new WaitForSeconds(0.025f * slowness);
@@ -63,6 +93,7 @@ namespace Dialogue
 						yield return new WaitForSeconds(0.08f * slowness);
 						break;
 					case '.':
+						voiceN = -1;
 						yield return new WaitForSeconds(0.2f * slowness);
 						break;
 					case '?':

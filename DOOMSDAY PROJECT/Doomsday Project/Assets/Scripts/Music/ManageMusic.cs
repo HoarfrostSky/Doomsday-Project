@@ -8,6 +8,7 @@ namespace Music
 {
     public class ManageMusic : AMusicManager
     {
+        public AudioClip[] RandomLayers;
         public AudioClip[] HarnLayers;
         public AudioClip[] StrangeLayers;
         public AudioClip[] NurLayers;
@@ -22,6 +23,7 @@ namespace Music
             {
                 case 0: //Aleatorio
                     Debug.Log("Se ha elegido musica para aleatorio");
+                    RegisterLayers(RandomLayers);
                     
                     break;
                 case 1: //Harn

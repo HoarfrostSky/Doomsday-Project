@@ -35,6 +35,7 @@ namespace States.ConcreteStates
             }
 
             dialogueUIGO.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+            dialogueUIGO.GetComponentInChildren<Animator>().SetTrigger("DialogueStart");
         }
 
         public override void Exit()
@@ -49,15 +50,14 @@ namespace States.ConcreteStates
 
             manageEmpathise.gameObject.transform.localScale = new Vector3(0f, 0f, 1f);
             dialogueUIGO.GetComponent<RectTransform>().localScale = new Vector3(0f, 0f, 1f);
+            dialogueUIGO.GetComponentInChildren<ManageShowUI>().HideDialogueUI();
+            MonoBehaviour.FindObjectOfType<DialogueUI>().DisconnectDialogue();
+            dialogueUIGO.GetComponentInChildren<Animator>().SetTrigger("HideDialogue");
         }
 
         public override void Update()
         {
             controlManager.DialogueControls(this, playerState, dialogueManager, dialogueUIGO.GetComponentInChildren<DialogueUI>(), manageEmpathise);
-        }
-
-        public override void RegisterInteractor(GameObject newInteractor)
-        {
         }
     }
 }

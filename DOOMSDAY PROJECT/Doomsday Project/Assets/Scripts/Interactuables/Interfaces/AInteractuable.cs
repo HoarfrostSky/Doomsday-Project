@@ -4,7 +4,9 @@ using System;
 using UnityEngine;
 using Dialogue;
 using States.Controllers;
+using Game;
 using Interact = Interactuables.Interfaces.IInteractuable;
+using Localization;
 
 namespace Interactuables.Interfaces
 {
@@ -13,34 +15,40 @@ namespace Interactuables.Interfaces
         protected PlayerStateController stateController;
 
         public EventHandler<String[]> SendMessageHandler;
-        public EventHandler<IInteractuable> InteractorHandler;
-        [SerializeField] protected String[] dialogue;
+        [TextArea(3, 10)] [SerializeField] protected String[] dialogue;
         protected GameObject colGO;
+
+        private GameManager gameManager;
+
+        protected LocalizationManager localization;
 
         private void Awake()
         {
             stateController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateController>();
-            if(stateController.GetState() != null) stateController.GetState().RegisterInteractor(this.gameObject);
+            gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+            gameManager.RegisterInteractuable(this.gameObject);
+
+            localization = new LocalizationManager();
         }
 
-        //If player enters range
+        //Si personaje entra en zona para interactuar
         private void OnTriggerEnter2D(Collider2D col)
         {
-
-            if (col.gameObject.CompareTag("Player"))
+            if (col.gameObject.CompareTag("Player") && stateController.GetState().GetName() == "State_Explore")
             {
                 colGO = col.gameObject;
-                GameObject.FindGameObjectWithTag("ShowInteract").transform.localScale = new Vector3(1f, 1f, 1f);
-                InteractorHandler?.Invoke(this, this);
+                gameManager.ChangeInteractUI(new Vector3(1f, 1f, 1f));
+                gameManager.activeInteractuable = this;
             }
         }
 
+        //Si personaje sale de zona para interactuar (IMPORTANTE: No debe haber varias zonas trigger sobrepuestas)
         private void OnTriggerExit2D(Collider2D col)
         {
             if (col.gameObject.CompareTag("Player"))
             {
-                colGO = col.gameObject;
-                GameObject.FindGameObjectWithTag("ShowInteract").transform.localScale = new Vector3(0f, 0f, 1f);
+                gameManager.ChangeInteractUI(new Vector3(0f, 0f, 1f));
+                gameManager.activeInteractuable = null;
             }
         }
 
